@@ -4,6 +4,11 @@
 *.dat
 *.jpg
 *.DS_Store
+*.hdf5
+*.zip
+*.mrxs
+*.dat
+*.ini
 
 
 # Byte-compiled / optimized / DLL files
