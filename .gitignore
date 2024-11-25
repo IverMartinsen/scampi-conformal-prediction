@@ -9,7 +9,8 @@
 *.mrxs
 *.dat
 *.ini
-
+*.csv
+*.tfrecords
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
