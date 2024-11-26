@@ -1,8 +1,4 @@
 import os
-import sys
-
-sys.path.append(os.getcwd())
-
 import argparse
 import ast
 import glob
@@ -13,7 +9,7 @@ import numpy as np
 import tensorflow as tf
 from tqdm import tqdm
 from openslide import OpenSlide, deepzoom
-from scampi_preprocessing.utils import get_crop, compute_iou, get_boxes_yolo, get_boxes_thresh
+from utils import get_crop, compute_iou, get_boxes_yolo, get_boxes_thresh
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--path_to_slides", type=str, default="./data/NO 6407-6-5/mrxs")
@@ -92,9 +88,10 @@ if __name__ == "__main__":
                     # only keep non-overlapping boxes
                     boxes = [box for i, box in enumerate(boxes) if np.all(iou[i] < 1e-3)]
                 for box in boxes:
-                    crop = get_crop(box, tile, pad_image=False)
-                    crop = tf.image.resize(crop, args.image_shape[:2])
-                    crop = tf.cast(crop, tf.uint8)
+                    crop = get_crop(box, tile, pad_image=False) # numpy array of variable resolution
+                    crop = tf.io.encode_jpeg(crop)
+                    #crop = tf.image.resize(crop, args.image_shape[:2])
+                    #crop = tf.cast(crop, tf.uint8)
                     
                     address = {'slide': slide, 'row': row, 'col': col, 'box': list(box)}
                     
@@ -102,7 +99,10 @@ if __name__ == "__main__":
                     metadata.append(address)
         
         file_name = os.path.join(args.destination, f"{slide.split('/')[-1]}.hdf5")
-        write_slide_to_hdf5(crops, metadata, file_name)
+        #write_slide_to_hdf5(crops, metadata, file_name)
+        with h5py.File(file_name, "w") as file:
+            for i, (crop, meta) in enumerate(zip(crops, metadata)):
+                file.create_dataset(str(meta), data=crop)
         
         end = time.time()
         
