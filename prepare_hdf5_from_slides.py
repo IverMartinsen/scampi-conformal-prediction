@@ -69,6 +69,11 @@ if __name__ == "__main__":
 
     for slide in tqdm(slides, total=len(slides)):
         
+        file_name = os.path.join(args.destination, f"{os.path.basename(slide).split('.')[0]}.hdf5")
+        if os.path.exists(file_name):
+            print(f"Skipping {slide}.")
+            continue
+        
         start = time.time()
         
         tile_generator = deepzoom.DeepZoomGenerator(
