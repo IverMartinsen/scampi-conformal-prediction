@@ -82,7 +82,7 @@ class HDF5Dataset(VisionDataset):
     def __init__(
         self,
         root,
-        loader=load_png_from_hdf5,
+        loader=load_jpeg_from_hdf5,
         extensions=None,
         transform=None,
         target_transform=None,
