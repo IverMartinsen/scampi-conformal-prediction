@@ -107,7 +107,7 @@ if __name__ == "__main__":
                     crops.append(crop)
                     metadata.append(address)
         
-        file_name = os.path.join(args.destination, f"{slide.split('/')[-1]}.hdf5")
+        file_name = os.path.join(args.destination, f"{os.path.basename(slide).split('.')[0]}.hdf5")
         #write_slide_to_hdf5(crops, metadata, file_name)
         with h5py.File(file_name, "w") as file:
             for i, (crop, meta) in enumerate(zip(crops, metadata)):
