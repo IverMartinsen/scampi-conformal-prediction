@@ -172,13 +172,13 @@ def compute_area(boxes):
     return (boxes[:, 2] - boxes[:, 0]) * (boxes[:, 3] - boxes[:, 1])
 
 
-def get_crop(regionprop, img, size=(512, 512), pad_image=True):
+def get_crop(regionprop, img, pad_image=True):
     """Extracts crop from img using coordinates in regionprop
 
     Args:
         regionprop (tuple or RegionProperties): bounding box coordinates
         img (np.array or PIL.Image): image to crop
-        size (tuple, optional): desired crop size. Defaults to (512, 512).
+        #size (tuple, optional): desired crop size. Defaults to (512, 512).
         pad_image (bool, optional): if the output should be padded to desired size. Defaults to True.
 
     Returns:
@@ -220,15 +220,14 @@ def get_crop(regionprop, img, size=(512, 512), pad_image=True):
 
     else:
 
-        size = np.round(np.array(size) * np.array((ly, lx)) / np.max((ly, lx))).astype(
-            int
-        )
+        #size = np.round(np.array(size) * np.array((ly, lx)) / np.max((ly, lx))).astype(int)
 
         image_out = np.array(img)[regionprop_slice]
 
     try:
-        return np.array(Image.fromarray(image_out).resize(size))
+        #return np.array(Image.fromarray(image_out).resize(size))
+        return image_out
     except ValueError:
-        print(f"ValueError with input shape {np.array(img).shape} and processed shape {image_out.shape} and size {size}")
+        print(f"ValueError with input shape {np.array(img).shape} and processed shape {image_out.shape}")
         print(f"regionprop_slice: {regionprop_slice}")
         raise
