@@ -15,6 +15,7 @@ parser.add_argument("--pretrained_weights", type=str, default='/Users/ima029/Des
 args = parser.parse_args()
 
 output_fname = os.path.basename(args.data_path).replace(".hdf5", "_features.hdf5")
+output_fname = os.path.join("./features", output_fname)
 
 transform = pth_transforms.Compose([
     pth_transforms.Resize((256, 256), interpolation=3),
@@ -41,6 +42,7 @@ data_loader = torch.utils.data.DataLoader(
 filenames = [f[0] for f in ds.samples]
 filenames = [str(f) for f in filenames]
 labels = [f[1] for f in ds.samples]
+labels = [str(f) for f in labels]
 
 features = []
 
