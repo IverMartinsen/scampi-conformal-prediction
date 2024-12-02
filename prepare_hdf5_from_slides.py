@@ -15,7 +15,7 @@ import torchvision
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--path_to_slides", type=str, default="./data/NO 6407-6-5/mrxs")
+parser.add_argument("--path_to_slides", type=str, default='/Users/ima029/Desktop/NO 6407-6-5/mrxs')
 parser.add_argument("--destination", type=str, default="./hdf5")
 parser.add_argument("--method", type=str, default="yolov5")
 parser.add_argument("--image_shape", type=tuple, default=(224, 224, 3))
@@ -23,6 +23,7 @@ args = parser.parse_args()
 
 
 slides = glob.glob(args.path_to_slides + "/*.mrxs")
+slides.sort()
 
 print(f"Found {len(slides)} slides.")
 
