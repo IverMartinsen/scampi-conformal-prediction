@@ -10,6 +10,9 @@ import vision_transformer as vits
 from torchvision import transforms as pth_transforms
 from hdf5_dataloader_v2 import HDF5Dataset
 
+print(f"Using {torch.cuda.get_device_name(0)}.")
+print(f"Using GPU with {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB memory.")
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_path", type=str, default="./hdf5/6407_6-5 1200 mDC.hdf5")
 parser.add_argument("--pretrained_weights", type=str, default='/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8370959/checkpoint.pth')
@@ -41,7 +44,9 @@ for path in file_paths:
     print(f"Processing {path}")
     
     ds = HDF5Dataset(path, transform=transform)
-    #ds = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/labelled imagefolders/imagefolder_20/', transform=transform)
+    args.pretrained_weights = '/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8485178/checkpoint.pth'
+    ds = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/labelled imagefolders/imagefolder_20/', transform=transform)
+    output_fname = "./labelled_crops_features.hdf5"
 
     data_loader = torch.utils.data.DataLoader(
         ds, 
@@ -58,7 +63,7 @@ for path in file_paths:
 
     for i, (samples, _) in enumerate(data_loader):
         print(f"Batch {i+1}/{len(data_loader)}")
-        samples = samples.cuda()
+        #samples = samples.cuda()
         features.append(model(samples).detach().cpu().numpy())
 
     features = np.concatenate(features, axis=0)
