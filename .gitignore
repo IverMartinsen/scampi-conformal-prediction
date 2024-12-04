@@ -12,6 +12,8 @@
 *.csv
 *.tfrecords
 jobfile.yml
+*.pkl
+/figures
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
