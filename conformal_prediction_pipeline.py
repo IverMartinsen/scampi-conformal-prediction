@@ -1,5 +1,6 @@
 import os
 import h5py
+import torch
 import joblib
 import numpy as np
 import pandas as pd
@@ -61,8 +62,21 @@ x_un = x_un[pred == 0]
 # ENTROPY FILTERING STEP
 # =============================================================================
 classifier = joblib.load("genus_classifier.pkl")
-
 y_prob = classifier.predict_proba(x_un)
+
+class LinearClassifier(torch.nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LinearClassifier, self).__init__()
+        self.linear = torch.nn.Linear(input_dim, output_dim)
+    
+    def forward(self, x):
+        return self.linear(x)
+
+classifier = LinearClassifier(384, 20)
+classifier.load_state_dict(torch.load("classifier.pth", map_location="mps"))
+logits = classifier(torch.tensor(x_un).float()).detach().numpy()
+y_prob = torch.nn.functional.softmax(torch.tensor(logits), dim=-1).numpy()
+
 y_pred = np.argmax(y_prob, axis=1)
 entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
 
@@ -75,10 +89,13 @@ y_pred = y_pred[entropy < q]
 # =============================================================================
 # CLASS-WISE QUANTILE COMPUTATION
 # =============================================================================
+ref_ent = pd.read_csv("entropy_distribution.csv")
+
 t = np.zeros(20)
 
 for i in [0, 4, 11, 14]:
-    e = compute_reference_entropy(classifier, i)
+    #e = compute_reference_entropy(classifier, i)
+    e = ref_ent.iloc[:, i].values
     t[i] = (e > q).mean()
 
 alpha = t.max()
@@ -86,7 +103,8 @@ alpha = t.max()
 q_class_wise = np.zeros(20)
 
 for i in [0, 4, 11, 14]:
-    e = compute_reference_entropy(classifier, i)
+    #e = compute_reference_entropy(classifier, i)
+    e = ref_ent.iloc[:, i].values
     q_class_wise[i] = np.quantile(e, 1 - alpha)
 
 # =============================================================================
@@ -110,3 +128,82 @@ for k in [0, 4, 11, 14]:
 df = pd.DataFrame(detections, columns=["filename", "label"])
 df.to_csv(os.path.join(folder, os.path.basename(path_to_features).replace("_features.hdf5", ".csv")), index=False)
 pd.DataFrame({'global_alpha': [global_alpha], 'class_wise_alpha': [alpha]}).to_csv(os.path.join(folder, "alpha.csv"), index=False)
+
+# =============================================================================
+# PLOTTING STEP
+# =============================================================================
+colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
+#xlim = (np.log(entropy).min(), np.log(entropy).max())
+xlim = (min(np.log(entropy).min(), np.log(ref_ent.values).min()), np.log(entropy).max())
+fontsize = 20
+int_to_class = {
+    0: "alisocysta",
+    4: "bisaccate",
+    11: "inaperturopollenites",
+    14: "palaeoperidinium",
+}
+
+fig, axes = plt.subplots(5, 1, figsize=(20, 20), sharex=True)
+
+ax = axes.flatten()[0]
+ax.hist(np.log(entropy), bins=100, density=True, alpha=0.5, color=colors[0], label="Unlabelled data from slide")
+ax.axvline(np.log(q), color='r', linestyle='--', label="5% quantile", linewidth=2)
+ax.set_xlim(xlim)
+ax.set_yticks([])
+ax.legend(fontsize=fontsize)
+for j, i in enumerate([0, 4, 11, 14]):
+    ax = axes.flatten()[j + 1]
+    #ax.hist(np.log(compute_reference_entropy(classifier, i)), bins=10, alpha=0.5, density=True, color=colors[j + 1], label=f"{int_to_class[i]}")
+    ax.hist(np.log(ref_ent).iloc[:, i], bins=10, alpha=0.5, density=True, color=colors[j + 1], label=f"{int_to_class[i]}")
+    ax.axvline(np.log(q_class_wise[i]), color='r', linestyle='--', linewidth=2, label="adjusted quantile")
+    ax.set_xlim(xlim)
+    ax.set_yticks([])
+    ax.legend(fontsize=fontsize)
+plt.xlabel("log Entropy", fontsize=fontsize)
+plt.xticks(fontsize=fontsize)
+plt.tight_layout()
+plt.savefig(os.path.join(folder, "entropy_distribution_pytorch_classifier.png"), dpi=300)
+plt.close()
+
+
+
+
+
+x = ref_ent.iloc[:, 14]
+z = entropy
+
+fig = plt.figure(figsize=(20, 10))
+plt.hist(np.log(x), bins=20, alpha=0.5, density=True, color="tab:blue", label="Palaeoperidinium")
+plt.hist(np.log(z), bins=100, alpha=0.5, density=True, color="tab:orange", label="Unlabelled data from slide")
+plt.legend(fontsize=20)
+plt.xlabel("log Entropy", fontsize=20)
+plt.ylabel("Density", fontsize=20)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+plt.savefig("palaeoperidinium_entropy_distribution.png", dpi=300)
+plt.close()
+
+a = np.linspace(0, 1, 100)
+
+b = np.zeros_like(a)
+
+for i, alpha in enumerate(a):
+    q = np.quantile(x, 1 - alpha)
+    b[i] = np.sum(z < q) / len(z)
+
+
+r = 0.8
+
+plt.figure(figsize=(20, 10))
+for r in [0.01, 0.025, 0.05, 0.1, 0.2, 0.5, 0.8]:
+    fdr = 1 / (1 + (1 - a) * r / b)
+
+    plt.plot(a, fdr, label=f"r={r}", marker="o")
+plt.legend(fontsize=20)
+plt.xlabel("alpha", fontsize=20)
+plt.ylabel("False Discovery rate", fontsize=20)
+plt.ylim(0, 1)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+plt.savefig("palaeoperidinium_detection_rate.png", dpi=300)
+plt.close()
