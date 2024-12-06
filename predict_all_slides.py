@@ -1,6 +1,7 @@
 import os
 import glob
 import h5py
+import torch
 import joblib
 import numpy as np
 import pandas as pd
@@ -34,8 +35,23 @@ global_alpha = 0.05
 path_to_files = glob.glob("features" + "/*.hdf5")
 path_to_files.sort()
 
-folder = "./test run all slides"
+folder = "./test run all slides pytorch classifier alpha 0.5"
 os.makedirs(folder, exist_ok=True)
+
+local_alphas = []
+
+class LinearClassifier(torch.nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LinearClassifier, self).__init__()
+        self.linear = torch.nn.Linear(input_dim, output_dim)
+    
+    def forward(self, x):
+        return self.linear(x)
+
+#classifier = joblib.load("genus_classifier.pkl")
+classifier = LinearClassifier(384, 20)
+classifier.load_state_dict(torch.load("classifier.pth", map_location="mps"))
+
 
 for path_to_features in path_to_files:
 
@@ -67,9 +83,10 @@ for path_to_features in path_to_files:
     # =============================================================================
     # ENTROPY FILTERING STEP
     # =============================================================================
-    classifier = joblib.load("genus_classifier.pkl")
-
-    y_prob = classifier.predict_proba(x_un)
+    logits = classifier(torch.tensor(x_un).float()).detach().numpy()
+    y_prob = torch.nn.functional.softmax(torch.tensor(logits), dim=-1).numpy()
+    
+    #y_prob = classifier.predict_proba(x_un)
     y_pred = np.argmax(y_prob, axis=1)
     entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
 
@@ -82,20 +99,26 @@ for path_to_features in path_to_files:
     # =============================================================================
     # CLASS-WISE QUANTILE COMPUTATION
     # =============================================================================
+    ref_ent = pd.read_csv("entropy_distribution.csv")
+
     t = np.zeros(20)
 
     for i in [0, 4, 11, 14]:
-        e = compute_reference_entropy(classifier, i)
+        #e = compute_reference_entropy(classifier, i)
+        e = ref_ent.iloc[:, i].values
         t[i] = (e > q).mean()
 
     alpha = t.max()
+    alpha = 0.5
+
+    local_alphas.append(alpha)
 
     q_class_wise = np.zeros(20)
 
     for i in [0, 4, 11, 14]:
-        e = compute_reference_entropy(classifier, i)
+        #e = compute_reference_entropy(classifier, i)
+        e = ref_ent.iloc[:, i].values
         q_class_wise[i] = np.quantile(e, 1 - alpha)
-
     # =============================================================================
     # DETECTION STEP
     # =============================================================================
@@ -116,4 +139,5 @@ for path_to_features in path_to_files:
 
     df = pd.DataFrame(detections, columns=["filename", "label"])
     df.to_csv(os.path.join(folder, os.path.basename(path_to_features).replace("_features.hdf5", ".csv")), index=False)
-    pd.DataFrame({'global_alpha': [global_alpha], 'class_wise_alpha': [alpha]}).to_csv(os.path.join(folder, f"{os.path.basename(path_to_features).replace('_features.hdf5', '')}_alpha.csv"), index=False)
+    #pd.DataFrame({'global_alpha': [global_alpha], 'class_wise_alpha': [alpha]}).to_csv(os.path.join(folder, f"alpha.csv"), index=False)
+pd.DataFrame({'file': path_to_files, 'alpha': local_alphas}).to_csv(os.path.join(folder, "alpha.csv"), index=False)
