@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-files = glob.glob("test run all slides/stats/*.csv")
+files = glob.glob("test run all slides pytorch classifier/stats/*.csv")
 files.sort()
 
 genus_counts = {}
@@ -28,12 +28,15 @@ d = [x.split(".")[0] for x in d]
 
 df["depth"] = d
 
+df["alpha"] = pd.read_csv("test run all slides pytorch classifier/alpha.csv").iloc[:, 1].values
+df["adjust_count"] = df["total_count"] * df["alpha"]
+
 df["total_count"].mean()
 
 # smooth the data
 for i in [0, 4, 11, 14]:
-    y = df[i].rolling(window=5).mean()
-
+    #y = df[i].rolling(window=5).mean()
+    y = (df[i] / (1 - df["alpha"])).rolling(window=5).mean()
     #y = df["count"].rolling(window=1).mean()
     #y = (df["count"] * df["total_count"].mean() / df["total_count"]).rolling(window=5).mean()
 
