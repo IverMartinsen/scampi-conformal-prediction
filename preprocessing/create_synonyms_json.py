@@ -68,7 +68,7 @@ for i in range(len(old_keys)):
 ###
 ### Save dictionary as json file
 ###
-with open("first_name_synonyms.json", "w") as file:
+with open("synonyms.json", "w") as file:
     json.dump(first_name_synonyms, file, indent=4, sort_keys=True)
 
 
@@ -76,7 +76,7 @@ with open("first_name_synonyms.json", "w") as file:
 ### Load dict of synonyms add column of correctly spelled first names to the labels dataframe
 ###
 
-with open("first_name_synonyms.json", "r") as file:
+with open("synonyms.json", "r") as file:
     first_name_synonyms = json.load(file)
 
 firstnames = []
