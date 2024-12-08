@@ -13,7 +13,7 @@
 *.tfrecords
 jobfile.yml
 *.pkl
-/figures
+*/figures
 *.pth
 train_on_springfield.yml
 
