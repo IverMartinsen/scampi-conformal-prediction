@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-files = glob.glob("test run all slides pytorch classifier/stats/*.csv")
+files = glob.glob('./postprocessing/results/test run all slides pytorch classifier alpha 0.5/stats' + "/*.csv")
 files.sort()
 
 genus_counts = {}
@@ -15,30 +15,21 @@ for file in files:
     genus_counts[os.path.basename(file)] = dict(zip(count[0], count[1]))
 
 df = pd.DataFrame(genus_counts).T.fillna(0).astype(int)
-# add index
-df["filename"] = df.index
-#df = pd.DataFrame(genus_counts.items(), columns=["filename", "count"])
+df["filename"] = df.index # add index
+df.index = range(len(df)) # reset index
 
-total_counts = pd.read_csv("hdf5/counts.csv")["count"].values
-df["total_count"] = total_counts
+df["total_count"] = pd.read_csv('./preprocessing/hdf5/counts.csv')["count"].values # add total count
 
-d = df.index.values
+d = df["filename"].values
 d = [x.split(" ")[1] for x in d]
 d = [x.split(".")[0] for x in d]
-
 df["depth"] = d
 
-df["alpha"] = pd.read_csv("test run all slides pytorch classifier/alpha.csv").iloc[:, 1].values
-df["adjust_count"] = df["total_count"] * df["alpha"]
-
-df["total_count"].mean()
+df["alpha"] = pd.read_csv('./postprocessing/results/test run all slides pytorch classifier alpha 0.5/alpha.csv').iloc[:, 1].values
 
 # smooth the data
 for i in [0, 4, 11, 14]:
-    #y = df[i].rolling(window=5).mean()
-    y = (df[i] / (1 - df["alpha"])).rolling(window=5).mean()
-    #y = df["count"].rolling(window=1).mean()
-    #y = (df["count"] * df["total_count"].mean() / df["total_count"]).rolling(window=5).mean()
+    y = (df[i] / (1 - df["alpha"])).rolling(window=1).mean()
 
     plt.figure(figsize=(20, 10))
     plt.plot(df["depth"], y, label="Genus count", marker="o")
@@ -46,5 +37,5 @@ for i in [0, 4, 11, 14]:
     plt.xlabel("Depth")
     plt.ylabel("Count")
     plt.title("Genus distribution")
-    plt.savefig(f"Class{i}_distribution.png")
+    plt.savefig(f"./postprocessing/results/test run all slides pytorch classifier alpha 0.5/Class{i}_distribution.png")
     plt.close()
