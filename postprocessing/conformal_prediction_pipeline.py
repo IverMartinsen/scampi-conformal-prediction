@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
-from utils import load_hdf5, read_fn
+from utils import load_hdf5, read_fn, LinearClassifier
 
 
 def compute_reference_entropy(classifier, class_label):
@@ -63,14 +63,6 @@ x_un = x_un[pred == 0]
 # =============================================================================
 classifier = joblib.load("genus_classifier.pkl")
 y_prob = classifier.predict_proba(x_un)
-
-class LinearClassifier(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LinearClassifier, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
-    
-    def forward(self, x):
-        return self.linear(x)
 
 classifier = LinearClassifier(384, 20)
 classifier.load_state_dict(torch.load("classifier.pth", map_location="mps"))
