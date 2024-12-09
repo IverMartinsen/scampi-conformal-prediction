@@ -53,3 +53,11 @@ def init_centroids_semi_supervised(x_lab, y_lab, x_un, k):
         centroids[k_lab + i] = x_un[rng.choice(range(x_un.shape[0]), p=p)]
     
     return centroids, cluster_labs
+
+class LinearClassifier(torch.nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LinearClassifier, self).__init__()
+        self.linear = torch.nn.Linear(input_dim, output_dim)
+    
+    def forward(self, x):
+        return self.linear(x)
