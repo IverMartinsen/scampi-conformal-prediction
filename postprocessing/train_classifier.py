@@ -17,7 +17,6 @@ from torchvision import transforms
 from sklearn.metrics import classification_report
 from sklearn.utils.class_weight import compute_class_weight
 from sklearn.model_selection import train_test_split, StratifiedKFold
-print(torchvision.__version__)
 
 
 parser = argparse.ArgumentParser()
@@ -29,6 +28,7 @@ parser.add_argument("--epochs", type=int, default=100)
 parser.add_argument("--data_dir", type=str, default="data/labelled imagefolders/imagefolder_20")
 parser.add_argument("--num_workers", type=int, default=4)
 parser.add_argument("--weight_decay", type=float, default=0.0)
+parser.add_argument("--fold", type=int, default=0)
 args = parser.parse_args()
 
 
@@ -46,10 +46,14 @@ transform = transforms.Compose([
 
 dataset = torchvision.datasets.ImageFolder(args.data_dir, transform=transform)
 
-i_tr, i_val = train_test_split(np.arange(len(dataset)), test_size=0.2, random_state=42, stratify=dataset.targets)
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+split_gen = skf.split(np.arange(len(dataset)), dataset.targets)
+
+for i, (i_tr, i_val) in enumerate(split_gen): # get the i-th fold
+    if i == args.fold:
+        break
 
 x_tr, x_val = torch.utils.data.Subset(dataset, i_tr), torch.utils.data.Subset(dataset, i_val)
-#x_tr.dataset.transform, x_val.dataset.transform = transform, transform
 
 tr_loader = torch.utils.data.DataLoader(
     x_tr,
@@ -138,7 +142,7 @@ def test_model(model, dataloader, loss_fn):
     correct /= size
     return test_loss, correct
 
-def train_model(model, x_tr, loss_fn, optimizer, num_epochs, x_val=None):
+def train_model(model, x_tr, loss_fn, optimizer, num_epochs, x_val=None, scheduler=None):
     for epoch in range(num_epochs):
         loss, acc, t = train_one_epoch(model, x_tr, loss_fn, optimizer)
         loss, acc, t = round(loss, 4), round(acc, 4), round(t, 4)
@@ -147,7 +151,10 @@ def train_model(model, x_tr, loss_fn, optimizer, num_epochs, x_val=None):
             val_msg = f", Test Loss: {round(test_loss, 4)}, Test Accuracy: {round(test_acc, 4)}"
         else:
             val_msg = ""
-        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {loss}, Accuracy: {acc}, Time: {t}" + val_msg)
+        lr = optimizer.param_groups[0]["lr"]
+        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {loss}, Accuracy: {acc}, Time: {t}, LR: {lr}" + val_msg)
+        if scheduler is not None:
+            scheduler.step()
 
 if __name__ == "__main__":
     
@@ -159,9 +166,11 @@ if __name__ == "__main__":
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
-    train_model(model, tr_loader, loss_fn, optimizer, args.epochs, val_loader)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=50, gamma=0.1)
+    
+    train_model(model, tr_loader, loss_fn, optimizer, args.epochs, val_loader, scheduler)
 
-    torch.save(classifier.state_dict(), "classifier.pth")
+    torch.save(classifier.state_dict(), f"classifier_fold_{args.fold}.pth")
     
     model.eval()
     
@@ -186,10 +195,10 @@ if __name__ == "__main__":
         y_true, y_pred, target_names=x_val.dataset.classes, output_dict=True,
         )
     
-    pd.DataFrame(report).to_csv("classification_report.csv")
+    pd.DataFrame(report).to_csv(f"classification_report_fold_{args.fold}.csv")
     
     e = {}
     for i in range(20):
         e[x_val.dataset.classes[i]] = y_entr[y_true == i][np.random.choice(len(y_entr[y_true == i]), 40)]
     
-    pd.DataFrame(e).to_csv("entropy.csv")
+    pd.DataFrame(e).to_csv(f"entropy_fold_{args.fold}.csv")
