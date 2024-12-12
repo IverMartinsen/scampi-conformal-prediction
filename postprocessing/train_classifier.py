@@ -44,13 +44,6 @@ transform = transforms.Compose([
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
 ])
 
-#test_transform = transforms.Compose([
-#    transforms.Resize(256),
-#    transforms.CenterCrop(224),
-#    transforms.ToTensor(),
-#    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
-#])
-
 dataset = torchvision.datasets.ImageFolder(args.data_dir, transform=transform)
 
 i_tr, i_val = train_test_split(np.arange(len(dataset)), test_size=0.2, random_state=42, stratify=dataset.targets)
