@@ -29,6 +29,8 @@ parser.add_argument("--data_dir", type=str, default="data/labelled imagefolders/
 parser.add_argument("--num_workers", type=int, default=4)
 parser.add_argument("--weight_decay", type=float, default=0.0)
 parser.add_argument("--fold", type=int, default=0)
+parser.add_argument("--backbone_arch", type=str, default="vit_small")
+parser.add_argument("--output_dir", type=str, default="")
 args = parser.parse_args()
 
 
@@ -75,8 +77,8 @@ print(f"Number of training images: {len(i_tr)}")
 print(f"Number of validation images: {len(i_val)}")
 
 # load the model
-pretrained_model = vits.__dict__["vit_small"](patch_size=16, num_classes=0, img_size=[224])
-vit_utils.load_pretrained_weights(pretrained_model, args.pretrained_weights, "teacher", "vit_small", 16)
+pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=0, img_size=[224])
+vit_utils.load_pretrained_weights(pretrained_model, args.pretrained_weights, "teacher", args.backbone_arch, 16)
 
 
 class LinearClassifier(torch.nn.Module):
@@ -88,7 +90,9 @@ class LinearClassifier(torch.nn.Module):
         return self.linear(x)
 
 
-classifier = LinearClassifier(384, 20)
+input_dim = {"vit_small": 384, "vit_base": 768}[args.backbone_arch]
+
+classifier = LinearClassifier(input_dim, 20)
 
 model = torch.nn.Sequential(pretrained_model, classifier).to(args.device)
 
@@ -103,7 +107,6 @@ def train_one_epoch(model, dataloader, loss_fn, optimizer):
     model.train()
     size = len(dataloader.dataset)
     correct = 0
-    t = time()
     for x, y in dataloader:
         x = x.to(args.device)
         y = y.to(args.device)
@@ -125,7 +128,7 @@ def train_one_epoch(model, dataloader, loss_fn, optimizer):
     
     accuracy = correct / size
     
-    return loss.item(), accuracy, time() - t
+    return loss.item(), accuracy
 
 def test_model(model, dataloader, loss_fn):
     model.eval()
@@ -143,20 +146,29 @@ def test_model(model, dataloader, loss_fn):
     return test_loss, correct
 
 def train_model(model, x_tr, loss_fn, optimizer, num_epochs, x_val=None, scheduler=None):
+
     for epoch in range(num_epochs):
-        loss, acc, t = train_one_epoch(model, x_tr, loss_fn, optimizer)
-        loss, acc, t = round(loss, 4), round(acc, 4), round(t, 4)
+
+        t = time()
+
+        loss, acc = train_one_epoch(model, x_tr, loss_fn, optimizer)
+        
         if x_val is not None:
             test_loss, test_acc = test_model(model, x_val, loss_fn)
             val_msg = f", Test Loss: {round(test_loss, 4)}, Test Accuracy: {round(test_acc, 4)}"
         else:
             val_msg = ""
+
         lr = optimizer.param_groups[0]["lr"]
-        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {loss}, Accuracy: {acc}, Time: {t}, LR: {lr}" + val_msg)
+
         if scheduler is not None:
             scheduler.step()
 
+        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {round(loss, 4)}, Accuracy: {round(acc, 4)}, Time: {round(time() - t, 4)}, LR: {lr}" + val_msg)
+
 if __name__ == "__main__":
+    
+    os.makedirs(args.output_dir, exist_ok=True)
     
     weights = compute_class_weight(
         "balanced", classes=np.unique(x_tr.dataset.targets), y=x_tr.dataset.targets,
@@ -166,11 +178,11 @@ if __name__ == "__main__":
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
 
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=50, gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     
     train_model(model, tr_loader, loss_fn, optimizer, args.epochs, val_loader, scheduler)
 
-    torch.save(classifier.state_dict(), f"classifier_fold_{args.fold}.pth")
+    torch.save(classifier.state_dict(), os.path.join(args.output_dir, f"classifier_fold_{args.fold}.pth"))
     
     model.eval()
     
@@ -195,10 +207,10 @@ if __name__ == "__main__":
         y_true, y_pred, target_names=x_val.dataset.classes, output_dict=True,
         )
     
-    pd.DataFrame(report).to_csv(f"classification_report_fold_{args.fold}.csv")
+    pd.DataFrame(report).to_csv(os.path.join(args.output_dir, f"classification_report_fold_{args.fold}.csv"))
     
     e = {}
     for i in range(20):
         e[x_val.dataset.classes[i]] = y_entr[y_true == i][np.random.choice(len(y_entr[y_true == i]), 40)]
     
-    pd.DataFrame(e).to_csv(f"entropy_fold_{args.fold}.csv")
+    pd.DataFrame(e).to_csv(os.path.join(args.output_dir, f"entropy_fold_{args.fold}.csv"))
