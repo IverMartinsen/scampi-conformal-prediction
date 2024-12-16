@@ -1,14 +1,19 @@
 import os
+import sys
+
+sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "vit"))
+
 import glob
 import argparse
 import h5py
 import torch
 import torchvision
-import vit_utils
+import vit.vit_utils as vit_utils
 import numpy as np
-import vision_transformer as vits
+import vit.vision_transformer as vits
 from torchvision import transforms as pth_transforms
-from hdf5_dataloader_v2 import HDF5Dataset
+from vit.hdf5_dataloader_v2 import HDF5Dataset
 
 print(f"Using {torch.cuda.get_device_name(0)}.")
 print(f"Using GPU with {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB memory.")
@@ -45,8 +50,8 @@ for path in file_paths:
     
     ds = HDF5Dataset(path, transform=transform)
     args.pretrained_weights = '/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8485178/checkpoint.pth'
-    ds = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/labelled imagefolders/imagefolder_20/', transform=transform)
-    output_fname = "./labelled_crops_features.hdf5"
+    #ds = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/labelled imagefolders/imagefolder_20/', transform=transform)
+    #output_fname = "./labelled_crops_features.hdf5"
 
     data_loader = torch.utils.data.DataLoader(
         ds, 
