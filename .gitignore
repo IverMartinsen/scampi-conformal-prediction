@@ -16,6 +16,7 @@ jobfile.yml
 */figures
 *.pth
 train_on_springfield.yml
+extract_features_on_springfield.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
