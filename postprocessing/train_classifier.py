@@ -4,19 +4,19 @@ import sys
 sys.path.append(os.getcwd())
 sys.path.append(os.path.join(os.getcwd(), "vit"))
 
+import json
 import torch
 import argparse
-import vit.vit_utils as vit_utils
 import torchvision
 import numpy as np
-import pandas as pd
+import vit.vit_utils as vit_utils
 import vit.vision_transformer as vits
-from time import time
 from PIL import Image
+from time import time
+from datetime import datetime
 from torchvision import transforms
-from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
-from sklearn.model_selection import train_test_split, StratifiedKFold
 
 
 parser = argparse.ArgumentParser()
@@ -28,15 +28,17 @@ parser.add_argument("--epochs", type=int, default=100)
 parser.add_argument("--data_dir", type=str, default="data/labelled imagefolders/imagefolder_20")
 parser.add_argument("--num_workers", type=int, default=4)
 parser.add_argument("--weight_decay", type=float, default=0.0)
-parser.add_argument("--fold", type=int, default=0)
 parser.add_argument("--backbone_arch", type=str, default="vit_small")
 parser.add_argument("--output_dir", type=str, default="")
+parser.add_argument("--seed", type=int, default=42)
+parser.add_argument("--validation_split", type=float, default=None)
 args = parser.parse_args()
 
 
 # load the data
 print("Loading data...")
 transform = transforms.Compose([
+    transforms.Resize((224, 224), interpolation=3),
     transforms.ColorJitter(brightness=0.0, contrast=0.0, saturation=0.0, hue=0.1),
     transforms.RandomResizedCrop(224, scale=(0.5, 1.0), interpolation=Image.BICUBIC),
     transforms.RandomHorizontalFlip(p=0.5),
@@ -48,14 +50,22 @@ transform = transforms.Compose([
 
 dataset = torchvision.datasets.ImageFolder(args.data_dir, transform=transform)
 
-skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-split_gen = skf.split(np.arange(len(dataset)), dataset.targets)
+if args.validation_split is not None:
+    i_tr, i_val = train_test_split(np.arange(len(dataset)), test_size=args.validation_split, stratify=dataset.targets, random_state=args.seed)
 
-for i, (i_tr, i_val) in enumerate(split_gen): # get the i-th fold
-    if i == args.fold:
-        break
+    x_tr, x_val = torch.utils.data.Subset(dataset, i_tr), torch.utils.data.Subset(dataset, i_val)
 
-x_tr, x_val = torch.utils.data.Subset(dataset, i_tr), torch.utils.data.Subset(dataset, i_val)
+    val_loader = torch.utils.data.DataLoader(
+        x_val,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=args.num_workers,
+        pin_memory=True,
+    )
+else:
+    x_tr = dataset
+    x_val = None
+    val_loader = None
 
 tr_loader = torch.utils.data.DataLoader(
     x_tr,
@@ -65,16 +75,9 @@ tr_loader = torch.utils.data.DataLoader(
     pin_memory=True,
 )
 
-val_loader = torch.utils.data.DataLoader(
-    x_val,
-    batch_size=args.batch_size,
-    shuffle=False,
-    num_workers=args.num_workers,
-    pin_memory=True,
-)
-
-print(f"Number of training images: {len(i_tr)}")
-print(f"Number of validation images: {len(i_val)}")
+print(f"Number of training images: {len(x_tr)}")
+if x_val is not None:
+    print(f"Number of validation images: {len(x_val)}")
 
 # load the model
 pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=0, img_size=[224])
@@ -171,46 +174,25 @@ if __name__ == "__main__":
     os.makedirs(args.output_dir, exist_ok=True)
     
     weights = compute_class_weight(
-        "balanced", classes=np.unique(x_tr.dataset.targets), y=x_tr.dataset.targets,
+        "balanced", classes=np.unique(dataset.targets), y=dataset.targets,
         )
     
     loss_fn = torch.nn.CrossEntropyLoss(weight=torch.tensor(weights, dtype=torch.float32).to(args.device))
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+    trainable_params = filter(lambda p: p.requires_grad, model.parameters())
+    
+    optimizer = torch.optim.Adam([{
+        "params": trainable_params,
+        "lr": args.lr,
+        "weight_decay": args.weight_decay,
+    }])
 
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     
     train_model(model, tr_loader, loss_fn, optimizer, args.epochs, val_loader, scheduler)
 
-    torch.save(classifier.state_dict(), os.path.join(args.output_dir, f"classifier_fold_{args.fold}.pth"))
+    torch.save(classifier.state_dict(), os.path.join(args.output_dir, f"classifier.pth"))
     
-    model.eval()
+    with open(os.path.join(args.output_dir, f"args.json"), "w") as f:
+        json.dump(vars(args), f)
     
-    y_true = []
-    y_pred = []
-    y_entr = []
-    with torch.no_grad():
-        for _ in range(10): # augment the data with 10 random crops
-            for x, y in val_loader:
-                x = x.to(args.device)
-                y = y.to(args.device)
-                logits = model(x)
-                proba = torch.nn.functional.softmax(logits, dim=1)
-                y_true.append(y.cpu().numpy())
-                y_pred.append(logits.argmax(1).cpu().numpy())
-                y_entr.append(-torch.sum(proba * torch.log(proba), dim=1).cpu().numpy())
-    y_true = np.concatenate(y_true)
-    y_pred = np.concatenate(y_pred)
-    y_entr = np.concatenate(y_entr)
-    
-    report = classification_report(
-        y_true, y_pred, target_names=x_val.dataset.classes, output_dict=True,
-        )
-    
-    pd.DataFrame(report).to_csv(os.path.join(args.output_dir, f"classification_report_fold_{args.fold}.csv"))
-    
-    e = {}
-    for i in range(20):
-        e[x_val.dataset.classes[i]] = y_entr[y_true == i][np.random.choice(len(y_entr[y_true == i]), 40)]
-    
-    pd.DataFrame(e).to_csv(os.path.join(args.output_dir, f"entropy_fold_{args.fold}.csv"))
