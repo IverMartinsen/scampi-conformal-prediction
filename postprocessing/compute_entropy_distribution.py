@@ -1,22 +1,38 @@
+import os
+import sys
+
+sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "vit"))
+
 import torch
-import vit_utils
+import vit.vit_utils as vit_utils
 import torchvision
 import numpy as np
 import pandas as pd
-import vision_transformer as vits
+import vit.vision_transformer as vits
 from tqdm import tqdm
 from PIL import Image
 from torchvision import transforms
 
 backbone_weights = "/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8485178/checkpoint.pth"
-classifier_weights = "classifier.pth"
-data_dir = "labelled imagefolders/imagefolder_20"
+classifier_weights = "./postprocessing/trained_models/vit_small/classifier_20241216122634.pth"
+data_dir = "./data/labelled imagefolders/imagefolder_20"
 batch_size = 32
 device = "mps"
 
+#transform = transforms.Compose([
+#    transforms.RandomResizedCrop(224, scale=(0.5, 1.0), interpolation=Image.BICUBIC),
+#    transforms.RandomHorizontalFlip(p=0.5),
+#    vit_utils.GaussianBlur(p=0.5),
+#    transforms.ToTensor(),
+#    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+#])
+
 transform = transforms.Compose([
+    transforms.ColorJitter(brightness=0.0, contrast=0.0, saturation=0.0, hue=0.1),
     transforms.RandomResizedCrop(224, scale=(0.5, 1.0), interpolation=Image.BICUBIC),
     transforms.RandomHorizontalFlip(p=0.5),
+    transforms.RandomVerticalFlip(p=0.5),
     vit_utils.GaussianBlur(p=0.5),
     transforms.ToTensor(),
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
@@ -45,7 +61,7 @@ model.eval()
 e = []
 y = []
 p = []
-for i in tqdm(range(5)):
+for i in tqdm(range(10)):
     for images, labels in dataloader:
         images = images.to(device)
         with torch.no_grad():
