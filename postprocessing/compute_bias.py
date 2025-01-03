@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 from postprocessing.utils import load_hdf5, lab_to_name, LinearClassifier
 
 
-
 path = './data/NO 15-9-1/features'
 path_to_files = glob.glob(path + "/*.hdf5")
 path_to_files.sort()
