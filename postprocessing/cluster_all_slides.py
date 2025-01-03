@@ -8,14 +8,7 @@ from tqdm import tqdm
 from PIL import Image
 from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import euclidean_distances
-from utils import read_fn, init_centroids_semi_supervised, load_hdf5
-
-
-lab_to_name = {
-    3: "azolla",
-    11: "inaperturopollenites",
-    14: "palaeoperidinium",
-    }
+from utils import read_fn, init_centroids_semi_supervised, load_hdf5, lab_to_name
 
 ood_detector = joblib.load("ood_detection_model.pkl")
 

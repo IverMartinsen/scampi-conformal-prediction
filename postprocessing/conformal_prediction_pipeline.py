@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
-from utils import load_hdf5, read_fn, LinearClassifier
+from utils import load_hdf5, read_fn, LinearClassifier, lab_to_name
 
 
 def compute_reference_entropy(classifier, class_label):
@@ -19,15 +19,6 @@ def compute_reference_entropy(classifier, class_label):
     e = -np.sum(p * np.log(p), axis=1)
 
     return e
-
-
-lab_to_name = {
-    0: "alisocysta",
-    3: "azolla",
-    4: "bisaccate",
-    11: "inaperturopollenites",
-    14: "palaeoperidinium",
-    }
 
 
 path_to_features = '/Users/ima029/Desktop/NO 6407-6-5/features/6407_6-5 2030 mDC_features.hdf5'

@@ -1,44 +1,24 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import json
 
-ref_ent = pd.read_csv('./postprocessing/entropy_distribution.csv')
-df = pd.read_csv('./postprocessing/entropies_15_9_1.csv')
+with open('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/merged_entropies.json', 'r') as f:
+    ent_lab = json.load(f)
 
-e = df["entropy"].values
-y = df["prediction"].values
+with open('...', 'r') as f:
+    ent_unl = json.load(f)
 
-
-norm_stats = pd.read_csv('/Users/ima029/Desktop/NO 6407-6-5/entropy_fold_0.csv', index_col=0)
-# import normal distribution
-
-from scipy.stats import norm
+classes_of_interest = ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palaeoperidinium']
 
 
+for class_name in classes_of_interest:
 
-plt.hist(e, bins=100, alpha=0.5, density=True, color="tab:orange", label="NO 15/9-1")
-plt.legend(fontsize=20)
-plt.xlabel("log Entropy", fontsize=20)
-plt.ylabel("Density", fontsize=20)
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
-plt.savefig("entropy_distribution.png", dpi=300)
-plt.close()
-
-
-
-for i in [0, 4, 11, 14]:
-
-    class_name = lab_to_name[i]
-    mean, std = norm_stats.loc[["mean", "std"], class_name]
-    x = norm.rvs(loc=mean, scale=std, size=10000)
-    
-    #x = ref_ent.iloc[:, i].values
-    z = e[y == i]
+    x = ent_lab[class_name]
+    z = ent_unl[class_name]
     
     fig = plt.figure(figsize=(20, 10))
-    plt.hist(x, bins=100, alpha=0.5, density=True, color="tab:blue", label=class_name)
-    
+    plt.hist(np.log(x), bins=100, alpha=0.5, density=True, color="tab:blue", label=class_name)
     plt.hist(np.log(z), bins=100, alpha=0.5, density=True, color="tab:orange", label="NO 15/9-1")
     plt.legend(fontsize=20)
     plt.xlabel("log Entropy", fontsize=20)
@@ -47,18 +27,6 @@ for i in [0, 4, 11, 14]:
     plt.yticks(fontsize=20)
     plt.savefig(f"{class_name}_entropy_distribution.png", dpi=300)
     plt.close()
-
-
-bias = pd.read_csv('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/figures/bias_15_9_1.csv')
-
-for i in [0, 4, 11, 14]:
-
-    class_name = lab_to_name[i]
-    #x = ref_ent.iloc[:, i].values
-    #x = np.log(x)
-    mean, std = norm_stats.loc[["mean", "std"], class_name]
-    x = norm.rvs(loc=mean, scale=std, size=10000)
-
 
 
     z = e[y == i]

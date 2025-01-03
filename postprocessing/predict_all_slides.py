@@ -6,7 +6,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from PIL import Image
-from utils import load_hdf5, read_fn
+from utils import load_hdf5, read_fn, lab_to_name
 
 
 def compute_reference_entropy(classifier, class_label):
@@ -19,15 +19,6 @@ def compute_reference_entropy(classifier, class_label):
     e = -np.sum(p * np.log(p), axis=1)
 
     return e
-
-
-lab_to_name = {
-    0: "alisocysta",
-    3: "azolla",
-    4: "bisaccate",
-    11: "inaperturopollenites",
-    14: "palaeoperidinium",
-    }
 
 
 global_alpha = 0.05

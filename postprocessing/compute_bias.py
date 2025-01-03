@@ -1,35 +1,13 @@
-import os
-import sys
 import glob
+import json
 import torch
 import joblib
 import numpy as np
 import pandas as pd
-from postprocessing.utils import load_hdf5
+import matplotlib.pyplot as plt
+from postprocessing.utils import load_hdf5, lab_to_name
 
 
-lab_to_name = {
-    0: "alisocysta",
-    1: "areoligera",
-    2: "areosphaeridium",
-    3: "azolla",
-    4: "bisaccate",
-    5: "cleistosphaeridium",
-    6: "deflandrea",
-    7: "eatonicysta",
-    8: "glaphyrocysta",
-    9: "hystrichokolpoma",
-    10: "hystrichosphaeridium",
-    11: "inaperturopollenites",
-    12: "isabelidinium",
-    13: "palaeocystodinium",
-    14: "palaeoperidinium",
-    15: "phthanoperidinium",
-    16: "spiniferites",
-    17: "subtilisphaera",
-    18: "svalbardella",
-    19: "wetzeliella",
-    }
 
 path = './data/NO 15-9-1/features'
 path_to_files = glob.glob(path + "/*.hdf5")
@@ -44,7 +22,7 @@ class LinearClassifier(torch.nn.Module):
         return self.linear(x)
 
 classifier = LinearClassifier(384, 20)
-classifier.load_state_dict(torch.load('./postprocessing/trained_models/vit_small/classifier_20241216122634.pth', map_location="mps"))
+classifier.load_state_dict(torch.load('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250103120412/classifier.pth', map_location="mps"))
 
 predictions = []
 entropies = []
@@ -87,27 +65,31 @@ predictions = np.concatenate(predictions)
 entropies = np.concatenate(entropies)
 
 #save entropies
-pd.DataFrame({"entropy": entropies, "prediction": predictions}).to_csv("entropies.csv", index=False)
+d = {}
 
+for i in range(20):
+    d[lab_to_name[i]] = entropies[predictions == i].tolist()
+
+with open("entropies_15_9_1.json", "w") as f:
+    json.dump(d, f)
+
+# compute class frequency
 classes, counts = np.unique(predictions, return_counts=True)
 
 n = len(predictions)
 
 bias = counts / n
 
-pd.DataFrame({"class": [lab_to_name[lab] for lab in classes], "bias": bias}).to_csv("bias.csv", index=False)
-
+pd.DataFrame({"class": [lab_to_name[lab] for lab in classes], "freq": bias}).to_csv("class_freq.csv", index=False)
 
 c = [lab_to_name[lab] for lab in classes]
-
-import matplotlib.pyplot as plt
 
 plt.figure(figsize=(10, 5))
 plt.bar(classes, bias)
 plt.xticks(classes, [lab_to_name[lab] for lab in classes], rotation=45, ha="right")
 plt.axhline(y=1/20, color='r', linestyle='--')
-plt.ylabel("Bias")
-plt.title("Bias of the classifier")
+plt.ylabel("Frequency")
+plt.title("Prior frequency of classes")
 plt.tight_layout()
-plt.savefig("bias.png", dpi=300)
+plt.savefig("class_freq_15_9_1.png", dpi=300)
 plt.close()

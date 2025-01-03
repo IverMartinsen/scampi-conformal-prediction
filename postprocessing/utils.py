@@ -5,6 +5,29 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.metrics.pairwise import euclidean_distances
 
+lab_to_name = {
+    0: "alisocysta",
+    1: "areoligera",
+    2: "areosphaeridium",
+    3: "azolla",
+    4: "bisaccate",
+    5: "cleistosphaeridium",
+    6: "deflandrea",
+    7: "eatonicysta",
+    8: "glaphyrocysta",
+    9: "hystrichokolpoma",
+    10: "hystrichosphaeridium",
+    11: "inaperturopollenites",
+    12: "isabelidinium",
+    13: "palaeocystodinium",
+    14: "palaeoperidinium",
+    15: "phthanoperidinium",
+    16: "spiniferites",
+    17: "subtilisphaera",
+    18: "svalbardella",
+    19: "wetzeliella",
+    }
+
 def read_fn(bytes):
     image = torch.tensor(bytes) # sequence of bytes
     image = torchvision.io.decode_jpeg(image) # shape: (3, H, W)
