@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from postprocessing.utils import load_hdf5, lab_to_name
+from postprocessing.utils import load_hdf5, lab_to_name, LinearClassifier
 
 
 
@@ -13,13 +13,6 @@ path = './data/NO 15-9-1/features'
 path_to_files = glob.glob(path + "/*.hdf5")
 path_to_files.sort()
 
-class LinearClassifier(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LinearClassifier, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
-    
-    def forward(self, x):
-        return self.linear(x)
 
 classifier = LinearClassifier(384, 20)
 classifier.load_state_dict(torch.load('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250103120412/classifier.pth', map_location="mps"))

@@ -12,6 +12,7 @@ import pandas as pd
 import vit.vision_transformer as vits
 from tqdm import tqdm
 from PIL import Image
+from utils import LinearClassifier
 from torchvision import transforms
 
 backbone_weights = "/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8485178/checkpoint.pth"
@@ -43,14 +44,6 @@ dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle
 
 backbone = vits.__dict__["vit_small"](patch_size=16, num_classes=0, img_size=[224])
 vit_utils.load_pretrained_weights(backbone, backbone_weights, "teacher", "vit_small", 16)
-
-class LinearClassifier(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LinearClassifier, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
-    
-    def forward(self, x):
-        return self.linear(x)
 
 classifier = LinearClassifier(384, 20)
 classifier.load_state_dict(torch.load(classifier_weights, map_location=device))

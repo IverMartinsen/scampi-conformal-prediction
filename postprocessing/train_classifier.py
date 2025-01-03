@@ -14,6 +14,7 @@ import vit.vision_transformer as vits
 from PIL import Image
 from time import time
 from datetime import datetime
+from utils import LinearClassifier
 from torchvision import transforms
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
@@ -82,16 +83,6 @@ if x_val is not None:
 # load the model
 pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=0, img_size=[224])
 vit_utils.load_pretrained_weights(pretrained_model, args.pretrained_weights, "teacher", args.backbone_arch, 16)
-
-
-class LinearClassifier(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LinearClassifier, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
-    
-    def forward(self, x):
-        return self.linear(x)
-
 
 input_dim = {"vit_small": 384, "vit_base": 768}[args.backbone_arch]
 

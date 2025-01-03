@@ -6,7 +6,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from PIL import Image
-from utils import load_hdf5, read_fn, lab_to_name
+from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
 
 
 def compute_reference_entropy(classifier, class_label):
@@ -31,14 +31,6 @@ folder = "./postprocessing/results/test run 15-9-1 pytorch classifier alpha 0.5"
 os.makedirs(folder, exist_ok=True)
 
 local_alphas = []
-
-class LinearClassifier(torch.nn.Module):
-    def __init__(self, input_dim, output_dim):
-        super(LinearClassifier, self).__init__()
-        self.linear = torch.nn.Linear(input_dim, output_dim)
-    
-    def forward(self, x):
-        return self.linear(x)
 
 #classifier = joblib.load("genus_classifier.pkl")
 classifier = LinearClassifier(384, 20)
