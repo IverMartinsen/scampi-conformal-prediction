@@ -15,7 +15,8 @@ classes_of_interest = ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palae
 for class_name in classes_of_interest:
 
     x = ent_lab[class_name]
-    z = ent_unl[class_name]
+    #z = ent_unl[class_name]
+    z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
     
     fig = plt.figure(figsize=(20, 10))
     plt.hist(np.log(x), bins=20, alpha=0.5, density=True, color="tab:blue", label=class_name)
@@ -31,7 +32,7 @@ for class_name in classes_of_interest:
 
     recall = 1.00
 
-    a = np.linspace(0, 1, 101)
+    a = np.linspace(0, 0.99, 100)
 
     b = np.zeros_like(a)
 
@@ -40,11 +41,12 @@ for class_name in classes_of_interest:
         b[j] = np.sum(z < q) / len(z)
 
     plt.figure(figsize=(20, 10))
-    for gamma in [0.001, 0.005, 0.01, 0.05]:
+    for gamma in [0.001, 0.005, 0.01]:
         
         T = np.array([len(ent_unl[k]) for k in ent_unl.keys()]).sum()
         P = T * recall * gamma
-        T_star = len(z)
+        #T_star = len(z)
+        T_star = len(ent_unl[class_name])
         assert T_star > P, print(T_star, P)
         N = T_star - P
         
@@ -67,16 +69,18 @@ for class_name in classes_of_interest:
 
 alpha = 0.95
 gamma = 0.005
-class_name = "palaeoperidinium"
+class_name = "inaperturopollenites"
 
 x = ent_lab[class_name]
-z = ent_unl[class_name]
+#z = ent_unl[class_name]
+z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
 q = np.quantile(x, 1 - alpha)
 beta = np.sum(z < q) / len(z)
 
 T = np.array([len(ent_unl[k]) for k in ent_unl.keys()]).sum()
 P = T * recall * gamma
-T_star = len(z)
+#T_star = len(z)
+T_star = len(ent_unl[class_name])
 N = T_star - P
 
 fdr = 1 / (1 + (1 - alpha) * (P / N) / beta)
