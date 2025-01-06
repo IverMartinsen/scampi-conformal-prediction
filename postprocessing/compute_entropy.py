@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from postprocessing.utils import load_hdf5, lab_to_name, LinearClassifier
 
 
-path = './data/NO 15-9-1/features'
+path = './data/NO 6407-6-5/features'
 path_to_files = glob.glob(path + "/*.hdf5")
 path_to_files.sort()
 
@@ -18,6 +18,7 @@ classifier.load_state_dict(torch.load('/Users/ima029/Desktop/NO 6407-6-5/postpro
 
 predictions = []
 entropies = []
+probabilities = []
 
 for path_to_features in path_to_files:
 
@@ -52,17 +53,22 @@ for path_to_features in path_to_files:
     entropies.append(entropy)
     y_pred = np.argmax(y_prob, axis=1)
     predictions.append(y_pred)
+    probabilities.append(y_prob)
 
 predictions = np.concatenate(predictions)
 entropies = np.concatenate(entropies)
+probabilities = np.concatenate(probabilities)
 
 #save entropies
 d = {}
 
 for i in range(20):
-    d[lab_to_name[i]] = entropies[predictions == i].tolist()
+    q = np.quantile(probabilities[:, i], 0.95)
+    idx = np.where(probabilities[:, i] > q)[0]
+    d[lab_to_name[i]] = entropies[idx].tolist()
+    #d[lab_to_name[i]] = entropies[predictions == i].tolist()
 
-with open("entropies_15_9_1.json", "w") as f:
+with open("entropies_6407_6_5.json", "w") as f:
     json.dump(d, f)
 
 # compute class frequency
@@ -83,5 +89,5 @@ plt.axhline(y=1/20, color='r', linestyle='--')
 plt.ylabel("Frequency")
 plt.title("Prior frequency of classes")
 plt.tight_layout()
-plt.savefig("class_freq_15_9_1.png", dpi=300)
+plt.savefig("class_freq_6407_6_5.png", dpi=300)
 plt.close()
