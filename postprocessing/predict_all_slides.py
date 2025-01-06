@@ -11,7 +11,7 @@ from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
 
 # args
 src_data = './data/NO 6407-6-5'
-alpha = 0.05
+alpha = 0.95
 path_to_ref_ent = './postprocessing/trained_models/merged_entropies.json'
 path_to_ood_detector = './postprocessing/ood_detector/ood_detector.pkl'
 path_to_classifier = './postprocessing/trained_models/20250103120412/classifier.pth'
