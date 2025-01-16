@@ -18,6 +18,7 @@ jobfile.yml
 train_on_springfield.yml
 extract_features_on_springfield.yml
 postprocessing/trained_models
+data/labelled forams
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
