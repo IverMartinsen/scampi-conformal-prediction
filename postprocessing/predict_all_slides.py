@@ -7,14 +7,15 @@ import joblib
 import numpy as np
 import pandas as pd
 from PIL import Image
-from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
+from postprocessing.utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
 
 # args
-src_data = './data/NO 6407-6-5'
+src_data = '/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/Gol-F-30-3, 19-20_ zoom 6.25_CROPS'
 alpha = 0.95
-path_to_ref_ent = './postprocessing/trained_models/merged_entropies.json'
+path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/data/labelled forams/merged_entropies.json'
 path_to_ood_detector = './postprocessing/ood_detector/ood_detector.pkl'
-path_to_classifier = './postprocessing/trained_models/20250103120412/classifier.pth'
+use_ood_detector = False
+path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250116130009/classifier.pth'
 # args end
 
 path_to_files = os.path.join(src_data, "features")
@@ -29,7 +30,7 @@ os.makedirs(folder, exist_ok=True)
 
 ood_detector = joblib.load(path_to_ood_detector)
 
-classifier = LinearClassifier(384, 20)
+classifier = LinearClassifier(384, 11)
 classifier.load_state_dict(torch.load(path_to_classifier, map_location="mps"))
 
 with open(path_to_ref_ent) as f:
@@ -48,17 +49,18 @@ for path_to_features in path_to_files:
     # =============================================================================
     # OOD DETECTION STEP
     # =============================================================================
-    pred = ood_detector.predict(x_un)
-    _, counts = np.unique(pred, return_counts=True)
-    num_black = counts[1]
-    try:
-        num_blurry = counts[2]
-    except IndexError:
-        num_blurry = 0
-    print(f"Detected {num_black} black and {num_blurry} blurry images.")
-    print(f"Removing {num_black + num_blurry} images.")
-    f_un = f_un[pred == 0]
-    x_un = x_un[pred == 0]
+    if use_ood_detector:
+        pred = ood_detector.predict(x_un)
+        _, counts = np.unique(pred, return_counts=True)
+        num_black = counts[1]
+        try:
+            num_blurry = counts[2]
+        except IndexError:
+            num_blurry = 0
+        print(f"Detected {num_black} black and {num_blurry} blurry images.")
+        print(f"Removing {num_black + num_blurry} images.")
+        f_un = f_un[pred == 0]
+        x_un = x_un[pred == 0]
 
     # =============================================================================
     # ENTROPY FILTERING STEP
