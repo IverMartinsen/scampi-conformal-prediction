@@ -9,13 +9,13 @@ from PIL import Image
 
 
 # list paths to all shards
-folder = "/Users/ima029/Desktop/SCAMPI/Repository/data/NO 6407-6-5/100K_BENCHMARK_224x224/images"
-output_file = "/Users/ima029/Desktop/SCAMPI/Repository/data/NO 6407-6-5/100K_BENCHMARK_224x224.hdf5"
+folder = '/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/CROPS_Gol-F-30-3, 19-20_zoom 35/images/'
+output_file = '/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/CROPS_Gol-F-30-3, 19-20_zoom 35/images.hdf5'
 
 read_fn = lambda file: (file, torchvision.io.read_file(file))
 
 print(f"Processing {folder}...")
-files = glob.glob(os.path.join(folder, "*.png"))
+files = glob.glob(os.path.join(folder, "*.jpg"))
 print(f"Number of files: {len(files)}")
 
 file_bytes = {}
@@ -39,7 +39,7 @@ print(f"Finished processing {folder}!")
 if __name__ == "__main__":
     def read_fn(bytes):
         image = torch.tensor(bytes) # sequence of bytes
-        image = torchvision.io.decode_png(image) # shape: (3, H, W)
+        image = torchvision.io.decode_jpeg(image) # shape: (3, H, W)
         image = image.permute(1, 2, 0) # shape: (H, W, 3)
         return image.numpy()
     path_to_hdf5 = output_file
