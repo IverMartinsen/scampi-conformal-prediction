@@ -57,8 +57,9 @@ pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=
 vit_utils.load_pretrained_weights(pretrained_model, args.backbone_weights, "teacher", args.backbone_arch, 16)
 
 input_dim = {"vit_small": 384, "vit_base": 768}[args.backbone_arch]
+output_dim = len(dataset.classes)
 
-classifier = LinearClassifier(input_dim, 20)
+classifier = LinearClassifier(input_dim, output_dim)
 classifier.load_state_dict(torch.load(args.classifier_weights, map_location=args.device))
 
 model = torch.nn.Sequential(pretrained_model, classifier).to(args.device)
@@ -79,7 +80,7 @@ with torch.no_grad():
         proba = torch.nn.functional.softmax(logits, dim=1)
         y_true.append(y.cpu().numpy())
         y_pred.append(logits.argmax(1).cpu().numpy())
-        y_loss.append(log_loss(y.cpu().numpy(), proba.cpu().numpy(), labels=np.arange(20)))
+        y_loss.append(log_loss(y.cpu().numpy(), proba.cpu().numpy(), labels=np.arange(output_dim)))
         y_entr.append(-torch.sum(proba * torch.log(proba), dim=1).cpu().numpy())
 y_true = np.concatenate(y_true)
 y_pred = np.concatenate(y_pred)
@@ -93,7 +94,7 @@ report = classification_report(
 pd.DataFrame(report).to_csv(os.path.join(args.output_dir, f"classification_report.csv"))
 
 e = {}
-for i in range(20):
+for i in range(output_dim):
     x = y_entr[y_true == i]
     e[dataloader.dataset.dataset.classes[i]] = x.tolist()
 

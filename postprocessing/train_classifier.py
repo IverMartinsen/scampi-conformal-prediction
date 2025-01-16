@@ -85,8 +85,9 @@ pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=
 vit_utils.load_pretrained_weights(pretrained_model, args.pretrained_weights, "teacher", args.backbone_arch, 16)
 
 input_dim = {"vit_small": 384, "vit_base": 768}[args.backbone_arch]
+output_dim = len(dataset.classes)
 
-classifier = LinearClassifier(input_dim, 20)
+classifier = LinearClassifier(input_dim, output_dim)
 
 model = torch.nn.Sequential(pretrained_model, classifier).to(args.device)
 
