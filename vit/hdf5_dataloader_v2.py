@@ -28,6 +28,7 @@ def load_png_from_hdf5(path):
         image = image.permute(1, 2, 0) # shape: (H, W, 3)
         image = image.numpy()
         image = Image.fromarray(image)
+        image = image.convert('RGB')
     return image
 
 
