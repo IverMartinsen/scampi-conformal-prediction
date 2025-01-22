@@ -55,6 +55,7 @@ transform = transforms.Compose([
 
 
 dataset = torchvision.datasets.ImageFolder(args.data_dir, transform=transform)
+dataset_clean = torchvision.datasets.ImageFolder(args.data_dir)
 
 for i, (img, _) in enumerate(dataset):
     img = img.permute(1, 2, 0).numpy()
@@ -66,7 +67,7 @@ for i, (img, _) in enumerate(dataset):
 dataloader = torch.utils.data.DataLoader(
     dataset,
     batch_size=args.batch_size,
-    shuffle=True,
+    shuffle=False,
     num_workers=args.num_workers,
     pin_memory=True,
 )
@@ -98,19 +99,23 @@ for i, (images, labels) in enumerate(dataloader):
 
 from sklearn.neighbors import KNeighborsClassifier
 
-knn_model = KNeighborsClassifier(n_neighbors=25, weights="distance")
+knn_model = KNeighborsClassifier(n_neighbors=9)
 
 
 log_model = LogisticRegression(multi_class="multinomial", class_weight="balanced", max_iter=1000, random_state=args.seed)
 
 i_tr, i_val = train_test_split(np.arange(len(dataset)), test_size=0.2, stratify=y, random_state=args.seed)
 
-knn_model.fit(x[i_tr], y[i_tr])
+#knn_model.fit(x[i_tr], y[i_tr])
+knn_model.fit(x, y)
 
-knn_model.score(x[i_val], y[i_val])
+#knn_model.score(x[i_val], y[i_val])
+knn_model.score(x, y)
 
-log_model.fit(x[i_tr], y[i_tr])
-log_model.score(x[i_val], y[i_val])
+#log_model.fit(x[i_tr], y[i_tr])
+log_model.fit(x, y)
+#log_model.score(x[i_val], y[i_val])
+log_model.score(x, y)
 
 from vit.hdf5_dataloader_v2 import HDF5Dataset
 
@@ -142,6 +147,7 @@ for i, (images, _) in enumerate(test_loader):
     print(f"Batch {i+1}/{len(test_loader)}")
 
 y_pred = log_model.predict(x_test)
+y_pred = knn_model.predict(x_test)
 y_pred_proba = log_model.predict_proba(x_test)
 
 #test_dataset_clean = HDF5Dataset('/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/CROPS_Gol-F-30-3, 19-20_zoom 35/hdf5/images.hdf5')
@@ -249,3 +255,76 @@ for c in np.sort(os.listdir(path)):
     for i, img in enumerate(images):
         img.save(os.path.join(dest, c, basenames[i]))
     
+
+
+
+
+
+
+from postprocessing.utils import init_centroids_semi_supervised
+from sklearn.cluster import KMeans
+
+test_dataset_clean = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/CROPS_Gol-F-30-3, 19-20_zoom 35/imagefolder')
+
+# 1, 8, 10
+
+c = 8
+
+x_lab = x
+y_lab = y
+x_un = x_test
+
+x_tot = np.concatenate([x_lab, x_un], axis=0)
+
+
+centroids, cluster_labs = init_centroids_semi_supervised(x_lab, y_lab, x_un, 100)
+
+kmeans = KMeans(n_clusters=100, random_state=0, init=centroids)
+kmeans.fit(x_tot)
+
+z = kmeans.labels_[:len(x_lab)]
+print(np.unique(z, return_counts=True))
+
+c_pred = kmeans.labels_[len(x_lab):]
+
+
+z[y == 10]
+c_pred[c_pred == 65]
+
+output_dir = "cluster_all"
+
+
+a = np.unique(c_pred, return_counts=True)
+
+b = np.unique(z, return_counts=True)
+
+# find the intersection between the two
+intersection = np.intersect1d(a[0], b[0])
+
+
+output_dir = "cluster_all"
+
+clean_images = dataset_clean
+
+n1 = 0
+n = 0
+
+for i in intersection:
+    idx = np.where(c_pred == i)[0]
+    images = [test_dataset_clean[i] for i in idx]
+    p = y_pred[idx]
+    os.makedirs(f"{output_dir}/{i}", exist_ok=True)
+    for j, (img, _) in enumerate(images):
+        name = dataset.classes[int(p[j])]
+        img.save(f"{output_dir}/{i}/{name}.png")
+    os.makedirs(f"{output_dir}/{i}_lab", exist_ok=True)
+    images = [clean_images[i] for i in np.where(z == i)[0]]
+    labels = y[np.where(z == i)[0]]
+    n += len(images)
+    for j, (img, _) in enumerate(images):
+        name = dataset.classes[int(labels[j])]
+        img.save(f"{output_dir}/{i}_lab/{name}.png")
+
+
+
+
