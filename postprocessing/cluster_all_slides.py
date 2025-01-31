@@ -1,45 +1,107 @@
 import os
+import sys
+
+sys.path.append(os.getcwd())
+sys.path.append(os.path.join(os.getcwd(), "vit"))
+
+
 import glob
-import h5py
-import joblib
-import pandas as pd
+import time
+import torch
+import argparse
+import torchvision
 import numpy as np
-from tqdm import tqdm
+import pandas as pd
+import vit.vit_utils as vit_utils
+import vit.vision_transformer as vits
 from PIL import Image
+from tqdm import tqdm
 from sklearn.cluster import KMeans
-from sklearn.metrics.pairwise import euclidean_distances
-from utils import read_fn, init_centroids_semi_supervised, load_hdf5, lab_to_name
+from vit.hdf5_dataloader_v2 import HDF5Dataset
+from torchvision import transforms as pth_transforms
+from postprocessing.utils import init_centroids_semi_supervised, lab_to_name
 
-ood_detector = joblib.load("ood_detection_model.pkl")
+print(f"Using {torch.cuda.get_device_name(0)}.")
+print(f"Using GPU with {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB memory.")
 
-# load labelled features
-path_to_labelled_features = "labelled_crops_features.hdf5"
+parser = argparse.ArgumentParser()
+parser.add_argument("--src_data", type=str, default='/Users/ima029/Desktop/NO 6407-6-5/data/NO 15-9-1/hdf5')
+parser.add_argument("--pretrained_weights", type=str, default='/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8370959/checkpoint.pth')
+parser.add_argument("--batch_size", type=int, default=128)
+parser.add_argument("--device", type=str, default="mps")
+parser.add_argument("--path_to_labeled_crops", type=str, default='/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20')
+parser.add_argument("--output_dir", type=str, default="./postprocessing/results/15-9-1-clustering")
+parser.add_argument("--num_workers", type=int, default=0)
+args = parser.parse_args()
 
-lab_filenames, lab_features, lab_labels = load_hdf5(path_to_labelled_features)
-
-path_to_files = glob.glob("features" + "/*.hdf5")
+path_to_files = glob.glob(args.src_data + "/*.hdf5")
 path_to_files.sort()
 
-for hdf5_file in path_to_files:
+os.makedirs(args.output_dir, exist_ok=True)
 
-    print(f"Processing {hdf5_file}")
+pre_model = vits.__dict__["vit_small"](patch_size=16, num_classes=0, img_size=[224])
+vit_utils.load_pretrained_weights(pre_model, args.pretrained_weights, "teacher", "vit_small", 16)
+
+transform = pth_transforms.Compose([
+    pth_transforms.Resize((256, 256), interpolation=3),
+    pth_transforms.CenterCrop(224),
+    pth_transforms.ToTensor(),
+])
+
+norm_layer = torch.nn.Sequential(
+    pth_transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+)
+
+model = torch.nn.Sequential(norm_layer, pre_model).to(args.device).eval()
+
+ds_labeled = torchvision.datasets.ImageFolder(args.path_to_labeled_crops, transform=transform)
+dataloader_labeled = torch.utils.data.DataLoader(
+    ds_labeled,
+    batch_size=args.batch_size,
+    shuffle=False,
+    num_workers=args.num_workers,
+)
+
+lab_features = np.zeros((len(ds_labeled), 384))
+lab_labels = np.zeros(len(ds_labeled))
+
+for i, (x, y) in enumerate(tqdm(dataloader_labeled)):
+    x = x.to(args.device)
+    y = y.to(args.device)
+    with torch.no_grad():
+        lab_features[i * args.batch_size:(i + 1) * args.batch_size] = model(x).detach().cpu().numpy()
+        lab_labels[i * args.batch_size:(i + 1) * args.batch_size] = y.detach().cpu().numpy()
+
+detections = []
+
+for slide in path_to_files:
     
-    # load unlabelled features
-    path_to_features = hdf5_file
-    path_to_images = os.path.join("./hdf5", os.path.basename(hdf5_file).replace('_features.hdf5', '.hdf5'))
+    print(f"Processing {slide}...")
 
-    f_un, x_un, _ = load_hdf5(path_to_features)
+    start = time.time()
     
-    y_pred = ood_detector.predict(x_un)
-    
-    f_un = f_un[y_pred == 0]
-    x_un = x_un[y_pred == 0]
+    ds = HDF5Dataset(slide, transform=transform)
 
-    detections = []
+    dataloader = torch.utils.data.DataLoader(
+        ds,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=args.num_workers,
+    )
 
-    for lab in [3, 11, 14]:
+    #x_un = np.zeros((len(ds), 384))
+    x_un = []
+    for i, (x, _) in enumerate(tqdm(dataloader)):
+        x = x.to(args.device)
+        with torch.no_grad():
+            #x_un[i * args.batch_size:(i + 1) * args.batch_size] = model(x).detach().cpu().numpy()
+            x_un.append(model(x).detach().cpu().numpy())
+    x_un = np.concatenate(x_un, axis=0)
 
-        f_lab = np.array(lab_filenames)[np.where(lab_labels == lab)]
+    for lab in [0, 4, 11, 14]:
+
+        os.makedirs(os.path.join(args.output_dir, lab_to_name[lab]), exist_ok=True)
+        
         x_lab = lab_features[np.where(lab_labels == lab)]
         y_lab = lab_labels[np.where(lab_labels == lab)]
 
@@ -54,17 +116,20 @@ for hdf5_file in path_to_files:
 
         shifted_labels = kmeans.labels_[len(x_lab):]
 
-        filenames_ = f_un[shifted_labels == 0]
+        retrieved_items = [x for x, _ in ds.samples[np.where(shifted_labels == 0)]]
+        # save crops
+        for idx in np.where(shifted_labels == 0)[0]:
+            img = ds[idx][0]
+            img = torch.tensor(img).permute(1, 2, 0).detach().numpy()
+            img = Image.fromarray((img * 255).astype(np.uint8))
+            name = os.path.basename(slide).replace(".hdf5", "") + "_" + os.path.basename(ds.samples[idx][0])
+            img.save(os.path.join(args.output_dir, lab_to_name[lab], name + ".png"))
+        
+        detections += (list(zip([os.path.basename(slide).replace(".hdf5", "")] * len(retrieved_items), retrieved_items, [lab] * len(retrieved_items))))
 
-        detections += (list(zip(filenames_, [lab] * len(filenames_))))
-
-        for file in filenames_:
-            with h5py.File(path_to_images, 'r') as f:
-                img = f[file][()]
-                img = read_fn(img)
-                img = Image.fromarray(img)
-                os.makedirs(f"./extracted_crops/{lab_to_name[lab]}", exist_ok=True)
-                img.save(f"./extracted_crops/{lab_to_name[lab]}/{file}.png")
-
-    df = pd.DataFrame(detections, columns=["filename", "label"])
-    df.to_csv(f"./feature_stats/{os.path.basename(path_to_features).replace('_features.hdf5', '.csv')}", index=False)
+    end = time.time()
+        
+    print(f"Done in {end - start:.2f} seconds.")
+        
+df = pd.DataFrame(detections, columns=["source", "filename", "label"])
+df.to_csv(os.path.join(args.output_dir, "stats.csv"), index=False)
