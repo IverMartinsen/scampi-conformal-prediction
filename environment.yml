@@ -1,0 +1,13 @@
+name: openslide-yolo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python<=3.12
+  - scikit-image
+  - pip
+  - pip:
+    - openslide-python
+    - openslide-bin
+    - yolov5
+
