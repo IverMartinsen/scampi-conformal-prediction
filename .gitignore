@@ -20,6 +20,9 @@ extract_features_on_springfield.yml
 postprocessing/trained_models
 data/labelled forams
 cluster_all_slides_on_springfield.yml
+BaileyLabels
+NO 15-9-19 A
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
