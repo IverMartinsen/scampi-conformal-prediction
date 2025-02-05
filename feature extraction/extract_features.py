@@ -15,14 +15,18 @@ import vit.vision_transformer as vits
 from torchvision import transforms as pth_transforms
 from vit.hdf5_dataloader_v2 import HDF5Dataset
 
-print(f"Using {torch.cuda.get_device_name(0)}.")
-print(f"Using GPU with {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB memory.")
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_path", type=str, default="./hdf5/6407_6-5 1200 mDC.hdf5")
 parser.add_argument("--pretrained_weights", type=str, default='/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8370959/checkpoint.pth')
 parser.add_argument("--output_dir", type=str, default="./features")
+parser.add_argument("--device", type=str, default="cuda")
+parser.add_argument("--batch_size", type=int, default=128)
+parser.add_argument("--num_workers", type=int, default=0)
 args = parser.parse_args()
+
+if args.device == "cuda":
+    print(f"Using GPU with {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB memory.")
+    print(f"Using {torch.cuda.get_device_name(0)}.")
 
 transform = pth_transforms.Compose([
     pth_transforms.Resize((256, 256), interpolation=3),
@@ -35,7 +39,7 @@ model = vits.__dict__["vit_small"](patch_size=16, num_classes=0, img_size=[224])
 
 vit_utils.load_pretrained_weights(model, args.pretrained_weights, "teacher", "vit_small", 16)
 model.eval()
-model.cuda()
+model = model.to(args.device)
 
 file_paths = glob.glob(args.data_path + "/*.hdf5")
 file_paths.sort()
@@ -55,23 +59,24 @@ for path in file_paths:
     #args.pretrained_weights = '/Users/ima029/Desktop/dino-v1/dino/trained_models/LUMI/zip scrapings (huge)/dino-v1-8485178/checkpoint.pth'
     #ds = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/labelled imagefolders/imagefolder_20/', transform=transform)
     #output_fname = "./labelled_crops_features.hdf5"
-
+    
     data_loader = torch.utils.data.DataLoader(
         ds, 
-        batch_size=128, 
+        batch_size=args.batch_size,
         shuffle=False,
-        num_workers=10,)
-
+        num_workers=args.num_workers,
+    )
+    
     filenames = [f[0] for f in ds.samples]
     filenames = [str(f) for f in filenames]
     labels = [f[1] for f in ds.samples]
     labels = [str(f) for f in labels]
 
     features = []
-
+    
     for i, (samples, _) in enumerate(data_loader):
         print(f"Batch {i+1}/{len(data_loader)}")
-        samples = samples.cuda()
+        samples = samples.to(args.device)
         features.append(model(samples).detach().cpu().numpy())
 
     features = np.concatenate(features, axis=0)
