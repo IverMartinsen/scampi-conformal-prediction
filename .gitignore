@@ -20,7 +20,7 @@ extract_features_on_springfield.yml
 postprocessing/trained_models
 data/labelled forams
 cluster_all_slides_on_springfield.yml
-NO 15-9-19 A
+data/NO 15-9-19 A/*.pdf
 *Thumbs.db
 
 
