@@ -8,7 +8,7 @@ sys.path.append(os.getcwd())
 import numpy as np
 import pandas as pd
 
-from scampi_evaluation.supervised_utils import stratified_idxs
+#from scampi_evaluation.supervised_utils import stratified_idxs
 
 
 parser = argparse.ArgumentParser()
@@ -33,23 +33,30 @@ if __name__ == "__main__":
     filenames = filenames[idx_to_keep]
     classnames = classnames[:args.num_classes]
     
-    os.makedirs(os.path.join(args.dest_folder, "train"), exist_ok=True)
-    os.makedirs(os.path.join(args.dest_folder, "val"), exist_ok=True)
+    #os.makedirs(os.path.join(args.dest_folder, "train"), exist_ok=True)
+    #os.makedirs(os.path.join(args.dest_folder, "val"), exist_ok=True)
 
-    for folder in ["train", "val"]:
-        for class_name in classnames:
-            os.makedirs(os.path.join(args.dest_folder, folder, class_name), exist_ok=True)
+    #for folder in ["train", "val"]:
+    #    for class_name in classnames:
+    #        os.makedirs(os.path.join(args.dest_folder, folder, class_name), exist_ok=True)
 
-    idx_train, idx_test = stratified_idxs(labels, splits=(0.8, 0.2), seed=42)
-
-    for index in idx_train:
-        path_to_file = os.path.join(args.image_folder, filenames[index])
-        class_name = classnames[labels[index]]
+    for i, (filename, label) in enumerate(zip(filenames, labels)):
+        path_to_file = os.path.join(args.image_folder, filename)
+        class_name = classnames[label]
         # copy file to train folder
-        shutil.copy(path_to_file, os.path.join(args.dest_folder, "train", class_name))
+        os.makedirs(os.path.join(args.dest_folder, class_name), exist_ok=True)
+        shutil.copy(path_to_file, os.path.join(args.dest_folder, class_name))
 
-    for index in idx_test:
-        path_to_file = os.path.join(args.image_folder, filenames[index])
-        class_name = classnames[labels[index]]
-        # copy file to test folder
-        shutil.copy(path_to_file, os.path.join(args.dest_folder, "val", class_name))
+    #idx_train, idx_test = stratified_idxs(labels, splits=(0.8, 0.2), seed=42)
+
+    #for index in idx_train:
+    #    path_to_file = os.path.join(args.image_folder, filenames[index])
+    #    class_name = classnames[labels[index]]
+    #    # copy file to train folder
+    #    shutil.copy(path_to_file, os.path.join(args.dest_folder, "train", class_name))
+
+    #for index in idx_test:
+    #    path_to_file = os.path.join(args.image_folder, filenames[index])
+    #    class_name = classnames[labels[index]]
+    #    # copy file to test folder
+    #    shutil.copy(path_to_file, os.path.join(args.dest_folder, "val", class_name))
