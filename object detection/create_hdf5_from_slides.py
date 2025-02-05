@@ -64,60 +64,70 @@ def read_slide_from_hdf5(file_name):
     return images, metadata
 
 
+def detect_objects(slide):
+
+    tile_generator = deepzoom.DeepZoomGenerator(
+        OpenSlide(slide), tile_size=2048, overlap=0, limit_bounds=True
+    )
+    
+    num_rows, num_cols = tile_generator.level_tiles[-1]
+    
+    crops = []
+    metadata = []
+    
+    for row in tqdm(range(num_rows), total=num_rows):
+        for col in range(num_cols):
+            tile = tile_generator.get_tile(tile_generator.level_count - 1, (row, col))
+            boxes = get_boxes(tile)
+            # only keep non-overlapping boxes
+            if len(boxes) > 1: # if there are more than one box
+                try:
+                    iou = compute_iou(boxes) * (np.eye(len(boxes)) == 0)
+                except TypeError:
+                    print(boxes)
+                    raise
+                # only keep non-overlapping boxes
+                boxes = [box for i, box in enumerate(boxes) if np.all(iou[i] < 1e-3)]
+            for box in boxes:
+                crop = get_crop(box, tile, pad_image=False) # numpy array of variable resolution
+                crop = torchvision.io.encode_jpeg(torch.tensor(crop).permute(2, 0, 1))
+                # convert to uint8
+                #crop = tf.convert_to_tensor(crop, dtype=tf.uint8)
+                #print(crop)
+                #crop = tf.image.resize(crop, args.image_shape[:2])
+                #crop = tf.cast(crop, tf.uint8)
+                
+                address = {'slide': slide, 'row': row, 'col': col, 'box': list(box)}
+                
+                crops.append(crop)
+                metadata.append(address)
+    return crops, metadata
+
+
 if __name__ == "__main__":
 
     os.makedirs(args.destination, exist_ok=True)
 
     for slide in tqdm(slides, total=len(slides)):
         
-        file_name = os.path.join(args.destination, f"{os.path.basename(slide).split('.')[0]}.hdf5")
-        if os.path.exists(file_name):
+        start = time.time()
+
+        output_fname = os.path.join(args.destination, f"{os.path.basename(slide).split('.')[0]}.hdf5")
+        
+        if os.path.exists(output_fname):
             print(f"Skipping {slide}.")
             continue
         
-        start = time.time()
+        crops, metadata = detect_objects(slide)
         
-        tile_generator = deepzoom.DeepZoomGenerator(
-            OpenSlide(slide), tile_size=2048, overlap=0, limit_bounds=True
-        )
-        
-        num_rows, num_cols = tile_generator.level_tiles[-1]
-        
-        crops = []
-        metadata = []
-        
-        for row in tqdm(range(num_rows), total=num_rows):
-            for col in range(num_cols):
-                tile = tile_generator.get_tile(tile_generator.level_count - 1, (row, col))
-                boxes = get_boxes(tile)
-                # only keep non-overlapping boxes
-                if len(boxes) > 1: # if there are more than one box
-                    try:
-                        iou = compute_iou(boxes) * (np.eye(len(boxes)) == 0)
-                    except TypeError:
-                        print(boxes)
-                        raise
-                    # only keep non-overlapping boxes
-                    boxes = [box for i, box in enumerate(boxes) if np.all(iou[i] < 1e-3)]
-                for box in boxes:
-                    crop = get_crop(box, tile, pad_image=False) # numpy array of variable resolution
-                    crop = torchvision.io.encode_jpeg(torch.tensor(crop).permute(2, 0, 1))
-                    # convert to uint8
-                    #crop = tf.convert_to_tensor(crop, dtype=tf.uint8)
-                    #print(crop)
-                    #crop = tf.image.resize(crop, args.image_shape[:2])
-                    #crop = tf.cast(crop, tf.uint8)
-                    
-                    address = {'slide': slide, 'row': row, 'col': col, 'box': list(box)}
-                    
-                    crops.append(crop)
-                    metadata.append(address)
-        
-        file_name = os.path.join(args.destination, f"{os.path.basename(slide).split('.')[0]}.hdf5")
-        #write_slide_to_hdf5(crops, metadata, file_name)
-        with h5py.File(file_name, "w") as file:
+        #write_slide_to_hdf5(crops, metadata, output_fname)
+        with h5py.File(output_fname, "w") as file:
             for i, (crop, meta) in enumerate(zip(crops, metadata)):
-                file.create_dataset(f"{os.path.basename(slide).split('.')[0]}_crop_{i}", data=crop, dtype='uint8')
+                file.create_dataset(
+                    name=f"{os.path.basename(slide).split('.')[0]}_crop_{str(i).zfill(6)}",
+                    data=crop, 
+                    dtype='uint8',
+                    )
                 #file.create_dataset(f"{os.path.basename(slide).split('.')[0]}_meta_{i}", data=str(meta))
         
         end = time.time()
