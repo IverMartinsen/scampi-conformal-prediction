@@ -1,4 +1,8 @@
 import os
+import sys
+
+sys.path.append(os.path.join(os.getcwd(), "postprocessing"))
+
 import glob
 import h5py
 import json
@@ -7,15 +11,17 @@ import joblib
 import numpy as np
 import pandas as pd
 from PIL import Image
-from postprocessing.utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
+from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
 
 # args
-src_data = '/Users/ima029/Desktop/Unsupervised foraminifera groupings/Data/Gol-F-30-3, 19-20_ zoom 6.25_CROPS'
+src_data = 'data/NO 15-9-19 A'
 alpha = 0.95
-path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/data/labelled forams/merged_entropies.json'
+path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250204134524/results/entropy.json'
 path_to_ood_detector = './postprocessing/ood_detector/ood_detector.pkl'
-use_ood_detector = False
-path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250116130009/classifier.pth'
+use_ood_detector = True
+path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250204134524/classifier.pth'
+classes = range(5)
+lab_to_name = json.load(open('data/BaileyLabels/imagefolder/lab_to_name.json'))
 # args end
 
 path_to_files = os.path.join(src_data, "features")
@@ -30,7 +36,7 @@ os.makedirs(folder, exist_ok=True)
 
 ood_detector = joblib.load(path_to_ood_detector)
 
-classifier = LinearClassifier(384, 11)
+classifier = LinearClassifier(384, 5)
 classifier.load_state_dict(torch.load(path_to_classifier, map_location="mps"))
 
 with open(path_to_ref_ent) as f:
@@ -46,11 +52,22 @@ for path_to_features in path_to_files:
     f_un, x_un, _ = load_hdf5(path_to_features)
     print(f"Loaded {x_un.shape[0]} features.")
 
+    # check for nan values
+    nans = np.unique(np.argwhere(np.isnan(x_un))[:, 0])
+    if len(nans) > 0:
+        print(f"Warning! Found {len(nans)} NaN values in {os.path.basename(path_to_features)}.")
+        f_un = np.delete(f_un, nans)
+        x_un = np.delete(x_un, nans, axis=0)
+    
     # =============================================================================
     # OOD DETECTION STEP
     # =============================================================================
     if use_ood_detector:
-        pred = ood_detector.predict(x_un)
+        try:
+            pred = ood_detector.predict(x_un)
+        except ValueError:
+            breakpoint()
+            
         _, counts = np.unique(pred, return_counts=True)
         num_black = counts[1]
         try:
@@ -74,8 +91,8 @@ for path_to_features in path_to_files:
     # =============================================================================
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
     # =============================================================================
-    for k in [0, 4, 11, 14]:
-        e = ref_ent[lab_to_name[k]]
+    for k in classes:
+        e = ref_ent[lab_to_name[str(k)]]
         q = np.quantile(e, 1 - alpha)
     
         fnames = f_un[(y_pred == k) & (entropy < q)]
@@ -85,8 +102,8 @@ for path_to_features in path_to_files:
                 img = f[file][()]
                 img = read_fn(img)
                 img = Image.fromarray(img)
-                os.makedirs(os.path.join(folder, lab_to_name[k]), exist_ok=True)
-                img.save(os.path.join(folder, lab_to_name[k], f"{file}.png"))
+                os.makedirs(os.path.join(folder, lab_to_name[str(k)]), exist_ok=True)
+                img.save(os.path.join(folder, lab_to_name[str(k)], f"{file}.png"))
         
         detections += (list(zip([os.path.basename(path_to_images)] * len(fnames), fnames, [k] * len(fnames))))
 
