@@ -43,7 +43,10 @@ transform = transforms.Compose([
 
 dataset = torchvision.datasets.ImageFolder(args.data_dir, transform=transform)
 
-_, idx_val = train_test_split(np.arange(len(dataset)), test_size=args.validation_split, stratify=dataset.targets, random_state=args.seed)
+if args.validation_split is None:
+    idx_val = np.arange(len(dataset))
+else:
+    _, idx_val = train_test_split(np.arange(len(dataset)), test_size=args.validation_split, stratify=dataset.targets, random_state=args.seed)
 
 dataloader = torch.utils.data.DataLoader(
     torch.utils.data.Subset(dataset, idx_val),
