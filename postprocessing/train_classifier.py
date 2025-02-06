@@ -79,6 +79,7 @@ tr_loader = torch.utils.data.DataLoader(
 print(f"Number of training images: {len(x_tr)}")
 if x_val is not None:
     print(f"Number of validation images: {len(x_val)}")
+print(f"Number of classes: {len(dataset.classes)}")
 
 # load the model
 pretrained_model = vits.__dict__[args.backbone_arch](patch_size=16, num_classes=0, img_size=[224])
