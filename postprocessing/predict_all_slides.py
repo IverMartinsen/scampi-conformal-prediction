@@ -16,12 +16,12 @@ from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
 # args
 src_data = 'data/NO 15-9-19 A'
 alpha = 0.95
-path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250204134524/results/entropy.json'
+path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/5 classes - log - model/entropy.json'
 path_to_ood_detector = './postprocessing/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250204134524/classifier.pth'
-classes = range(5)
-lab_to_name = json.load(open('data/BaileyLabels/imagefolder/lab_to_name.json'))
+path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/5 classes - log - model/classifier.pkl'
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder/lab_to_name.json'))
+classes = range(len(lab_to_name))
 # args end
 
 path_to_files = os.path.join(src_data, "features")
@@ -54,10 +54,12 @@ for path_to_features in path_to_files:
 
     # check for nan values
     nans = np.unique(np.argwhere(np.isnan(x_un))[:, 0])
-    if len(nans) > 0:
-        print(f"Warning! Found {len(nans)} NaN values in {os.path.basename(path_to_features)}.")
-        f_un = np.delete(f_un, nans)
-        x_un = np.delete(x_un, nans, axis=0)
+    infs = np.unique(np.argwhere(np.isinf(x_un))[:, 0])
+    if len(nans) > 0 or len(infs) > 0:
+        print(f"Warning! Found {len(nans)} NaN values and {len(infs)} inf values in {os.path.basename(path_to_features)}.")
+        idxs = np.unique(np.concatenate([nans, infs]))
+        f_un = np.delete(f_un, idxs)
+        x_un = np.delete(x_un, idxs, axis=0)
     
     # =============================================================================
     # OOD DETECTION STEP
@@ -92,6 +94,7 @@ for path_to_features in path_to_files:
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
     # =============================================================================
     for k in classes:
+
         e = ref_ent[lab_to_name[str(k)]]
         q = np.quantile(e, 1 - alpha)
     
@@ -105,7 +108,7 @@ for path_to_features in path_to_files:
                 os.makedirs(os.path.join(folder, lab_to_name[str(k)]), exist_ok=True)
                 img.save(os.path.join(folder, lab_to_name[str(k)], f"{file}.png"))
         
-        detections += (list(zip([os.path.basename(path_to_images)] * len(fnames), fnames, [k] * len(fnames))))
+        detections += (list(zip([os.path.basename(path_to_images)] * len(fnames), fnames, [k] * len(fnames), [lab_to_name[str(k)]] * len(fnames))))
 
-df = pd.DataFrame(detections, columns=["source", "filename", "label"])
+df = pd.DataFrame(detections, columns=["source", "filename", "label", "genus"])
 df.to_csv(os.path.join(folder, "stats.csv"), index=False)
