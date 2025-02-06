@@ -497,12 +497,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3672_mC__194683_194965__B13_Tenua_compta.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__25_9-2_S_2166_mDC__86202_86466__B44_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -587,12 +581,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-19_1930.43_mC__179545_179822__B13_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__16_2-19_1930.43_mC__241279_241593__B38_Tenua_compta_P.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -641,23 +629,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__198408_198771__B47_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__31167_31410__B27_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_3-9_T2_4338_mDC__213244_213539__B22_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__218233_218550__B110_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -724,12 +700,6 @@
         "depth": "1930.43",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__200055_200336__B55_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3786_mDC__178818_179122__B30_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_",
@@ -899,12 +869,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-15_1922.85_mC__180591_180835__B22_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__16_2-19_1930.43_mC__190513_190836__B9_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -1049,12 +1013,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-19_1930.43_mC__182959_183258__B4_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_A_3902_mDC__217789_218172__B55_Surculosphaeridium_vestitum_P - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -1096,12 +1054,6 @@
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__231527_231860__B64_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3786_mDC__213604_213932__B27_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_",
@@ -1156,12 +1108,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_3-9_T2_4338_mDC__209720_209893__B21_Surcdulosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__233137_233434__B85_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -1283,18 +1229,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4338_mDC__184516_184845__B3_Rigaudella_aemula_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__177956_178343__B23_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3774_mDC__171861_172234__B18_Rigaudella_aemula - Copy (3).jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -1378,12 +1312,6 @@
         "depth": "3960",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__207109_207433__B107_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__30_11-14_2898_mDC__54149_54551__B6_Rigaudella_aemula.jpg": {
         "well_id": "30_11_14_",
@@ -1493,12 +1421,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__173133_173408__B7_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_1930.43_mC__185607_185894__B48_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -1526,12 +1448,6 @@
     "crop__15_5-7_A_3902_mDC__180234_180396__B95_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__171861_172234__B18_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -1564,12 +1480,6 @@
         "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__176095_176415__B12_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__16_2-15_1922.85_mC__228998_229253__B20_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_15_",
@@ -1618,12 +1528,6 @@
         "depth": "3406",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__16_2-19_1930.43_mC__184500_184834__B14_Tenua_compta.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
     },
     "crop__15_2-1_4280_mSWC__67996_68316__B26_Surculosphaeridium_vestitum_P.jpg": {
         "well_id": "15_2_1_",
@@ -1751,12 +1655,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__171797_171983__B5_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__30_11-11_A_3702_mDC__191677_192057__B10_Rigaudella_aemula_F.jpg": {
         "well_id": "30_11_11_A",
         "depth": "3702",
@@ -1778,12 +1676,6 @@
     "crop__15_5-7_3774_mDC__198546_198885__B61_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__184516_184845__B3_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -1937,12 +1829,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__180305_180520__B95_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4262_mSWC__207374_207742__B6_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
@@ -2015,12 +1901,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__236711_237005__B68_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1933.25_mC__46810_47022__B51_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
         "depth": "1933.25",
@@ -2045,12 +1925,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__180059_180261__B32_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__87755_88070__B42_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -2068,12 +1942,6 @@
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__199530_199886__B117_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__202748_203024__B102_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -2141,35 +2009,17 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4338_mDC__190408_190694__B1_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_AT2_3880_mDC__209975_210316__B3_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__177495_177835__B94_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__76062_76380__B43_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__195044_195300__B3_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__217964_218185__B54_Surculosphaeridium_vestitum_F - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -2219,12 +2069,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_3-9_T2_4332_mDC__64203_64513__B14_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_3960_mSWC__199082_199376__B14_Sirmiodinium_grossii.jpg": {
         "well_id": "15_2_1_",
         "depth": "3960",
@@ -2267,18 +2111,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__242904_243196__B70_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__197069_197286__B37_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__83261_83510__B41_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -2302,12 +2134,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__201699_201944__B100_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_3-9_T2_3981_mDC__197817_198068__B21_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -2375,12 +2201,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3672_mC__191398_191636__B16_Tenua_compta.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_3774_mDC__241863_242104__B47_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -2398,12 +2218,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__184947_185198__B48_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_6-11_A_4090_mDC__63111_63470__B29_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -2500,12 +2314,6 @@
         "depth": "2178",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__181887_182193__B26_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3786_mDC__209088_209326__B20_Surculospharidium_vestitum_F - Copy.jpg": {
         "well_id": "15_5_7_",
@@ -2639,12 +2447,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__190486_190946__B86_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3774_mDC__195866_196213__B67_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -2711,12 +2513,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__179023_179284__B35_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_2-1_4262_mSWC__203297_203575__B8_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
@@ -2740,12 +2536,6 @@
         "depth": "563",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__184516_184845__B3_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_3-9_T2_3981_mDC__188064_188264__B4_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -2819,18 +2609,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3774_mDC__173133_173408__B7_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__218408_218784__B54_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__175368_175663__B96_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -2848,12 +2626,6 @@
         "depth": "4150",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3672_mC__193539_193798__B15_Tenua_compta.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
     },
     "crop__15_3-9_T2_3975_mDC__72551_72828__B12_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -2891,12 +2663,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__197380_197651__B2_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_9-2_S_2172_mDC__193897_194143__B6_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -2908,12 +2674,6 @@
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__191183_191525__B1_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__236211_236542__B93_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -2975,12 +2735,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-15_1922.85_mC__189854_190091__B30_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3672_mC__185051_185314__B10_Tenua_compta.jpg": {
         "well_id": "15_5_7_",
         "depth": "3672",
@@ -3004,18 +2758,6 @@
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__207396_207596__B107_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__172495_172787__B99_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__30_11-11_A_3702_mDC__205541_205841__B1_Rigaudella_aemula_F.jpg": {
         "well_id": "30_11_11_A",
@@ -3044,12 +2786,6 @@
     "crop__15_6-11_A_4090_mDC__63857_64114__B27_Rigaudella_aemula_P.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__176623_177149__B11_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -3082,12 +2818,6 @@
         "depth": "3786",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__51044_51454__B4_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_9-2_S_2178_mDC__22781_23071__B2_Surculosphaeridium_vestitum.jpg": {
         "well_id": "25_9_2_S",
@@ -3161,12 +2891,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__192175_192480__B22_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-15_1922.85_mC__197018_197296__B5_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
         "well_id": "16_2_15_",
         "depth": "1922.85",
@@ -3202,12 +2926,6 @@
         "depth": "2982.9",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_A_3902_mDC__237735_237935__B76_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_3-9_T2_3981_mDC__198094_198365__B22_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -3257,21 +2975,9 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3786_mDC__174767_174968__B31_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3786_mDC__172770_173090__B34_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4344_mDC__21631_21829__B6_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -3305,23 +3011,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__223455_223681__B57_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-14_2982.9_mC__174567_174767__B2_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_14_",
         "depth": "2982.9",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_3-9_T2_4332_mDC__86269_86570__B5_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__31278_31567__B5_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
@@ -3329,29 +3023,11 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_3-9_T2_4338_mDC__228789_229062__B17_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3786_mDC__173372_173739__B4_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__172770_173090__B34_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__214021_214422__B112_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4090_mDC__59952_60388__B29_Rigaudella_aemula_P.jpg": {
         "well_id": "15_6_11_A",
@@ -3443,12 +3119,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__206901_207169__B98_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2172_mDC__230958_231231__B40_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -3485,12 +3155,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_AT2_3880_mDC__212493_212648__B3_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_AT2",
-        "depth": "3880",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__74590_74932__B46_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -3514,12 +3178,6 @@
         "depth": "4096",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__171409_171820__B6_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__16_2-15_1922.85_mC__222759_223018__B36_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_15_",
@@ -3593,12 +3251,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__171861_172234__B18_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3786_mDC__170857_171052__B6_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
@@ -3659,12 +3311,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-19_1930.43_mC__191428_191672__B9_Sirmiodinium_grossii_F - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3792_mDC__93076_93502__B1_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3792",
@@ -3689,12 +3335,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4338_mDC__235438_235810__B9_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_1933.25_mC__44956_45281__B47_Tenua_compta_F.jpg": {
         "well_id": "16_2_19_",
         "depth": "1933.25",
@@ -3716,12 +3356,6 @@
     "crop__15_3-9_T2_4338_mDC__192313_192665__B2_Surculosphaeridium_vestitum_P - Copy.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__194628_195015__B27_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -3772,12 +3406,6 @@
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__179626_179874__B24_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__188029_188417__B10_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -3845,12 +3473,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__188810_189068__B33_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__16_2-19_1930.43_mC__233523_233812__B27_Tenua_compta_F.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -3880,12 +3502,6 @@
         "depth": "3415",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_A_3902_mDC__197046_197265__B116_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__174326_174600__B5_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -3971,12 +3587,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4332_mDC__62831_63041__B15_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-11_A_4090_mDC__32958_33344__B3_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
@@ -3988,12 +3598,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__176623_177149__B11_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3786_mDC__217093_217446__B24_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_",
@@ -4018,18 +3622,6 @@
         "depth": "1930.43",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__175877_176067__B8_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__182466_182769__B28_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3774_mDC__214359_214571__B50_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
@@ -4067,12 +3659,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__175006_175354__B9_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2172_mDC__176806_177011__B46_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -4084,12 +3670,6 @@
         "depth": "3672",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__172319_172637__B14_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_2-1_4280_mSWC__42639_43013__B54_Rigaudella_aemula_F.jpg": {
         "well_id": "15_2_1_",
@@ -4127,12 +3707,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__179844_180195__B33_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_11-26_2141_mDC__71452_71752__B10_Sirmiodinium_grossii.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -4152,12 +3726,6 @@
         "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__217462_217776__B125_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__217462_217776__B125_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
@@ -4222,12 +3790,6 @@
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__230759_230969__B91_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__16_2-19_1930.43_mC__190418_190655__B7_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
@@ -4301,18 +3863,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__181770_182153__B29_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__217292_217504__B29_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2166_mDC__22399_22663__B56_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -4331,12 +3881,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4332_mDC__94447_94944__B9_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_6-8_S_3165_mDC__25550_26051__B2_Rigaudella_aemula.jpg": {
         "well_id": "15_6_8_S",
         "depth": "3165",
@@ -4346,12 +3890,6 @@
     "crop__25_8-9_2410_mDC_20221112024702501__61218_61415__B1_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "25_8_9_",
         "depth": "2410",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__191897_192170__B15_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -4493,12 +4031,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3672_mC__225180_225449__B6_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_A_3902_mDC__185404_185773__B1_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -4510,12 +4042,6 @@
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_3-9_T2_4344_mDC__46580_46882__B2_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__16_2-19_1930.43_mC__199439_199717__B49_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
@@ -4534,12 +4060,6 @@
         "depth": "3144",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__189320_189693__B14_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_3-9_T2_3981_mDC__199006_199274__B23_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -4613,12 +4133,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__188052_188286__B34_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__43631_43952__B7_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -4630,12 +4144,6 @@
         "depth": "3880",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__213604_213932__B27_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__239654_239858__B27_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -4652,12 +4160,6 @@
     "crop__15_3-9_T2_4332_mDC__95193_95609__B8_Rigaudella_aemula_F_P - Copy (2).jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__191133_191370__B86_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -4679,12 +4181,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__221340_221598__B16_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_A_3902_mDC__209481_209674__B104_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -4696,12 +4192,6 @@
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_3-9_T2_4344_mDC__60564_60932__B5_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_2-1_4280_mSWC__47316_47606__B72_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
@@ -4727,23 +4217,11 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_3-9_T2_4332_mDC__95193_95609__B8_Rigaudella_aemula_F_P - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2172_mDC__216024_216338__B20_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__175216_175650__B98_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__37417_37674__B2_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
@@ -4756,12 +4234,6 @@
         "depth": "4280",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__201789_202067__B4_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__7120_2-3_S_2012.5_mC__81686_81997__B16_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
@@ -4817,12 +4289,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__193908_194260__B21_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1930.43_mC__187532_187813__B16_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -4835,27 +4301,9 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__210267_210521__B106_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__213418_213782__B121_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__28897_29133__B7_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3786_mDC__207141_207468__B18_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -4895,12 +4343,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4332_mDC__94447_94944__B9_Rigaudella_aemula.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_3981_mDC__177009_177296__B18_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
@@ -4930,12 +4372,6 @@
         "depth": "1930.43",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__214032_214203__B109_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3774_mDC__195360_195797__B56_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
@@ -4973,12 +4409,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-19_1930.43_mC__174876_175180__B46_Tenua_compta.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_3786_mDC__177899_178301__B11_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
@@ -4990,18 +4420,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__94447_94944__B9_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3792_mDC__78422_78717__B5_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2166_mDC__50406_50649__B12_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -5036,12 +4454,6 @@
     "crop__15_2-1_4280_mSWC__38513_38871__B52_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__223603_223808__B58_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -5087,18 +4499,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_A_3902_mDC__210948_211295__B115_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__185607_185894__B48_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_A_3902_mDC__243103_243444__B70_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -5116,12 +4516,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__179844_180195__B33_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__40212_40403__B13_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
@@ -5147,12 +4541,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__196962_197182__B6_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_6-11_A_4090_mDC__59670_60112__B25_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
@@ -5171,12 +4559,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__192454_192674__B25_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_A_2263.73_mC__202424_202618__B2_Tenua_compta.jpg": {
         "well_id": "16_2_19_A",
         "depth": "2263.73",
@@ -5188,18 +4570,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__202683_202978__B51_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__177004_177196__B21_Sirmiodinium_grossii_P.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_3774_mDC__233967_234249__B76_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
@@ -5234,12 +4604,6 @@
     "crop__15_2-1_4262_mSWC__209508_209795__B12_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__231136_231349__B84_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -5279,18 +4643,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__212041_212371__B108_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__176623_177149__B11_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-15_1922.85_mC__183329_183618__B27_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_15_",
         "depth": "1922.85",
@@ -5303,23 +4655,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__177004_177225__B8_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-14_2973.95_mC__63083_63361__B1_Dissiliodinium_willei.jpg": {
         "well_id": "30_11_14_",
         "depth": "2973.95",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_A_3902_mDC__217964_218185__B54_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__16_2-15_1922.85_mC__212184_212416__B8_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_15_",
@@ -5336,18 +4676,6 @@
     "crop__15_6-11_A_4150_mDC__20405_20642__B10_Rigaudella_aemula_F.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4150",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__195044_195300__B3_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__171567_171954__B88_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -5375,12 +4703,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4332_mDC__48198_48513__B3_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__187324_187661__B17_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -5398,12 +4720,6 @@
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__185404_185773__B1_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3774_mDC__184607_184818__B34_Rigaudella_aemula_F - Copy.jpg": {
         "well_id": "15_5_7_",
@@ -5423,12 +4739,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__201543_201865__B4_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_4280_mSWC__19995_20310__B60_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -5440,24 +4750,6 @@
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__16_2-19_1930.43_mC__183771_184105__B14_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__192313_192665__B2_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__196768_196982__B39_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__7120_2-3_S_2012.5_mC__54506_54832__B20_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
@@ -5474,12 +4766,6 @@
     "crop__15_2-1_4280_mSWC__81371_81668__B42_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__235438_235810__B9_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -5537,27 +4823,9 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4344_mDC__48620_48987__B4_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__38556_38916__B59_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__225082_225342__B18_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__175006_175354__B9_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -5567,29 +4835,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__198569_199150__B49_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__202748_203024__B102_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__189500_189802__B13_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__180139_180440__B31_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_9-2_S_2172_mDC__201821_202099__B52_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -5609,41 +4859,17 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__195866_196213__B67_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3774_mDC__214978_215190__B39_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3786_mDC__206123_206475__B36_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1930.43_mC__199663_199972__B26_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__171409_171820__B6_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__188213_188420__B68_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_9-2_S_2172_mDC__201804_202004__B52_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -5662,12 +4888,6 @@
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__224650_224978__B62_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4150_mDC__42948_43216__B7_Rigaudella_aemula_F.jpg": {
         "well_id": "15_6_11_A",
@@ -5692,12 +4912,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_3-9_T2_4338_mDC__227842_228075__B18_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__241177_241342__B74_Surculosphaeridium_vestitum_F - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -5735,24 +4949,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__232014_232299__B92_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__188810_189068__B33_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__180677_181007__B87_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__6201_11-2_3593_mSWC_20221116130744618__198461_198905__B4_Rigaudella_aemula.jpg": {
         "well_id": "6201_11_2_",
         "depth": "3593",
@@ -5776,12 +4972,6 @@
         "depth": "3975",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__171567_171954__B88_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_A_3902_mDC__200735_201095__B48_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -5891,23 +5081,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__200735_201095__B48_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_9-18_3232.6_mC__172249_172599__B1_Rigaudella_aemula.jpg": {
         "well_id": "15_9_18_",
         "depth": "3232.6",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__197380_197651__B2_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__25_9-2_S_2172_mDC__217101_217363__B56_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -5932,12 +5110,6 @@
         "depth": "1933.25",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__175216_175650__B98_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_9-2_S_2172_mDC__222676_222918__B22_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -6035,29 +5207,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__199788_199969__B54_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__196149_196439__B1_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__7120_2-3_S_2012.5_mC__37355_37579__B25_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__172495_172787__B99_Rigaudella_aemula_P - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__25_11-26_2141_mDC__60173_60479__B11_Sirmiodinium_grossii.jpg": {
         "well_id": "25_11_26_",
@@ -6070,12 +5224,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3786_mDC__212475_212781__B26_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3672_mC__239866_240191__B1_Tenua_compta.jpg": {
         "well_id": "15_5_7_",
@@ -6101,24 +5249,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3681_mDC__27511_27755__B6_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3681",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__16_2-19_1930.43_mC__191158_191444__B9_Sirmiodinium_grossii_P - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__218233_218550__B110_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__215147_215437__B109_Surculosphaeridium_vestitum_P - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -6143,12 +5273,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__194156_194431__B35_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__49774_50029__B22_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
@@ -6167,12 +5291,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4332_mDC__92285_92603__B10_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_A_3902_mDC__211141_211458__B124_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -6184,18 +5302,6 @@
         "depth": "3786",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__239507_239725__B80_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__177956_178343__B23_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_A_3902_mDC__222350_222687__B60_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -6242,12 +5348,6 @@
     "crop__15_6-11_A_4090_mDC__47304_47577__B19_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__197867_198099__B40_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -6305,12 +5405,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__188231_188460__B34_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3774_mDC__179856_180130__B21_Rigaudella_aemula_F - Copy (2).jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -6318,12 +5412,6 @@
         "species": "aemula"
     },
     "crop__15_5-7_3774_mDC__212688_213013__B92_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__180059_180261__B32_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
@@ -6346,18 +5434,6 @@
         "depth": "1914.75",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__175442_175730__B19_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__192663_192866__B25_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_11-26_2141_mDC__76743_77015__B21_Tenua_compta.jpg": {
         "well_id": "25_11_26_",
@@ -6383,12 +5459,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3774_mDC__171567_171954__B88_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_A_3902_mDC__192912_193184__B34_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -6412,18 +5482,6 @@
         "depth": "3960",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__16_2-19_1930.43_mC__186012_186296__B48_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__198205_198530__B43_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2166_mDC__43603_43839__B14_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -6449,12 +5507,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3774_mDC__170998_171445__B99_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_A_3902_mDC__189822_190183__B26_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -6474,12 +5526,6 @@
         "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__191396_191619__B30_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__241089_241385__B80_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
@@ -6508,18 +5554,6 @@
         "depth": "3975",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__197071_197435__B40_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__194049_194540__B2_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_2-1_4280_mSWC__33783_34192__B75_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_2_1_",
@@ -6557,12 +5591,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_3-9_T2_4338_mDC__233790_234172__B10_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__37158_37411__B2_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
@@ -6572,12 +5600,6 @@
     "crop__32_4-1_1458_mDC_20221110220433591__40176_40407__B4_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__214022_214241__B7_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -6611,12 +5633,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-15_1922.85_mC__176362_176576__B21_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_11-26_2141_mDC__66432_66777__B6_Sirmiodinium_grossii.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -6644,12 +5660,6 @@
     "crop__15_3-9_T2_4344_mDC__43170_43485__B3_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__234662_235072__B66_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -6689,29 +5699,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__222093_222292__B24_Sueculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__196962_197182__B6_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__51779_52060__B21_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_3774_mDC__180139_180440__B31_Rigaudella_aemula_P.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_AT2_3880_mDC__243931_244292__B2_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_AT2",
@@ -6731,12 +5723,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__173126_173593__B17_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_3960_mSWC__198223_198473__B19_Sirmiodinium_grossii_P.jpg": {
         "well_id": "15_2_1_",
         "depth": "3960",
@@ -6752,12 +5738,6 @@
     "crop__15_3-9_T2_4338_mDC__245789_246009__B20_Surculosphaeridium_vestitum_F - Copy.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__212981_213291__B123_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -6803,12 +5783,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__193054_193383__B36_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__73404_73753__B37_Surculosphaeridium_vestitum_P.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -6821,35 +5795,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__193507_193779__B35_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__171409_171820__B6_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__91728_92083__B12_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_3981_mDC__198748_198983__B26_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__215394_215601__B109_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3699_mDC__189047_189368__B2_Tenua_compta.jpg": {
         "well_id": "15_5_7_",
@@ -6881,12 +5831,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__204866_205185__B16_Rigaudella_aemula.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_4338_mDC__187879_188210__B5_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4338",
@@ -6911,35 +5855,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3672_mC__240674_240947__B2_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__7228_2-1_S_1115_mSWC__227060_227370__B14_Sirmiodinium_grossii.jpg": {
         "well_id": "7228_2_1_S",
         "depth": "1115",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__212184_212416__B8_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__216023_216286__B11_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__199724_199988__B63_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_6-11_A_4090_mDC__33146_33533__B5_Rigaudella_aemula_P.jpg": {
         "well_id": "15_6_11_A",
@@ -6953,23 +5873,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__175144_175359__B16_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3786_mDC__168118_168837__B9_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__174326_174600__B5_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__30_11-12_A_4016_mDC__203619_203903__B2_Dissiliodinium_willei.jpg": {
         "well_id": "30_11_12_A",
@@ -7025,12 +5933,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__204939_205312__B64_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2172_mDC__199600_199876__B14_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -7055,21 +5957,9 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__187324_187661__B17_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3774_mDC__198647_198803__B54_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__51044_51454__B4_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -7103,18 +5993,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__236211_236542__B93_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__198125_198426__B42_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_AT2_3880_mDC__241953_242213__B2_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
@@ -7133,12 +6011,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3774_mDC__198546_198885__B61_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_4280_mSWC__51837_52179__B18_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -7151,35 +6023,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__175144_175359__B16_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__184592_184877__B44_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_6-11_A_4150_mDC__23723_24297__B8_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4150",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3672_mC__188629_188914__B9_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_3780_mDC__18507_18825__B7_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__216426_216783__B109_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -7187,41 +6035,17 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__198026_198219__B4_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_3-9_T2_3981_mDC__223567_223828__B13_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__188920_189225__B33_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-15_1922.85_mC__179900_180167__B24_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_15_",
         "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__181887_182193__B26_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_6-11_A_4090_mDC__27945_28093__B7_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_6_11_A",
-        "depth": "4090",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_A_3902_mDC__222133_222386__B56_Surculosphaeridium_vestitum_F - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -7230,18 +6054,6 @@
         "species": "vestitum"
     },
     "crop__15_5-7_3774_mDC__187304_187566__B37_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__207138_207396__B105_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__201479_201806__B4_Rigaudella_aemula - Copy.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
@@ -7259,29 +6071,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3780_mDC__56421_56680__B1_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1930.43_mC__189130_189442__B7_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__182231_182603__B2_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__175632_175911__B7_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_3-9_T2_3975_mDC__87047_87350__B7_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -7301,12 +6095,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__212500_212773__B9_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3774_mDC__197255_197699__B60_Rigaudella_aemula - Copy.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -7325,33 +6113,9 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4338_mDC__201010_201284__B15_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__232400_232724__B90_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__243517_243867__B78_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__7120_2-3_S_2012.5_mC__57668_57952__B30_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__195294_195524__B3_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -7367,18 +6131,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__172319_172637__B14_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__197255_197699__B60_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_AT2_3880_mDC__237812_238118__B1_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
@@ -7390,24 +6142,6 @@
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-15_1922.85_mC__220925_221210__B16_Sirmiodinium_grossii_P.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__174106_174448__B20_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__189130_189442__B7_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_2-1_4262_mSWC__195454_195856__B2_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
@@ -7432,12 +6166,6 @@
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__189854_190091__B30_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__16_2-19_1930.43_mC__239684_239942__B34_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
@@ -7523,12 +6251,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__225527_225715__B61_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__59782_60043__B26_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -7559,41 +6281,17 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4338_mDC__200342_200648__B12_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__223720_223979__B58_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__31063_31310__B35_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_3-9_T2_4332_mDC__39869_40305__B7_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__30_11-11_A_3702_mDC__189551_189870__B2_Rigaudella_aemula_P.jpg": {
         "well_id": "30_11_11_A",
         "depth": "3702",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__91843_92112__B10_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_3-9_T2_4332_mDC__48418_48765__B2_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_3_9_T2",
@@ -7606,24 +6304,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__181754_182165__B26_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__188052_188286__B34_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__221703_221921__B14_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__233649_234003__B85_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_A",
@@ -7667,12 +6347,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__182098_182389__B89_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2172_mDC__212153_212375__B55_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -7697,47 +6371,17 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__16_2-19_1930.43_mC__177405_177633__B2_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__192617_192998__B25_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3774_mDC__176130_176548__B10_Rigaudella_aemula - Copy.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__179856_180130__B21_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__178687_178984__B23_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__7120_2-3_S_2012.5_mC__51342_51614__B1_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__215273_215589__B22_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__30_11-14_2973.95_mC__50504_50654__B3_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_14_",
@@ -7750,12 +6394,6 @@
         "depth": "3975",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__199651_199872__B38_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3774_mDC__229245_229596__B83_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
@@ -7787,18 +6425,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__225249_225488__B61_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__184607_184818__B34_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_11-26_2141_mDC__66599_66860__B20_Tenua_compta.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -7817,12 +6443,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__198026_198219__B4_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_9-2_S_2166_mDC__23895_24138__B55_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -7834,12 +6454,6 @@
         "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__181304_181744__B22_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_6-11_A_4090_mDC__88845_89105__B40_Rigaudella_aemula_P.jpg": {
         "well_id": "15_6_11_A",
@@ -7877,18 +6491,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__204594_204912__B97_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__192391_192694__B28_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-11_A_3702_mDC__228444_228797__B14_Rigaudella_aemula_F.jpg": {
         "well_id": "30_11_11_A",
         "depth": "3702",
@@ -7913,41 +6515,17 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__202621_202930__B118_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_AT2_3880_mDC__242121_242215__B2_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__212500_212773__B9_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_AT2_3880_mDC__209635_209907__B3_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_AT2",
-        "depth": "3880",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__76784_77050__B43_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4332_mDC__94447_94944__B9_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_6-11_A_4090_mDC__68195_68650__B33_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -7973,23 +6551,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__233137_233434__B85_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-14_2982.9_mC__176815_177039__B9_Dissiliodinium_willei.jpg": {
         "well_id": "30_11_14_",
         "depth": "2982.9",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__16_2-15_1922.85_mC__214022_214241__B7_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_3-9_T2_3981_mDC__169195_169457__B14_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -8003,18 +6569,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3774_mDC__174344_174722__B13_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__175216_175650__B98_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2166_mDC__61905_62157__B75_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -8022,12 +6576,6 @@
         "species": "compta"
     },
     "crop__15_5-7_A_3902_mDC__186891_187268__B12_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__234907_235175__B85_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
@@ -8069,12 +6617,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-19_1930.43_mC__191095_191267__B8_Sirmiodinium_grossii_F - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_11-26_2141_mDC__61116_61419__B13_Sirmiodinium_grossii.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -8105,18 +6647,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3672_mC__237992_238224__B3_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__16_2-15_1922.85_mC__179900_180167__B24_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3774_mDC__172591_173187__B8_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -8134,36 +6664,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__203503_203767__B3_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__225388_225649__B8_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__197297_197541__B44_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__39869_40305__B7_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__189822_190183__B26_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__247001_247234__B32_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -8225,47 +6725,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__196136_196434__B41_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__176130_176548__B10_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_3975_mDC__83206_83448__B11_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3975",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-15_1922.85_mC__188231_188460__B34_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__234202_234516__B27_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3786_mDC__209088_209326__B20_Surculospharidium_vestitum_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__172319_172637__B14_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__30_11-14_2982.9_mC__174690_174910__B4_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_14_",
@@ -8278,42 +6742,6 @@
         "depth": "3880",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__214990_215330__B23_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__201804_202133__B63_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__214022_214241__B7_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3672_mC__221052_221306__B5_Tenua_compta.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__228895_229095__B83_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__187532_187813__B16_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_9-18_3232.6_mC__189776_190112__B8_Rigaudella_aemula.jpg": {
         "well_id": "15_9_18_",
@@ -8339,23 +6767,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__197018_197296__B5_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_6-11_A_4150_mDC__79771_80274__B17_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4150",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__239771_240001__B75_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3786_mDC__177052_177255__B33_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
@@ -8381,45 +6797,9 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_A_3902_mDC__173799_174073__B5_Surculosphaeridium_vestiyum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__175144_175359__B16_Rigaudella_aemula_P - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__30_11-5_3144_mDC__57518_57933__B2_Rigaudella_aemula.jpg": {
         "well_id": "30_11_5_",
         "depth": "3144",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__223161_223585__B63_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__184847_185158__B10_Tenua_compta.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__242578_242787__B69_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__51044_51454__B4_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -8441,12 +6821,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_A_3902_mDC__202717_203029__B53_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-8_S_3165_mDC__43335_43878__B18_Rigaudella_aemula.jpg": {
         "well_id": "15_6_8_S",
         "depth": "3165",
@@ -8458,12 +6832,6 @@
         "depth": "3902",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__212500_212773__B9_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_A_3902_mDC__237205_237491__B67_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_5_7_A",
@@ -8477,31 +6845,13 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__222759_223018__B36_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_3-9_T2_3975_mDC__31219_31464__B1_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3975",
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__217789_218172__B55_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__236144_236426__B66_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__209870_210048__B106_Surculosphaeridium_vestitum_F - Copy.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
@@ -8531,12 +6881,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__181754_182165__B26_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_1930.43_mC__208778_209013__B28_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -8555,23 +6899,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__171861_172234__B18_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3774_mDC__237461_237822__B73_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_AT2_3880_mDC__211321_211561__B3_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_AT2",
-        "depth": "3880",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__7228_2-1_S_1115_mSWC__223580_223884__B13_Sirmiodinium_grossii.jpg": {
         "well_id": "7228_2_1_S",
@@ -8591,29 +6923,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__229913_230162__B65_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__180059_180261__B32_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3792_mDC__69869_70241__B3_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_",
         "depth": "3792",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__183528_183818__B3_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__25_9-2_S_2166_mDC__78836_79121__B28_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -8621,21 +6935,9 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__195294_195524__B3_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__7120_2-3_S_2012.5_mC__59973_60237__B26_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__223157_223416__B19_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -8687,12 +6989,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4332_mDC__91728_92083__B12_Rigaudella_aemula_P - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_4280_mSWC__76909_77337__B38_Surculosphaeridium_vestitum_P.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -8717,24 +7013,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__236144_236426__B66_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__175368_175663__B96_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3786_mDC__178818_179122__B30_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__58295_58591__B33_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -8753,27 +7031,9 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3774_mDC__173126_173593__B17_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__214574_214850__B50_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-8_S_3165_mDC__53588_53907__B8_Rigaudella_aemula.jpg": {
         "well_id": "15_6_8_S",
         "depth": "3165",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__181770_182153__B29_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -8782,24 +7042,6 @@
         "depth": "3681",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__174646_174936__B9_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__173133_173408__B7_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__184001_184307__B15_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_3786_mDC__208907_209437__B17_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
@@ -8903,18 +7145,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__183794_184076__B35_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__219102_219395__B28_Surculospharidium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-11_A_4090_mDC__86232_86659__B43_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
@@ -8926,36 +7156,6 @@
         "depth": "3786",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__190957_191262__B26_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__214087_214400__B120_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__193660_193860__B27_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__188231_188460__B34_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__237205_237491__B67_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2166_mDC__50810_51065__B50_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -8981,41 +7181,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__222350_222687__B60_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__195360_195797__B56_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_6-11_A_4090_mDC__38296_38543__B13_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__172158_172466__B6_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__176095_176415__B12_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__199790_200091__B46_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_11-26_2141_mDC__61854_62056__B2_Sirmiodinium_grossii_F.jpg": {
         "well_id": "25_11_26_",
@@ -9035,12 +7205,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3774_mDC__170998_171445__B99_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3786_mDC__196991_197222__B1_Sirmiodinium_grossii.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
@@ -9052,24 +7216,6 @@
         "depth": "2973.95",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__16_2-15_1922.85_mC__224407_224674__B15_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-19_1930.43_mC__181521_181740__B12_Sirmiodinium_grossii_P - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__215367_215603__B11_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__25_9-2_S_2178_mDC__81383_81651__B9_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "25_9_2_S",
@@ -9107,29 +7253,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3786_mDC__211734_212084__B37_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__65716_66019__B29_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4332_mDC__92285_92603__B10_Rigaudella_aemula_P - Copy (4).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__180139_180440__B31_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3780_mDC__45667_45828__B2_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
@@ -9143,12 +7271,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__175006_175354__B9_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_4262_mSWC__205404_205831__B7_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
@@ -9158,24 +7280,6 @@
     "crop__15_5-7_AT2_3880_mDC__241761_242024__B2_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__183941_184316__B38_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__199963_200411__B61_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__179856_180130__B21_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -9191,41 +7295,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__182143_182493__B30_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__175442_175730__B19_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__182466_182769__B28_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__183329_183618__B27_Sirmiodinium_grossii - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_6-8_S_3165_mDC__83528_83958__B17_Rigaudella_aemula.jpg": {
         "well_id": "15_6_8_S",
         "depth": "3165",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3780_mDC__24179_24498__B4_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__30_11-11_S_3209_mDC__225471_225847__B13_Rigaudella_aemula.jpg": {
         "well_id": "30_11_11_S",
@@ -9245,12 +7319,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-19_1930.43_mC__183851_184109__B44_Tenua_compta.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__16_2-19_1930.43_mC__197006_197240__B24_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
@@ -9269,12 +7337,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__179070_179426__B24_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_6-11_A_4090_mDC__50854_50988__B17_Rigaudella_aemula_F.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
@@ -9287,23 +7349,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_3-9_T2_4332_mDC__95308_95547__B8_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__41710_41989__B2_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__231500_231802__B84_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__16_2-19_1933.25_mC__75244_75575__B28_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
@@ -9311,21 +7361,9 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-15_1922.85_mC__182110_182407__B29_Sirmiodinium_grossii_P.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_3-9_T2_4338_mDC__238570_238823__B26_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__192271_192459__B31_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -9341,29 +7379,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__211141_211458__B124_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__238570_238823__B26_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2166_mDC__53500_53705__B11_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__177956_178343__B23_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_A_3902_mDC__193941_194227__B27_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_A",
@@ -9371,29 +7391,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__189542_189869__B19_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__210711_211055__B114_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2172_mDC__245250_245511__B29_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__182098_182389__B89_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3780_mDC__20588_20897__B8_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_",
@@ -9407,23 +7409,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3792_mDC__69869_70241__B3_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3786_mDC__198258_198586__B1_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__181304_181744__B22_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__30_11-10_A_3616_mDC__50389_50607__B6_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_10_A",
@@ -9442,12 +7432,6 @@
         "depth": "3960",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4344_mDC__43170_43485__B3_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4090_mDC__39741_40101__B11_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -9491,12 +7475,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__176130_176548__B10_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_6-11_A_4090_mDC__51426_51692__B17_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
@@ -9509,23 +7487,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__201771_202114__B45_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-11_A_4090_mDC__60463_60818__B29_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__195294_195524__B3_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_6-8_S_3165_mDC__28692_28999__B3_Rigaudella_aemula.jpg": {
         "well_id": "15_6_8_S",
@@ -9536,12 +7502,6 @@
     "crop__15_5-7_3774_mDC__235154_235427__B69_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__51044_51454__B4_Rigaudella_aemula_F - Copy (4).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -9563,12 +7523,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-19_1930.43_mC__190513_190836__B9_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_3-9_T2_3975_mDC__71479_71760__B14_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3975",
@@ -9581,35 +7535,11 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__16_2-15_1922.85_mC__188130_188408__B31_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_9-2_S_2172_mDC__193391_193616__B7_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-19_1930.43_mC__181139_181445__B12_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__183941_184316__B38_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__180677_181007__B87_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_3-9_T2_3981_mDC__241161_241373__B8_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -9623,23 +7553,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3672_mC__238748_238956__B4_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_2-1_4280_mSWC__58474_58801__B22_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__211646_211962__B15_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__198238_198608__B42_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_A",
@@ -9665,12 +7583,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__232532_232858__B31_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__41395_41701__B54_Rigaudella_aemula_F.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -9689,21 +7601,9 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4332_mDC__95193_95609__B8_Rigaudella_aemula_F_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2172_mDC__217270_217549__B37_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__16_2-19_1930.43_mC__190219_190405__B7_Tenua_compta_P - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
         "genus": "tenua",
         "species": "compta"
     },
@@ -9713,29 +7613,11 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3786_mDC__176852_177097__B32_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__234535_234698__B88_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__7324_10-1_563_mSWC__68577_68922__B11_Sirmiodinium_grossii.jpg": {
         "well_id": "7324_10_1_",
         "depth": "563",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__206631_207024__B104_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__32_4-1_1458_mDC_20221110220433591__61028_61256__B48_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
@@ -9767,12 +7649,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__180625_180958__B27_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__72003_72302__B36_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
@@ -9803,30 +7679,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__217919_218317__B28_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__202024_202406__B51_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__209481_209674__B104_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__190406_190710__B26_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__222191_222654__B57_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
@@ -9839,12 +7691,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__182816_183145__B4_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1933.25_mC__72875_73118__B26_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
         "depth": "1933.25",
@@ -9854,12 +7700,6 @@
     "crop__15_2-1_4262_mSWC__195775_196171__B1_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__183280_183702__B7_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -9875,23 +7715,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_3-9_T2_4332_mDC__39869_40305__B7_Rigaudella_aemula.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_1930.43_mC__216592_216808__B32_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__178869_179202__B3_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4090_mDC__53450_53783__B16_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -9914,12 +7742,6 @@
     "crop__15_2-1_4280_mSWC__53223_53554__B17_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__213306_213534__B121_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -9953,23 +7775,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__216426_216783__B109_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_6-11_A_4090_mDC__61250_61632__B29_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
         "depth": "4090",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__217409_217682__B21_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__52177_52362__B25_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
@@ -9983,18 +7793,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__215147_215437__B109_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3780_mDC__18337_18539__B10_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__7120_2-3_S_2012.5_mC__68955_69221__B12_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
@@ -10006,12 +7804,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__210499_210855__B103_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__7324_10-1_563_mSWC__43187_43587__B7_Sirmiodinium_grossii.jpg": {
         "well_id": "7324_10_1_",
@@ -10031,21 +7823,9 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__16_2-15_1922.85_mC__197380_197651__B2_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__30_11-11_S_3191_mDC__199808_200239__B1_Rigaudella_aemula.jpg": {
         "well_id": "30_11_11_S",
         "depth": "3191",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__198466_198864__B66_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -10060,30 +7840,6 @@
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__16_2-15_1922.85_mC__189854_190091__B30_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__174136_174488__B5_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__189589_189811__B32_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__191357_191670__B32_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_A_3902_mDC__208346_208691__B104_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_A",
@@ -10114,12 +7870,6 @@
         "depth": "1914.75",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__235095_235403__B88_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_2-1_3960_mSWC__235240_235461__B24_Sirmiodinium_grossii.jpg": {
         "well_id": "15_2_1_",
@@ -10175,18 +7925,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__222671_223011__B59_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__183794_184076__B35_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_3981_mDC__201384_201607__B25_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
@@ -10199,29 +7937,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__172591_173187__B8_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__172591_173187__B8_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3774_mDC__197726_198087__B65_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__200365_200658__B26_Sirmiodinium_grossii_P - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__25_9-2_S_2166_mDC__68754_68988__B38_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -10247,23 +7967,11 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__16_2-15_1922.85_mC__181186_181485__B26_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__61455_61810__B36_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_3780_mDC__34981_35307__B9_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__208281_208472__B54_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -10283,23 +7991,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__179070_179426__B24_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__51834_52154__B18_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__210716_210996__B119_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__220313_220625__B21_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -10312,12 +8008,6 @@
         "depth": "2141",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__171797_171983__B5_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_A_3902_mDC__232834_233121__B87_Surculosphaeridium_vestitum - Copy.jpg": {
         "well_id": "15_5_7_A",
@@ -10336,12 +8026,6 @@
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4344_mDC__41775_42076__B1_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4344",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_2-1_4280_mSWC__50010_50299__B84_Surculosphaeridium_vestitum_P.jpg": {
         "well_id": "15_2_1_",
@@ -10385,35 +8069,17 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__208111_208366__B98_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__54320_54594__B19_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__177893_178175__B3_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_AT2_3880_mDC__245732_246023__B4_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__15_6-11_A_4090_mDC__34140_34554__B4_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_6_11_A",
-        "depth": "4090",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_2-1_4280_mSWC__59698_59925__B33_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_2_1_",
@@ -10427,27 +8093,9 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4332_mDC__92285_92603__B10_Rigaudella_aemula_P - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__178777_179162__B4_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__52449_52731__B73_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3786_mDC__217093_217446__B24_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -10481,47 +8129,17 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__197018_197296__B5_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_9-2_S_2172_mDC__210175_210458__B34_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__243671_243914__B79_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__191396_191619__B30_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__16_2-19_1930.43_mC__183653_183911__B11_Sirmiodinium_grossii - Copy.jpg": {
         "well_id": "16_2_19_",
         "depth": "1930.43",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3786_mDC__194484_194926__B35_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3774_mDC__174106_174448__B20_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_5-7_3792_mDC__83338_83629__B2_Sirmiodinium_grossii.jpg": {
         "well_id": "15_5_7_",
@@ -10535,21 +8153,9 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__178969_179219__B95_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_11-26_2141_mDC__58722_59044__B11_Sirmiodinium_grossii.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__188810_189068__B33_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -10564,24 +8170,6 @@
         "depth": "2012.5",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4338_mDC__175753_176213__B13_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__241282_241557__B77_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_6-8_S_3165_mDC__65154_65700__B12_Rigaudella_aemula.jpg": {
-        "well_id": "15_6_8_S",
-        "depth": "3165",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_9-18_3232.6_mC__193689_194199__B11_Rigaudella_aemula.jpg": {
         "well_id": "15_9_18_",
@@ -10607,47 +8195,11 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3672_mC__187354_187613__B8_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__247729_248036__B73_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__192912_193184__B34_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__203533_203806__B101_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__35953_36303__B12_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_3-9_T2_4338_mDC__204866_205185__B16_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__245789_246009__B20_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3774_mDC__179884_180165__B32_Rigaudella_aemula_F - Copy.jpg": {
         "well_id": "15_5_7_",
@@ -10667,12 +8219,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__186807_187303__B1_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_11-26_2141_mDC__74878_75180__B21_Tenua_compta.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -10685,12 +8231,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__240098_240434__B74_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3687_mDC__190794_191096__B4_Tenua_compta.jpg": {
         "well_id": "15_5_7_",
         "depth": "368",
@@ -10702,12 +8242,6 @@
         "depth": "4150",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__189260_189577__B19_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__65711_66007__B20_Dissiliodinium_willei.jpg": {
         "well_id": "25_5_1_",
@@ -10732,12 +8266,6 @@
         "depth": "3681",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-15_1922.85_mC__183329_183618__B27_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_3-9_T2_3975_mDC__64358_64590__B19_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -10775,12 +8303,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__210858_211186__B12_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3786_mDC__216332_216627__B25_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
@@ -10811,24 +8333,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__188130_188408__B31_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__206732_206978__B111_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3672_mC__225932_226172__B7_Tenua_compta_P - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_AT2_3880_mDC__236201_236439__B1_Surculosphaeridium_vestitum_F.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
@@ -10841,12 +8345,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__236731_237100__B82_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_3774_mDC__218159_218487__B48_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
@@ -10858,30 +8356,6 @@
         "depth": "217",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__179884_180165__B32_Rigaudella_aemula_F - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__183918_184140__B10_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__191247_191613__B20_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__213427_213709__B126_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__195553_195753__B15_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -10907,24 +8381,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__215141_215406__B10_Sirmiodinium_grossii_F - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__174344_174722__B13_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3786_mDC__198258_198586__B1_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_11-26_2141_mDC__82488_82740__B7_Tenua_compta.jpg": {
         "well_id": "25_11_26_",
         "depth": "2141",
@@ -10936,12 +8392,6 @@
         "depth": "3702",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__215606_215888__B125_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_11-26_2141_mDC__61918_62167__B12_Tenua_compta.jpg": {
         "well_id": "25_11_26_",
@@ -10955,18 +8405,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__179844_180195__B33_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__175442_175730__B19_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2166_mDC__60916_61157__B49_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -10976,18 +8414,6 @@
     "crop__7228_2-1_S_1115_mSWC__193756_194019__B6_Sirmiodinium_grossii.jpg": {
         "well_id": "7228_2_1_S",
         "depth": "1115",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__193818_194211__B23_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__196149_196439__B1_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -11021,12 +8447,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3786_mDC__175721_175948__B33_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3786",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__43761_44057__B11_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -11051,18 +8471,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__174344_174722__B13_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3780_mDC__20588_20897__B8_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3780",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__71967_72317__B65_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
@@ -11081,12 +8489,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4332_mDC__91728_92083__B12_Rigaudella_aemula_P - Copy (4).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_AT2_3880_mDC__238567_238910__B1_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
@@ -11098,30 +8500,6 @@
         "depth": "2898",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__198647_198803__B54_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__175867_176208__B46_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__199639_199847__B55_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__179884_180165__B32_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__32_4-1_1458_mDC_20221110220433591__53367_53703__B46_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
@@ -11135,18 +8513,6 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__188029_188417__B10_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3672_mC__185051_185314__B10_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__25_9-2_S_2166_mDC__91777_92036__B48_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -11159,45 +8525,15 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__176095_176415__B12_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__187304_187566__B37_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__244257_244502__B72_Surculosphaeridium_vestitum_P - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-11_S_3209_mDC__172156_172322__B5_Surculospharidium_vestitum_F.jpg": {
         "well_id": "30_11_11_S",
         "depth": "3209",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3774_mDC__196386_196700__B62_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_2-1_4262_mSWC__201735_202108__B4_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4262",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__192221_192628__B11_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
@@ -11207,35 +8543,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__201174_201582__B63_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__173126_173593__B17_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2166_mDC__58054_58277__B2_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-19_1930.43_mC__186161_186525__B6_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__196149_196439__B1_Sirmiodinium_grossii - Copy - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__30_11-14_2973.95_mC__25120_25274__B2_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_14_",
@@ -11255,18 +8567,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__215367_215603__B11_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__172978_173233__B6_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-11_A_3702_mDC__192796_192974__B9_Rigaudella_aemula_F.jpg": {
         "well_id": "30_11_11_A",
         "depth": "3702",
@@ -11279,65 +8579,17 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__15_5-7_3774_mDC__180625_180958__B27_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__25_9-2_S_2178_mDC__44941_45537__B3_Rigaudella_aemula.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2178",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__223524_223913__B30_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__205605_205962__B25_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_5-1_2992.8_mC_20221110171531673__30442_30689__B27_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
         "depth": "2992.8",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_3774_mDC__170998_171445__B99_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__212184_212416__B8_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__193498_193912__B24_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__204866_205185__B16_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__199663_199972__B26_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_6-11_A_4096_mDC__177277_177445__B2_Rigaudella_aemula_F.jpg": {
         "well_id": "15_6_11_A",
@@ -11351,12 +8603,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__16_2-15_1922.85_mC__221127_221384__B14_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__7228_2-1_S_1115_mSWC__187709_187965__B4_Sirmiodinium_grossii_F.jpg": {
         "well_id": "7228_2_1_S",
         "depth": "1115",
@@ -11369,18 +8615,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__232834_233121__B87_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__228998_229253__B20_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_2-1_3960_mSWC__184222_184491__B6_Sirmiodinium_grossii.jpg": {
         "well_id": "15_2_1_",
         "depth": "3960",
@@ -11392,12 +8626,6 @@
         "depth": "4280",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-19_1930.43_mC__190418_190655__B7_Tenua_compta - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
     },
     "crop__15_5-7_3774_mDC__230913_231395__B75_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_",
@@ -11417,29 +8645,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__179884_180165__B32_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_3-9_T2_3981_mDC__225526_225769__B12_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__182143_182493__B30_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__174106_174448__B20_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_9-18_3232.6_mC__175300_175804__B4_Rigaudella_aemula.jpg": {
         "well_id": "15_9_18_",
@@ -11453,29 +8663,11 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__198880_199294__B3_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_A_2263.73_mC__204488_204744__B3_Tenua_compta.jpg": {
         "well_id": "16_2_19_A",
         "depth": "2263.73",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__16_2-15_1922.85_mC__189589_189811__B32_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__182187_182449__B25_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__16_2-15_1922.85_mC__221721_222030__B17_Sirmiodinium_grossii_P - Copy.jpg": {
         "well_id": "16_2_15_",
@@ -11483,41 +8675,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__179856_180130__B21_Rigaudella_aemula_F.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__215141_215406__B10_Sirmiodinium_grossii_F - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3792_mDC__91820_92102__B7_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__237769_238211__B76_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__92285_92603__B10_Rigaudella_aemula_P - Copy (2).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__239593_239877__B81_Surculosphaeridium_vestitum_P - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_5-7_3681_mDC__64916_65193__B3_Tenua_compta.jpg": {
         "well_id": "15_5_7_",
@@ -11537,45 +8699,9 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4338_mDC__194290_194550__B14_Surculosphaeridium_vestitum_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__32928_33279__B9_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3672_mC__239866_240191__B1_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_5-7_3774_mDC__197726_198087__B65_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__232394_232734__B19_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__28488_28768__B1_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_6-11_A_4150_mDC__20405_20642__B10_Rigaudella_aemula_F - Copy.jpg": {
-        "well_id": "15_6_11_A",
-        "depth": "4150",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -11585,51 +8711,9 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__179070_179426__B24_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__171797_171983__B5_Rigaudella_aemula_F - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__221721_222030__B17_Sirmiodinium_grossii_P.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__198026_198219__B4_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__222081_222282__B59_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-12_A_4043_mDC__51313_51519__B4_Sirmiodinium_grossii.jpg": {
         "well_id": "30_11_12_A",
         "depth": "4043",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__205556_205814__B99_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__212184_212416__B8_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -11645,39 +8729,15 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__16_2-15_1922.85_mC__195044_195300__B3_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_A_3902_mDC__176975_177227__B8_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_3-9_T2_4332_mDC__87752_88125__B11_Surculosphaeridium_vestitum_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_3792_mDC__84480_84755__B4_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_5-7_A_3902_mDC__173143_173481__B5_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_A",
         "depth": "3902",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__172495_172787__B99_Rigaudella_aemula_P.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
     },
@@ -11693,12 +8753,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_3774_mDC__172591_173187__B8_Rigaudella_aemula - Copy (3).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__15_5-7_3786_mDC__178032_178367__B30_Rigaudella_aemula.jpg": {
         "well_id": "15_5_7_",
         "depth": "3786",
@@ -11711,23 +8765,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__187567_187966__B36_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
     "crop__16_2-19_1933.25_mC__38523_38753__B46_Tenua_compta.jpg": {
         "well_id": "16_2_19_",
         "depth": "1933.25",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_3-9_T2_4338_mDC__235438_235810__B9_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__30_11-11_S_3209_mDC__233553_233939__B14_Rigaudella_aemula.jpg": {
         "well_id": "30_11_11_S",
@@ -11765,18 +8807,6 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__176975_177227__B8_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__48418_48765__B2_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2166_mDC__57837_58064__B23_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
@@ -11788,12 +8818,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_3672_mC__180318_180599__B11_Tenua_compta - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
     },
     "crop__15_5-7_A_3902_mDC__217138_217391__B109_Rigaudella_aemula_P.jpg": {
         "well_id": "15_5_7_A",
@@ -11807,18 +8831,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_3774_mDC__188658_188929__B68_Rigaudella_aemula - Copy.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__214585_214812__B126_Surculosphaeridium_vestitum_F - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2172_mDC__192127_192407__B6_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -11830,18 +8842,6 @@
         "depth": "4280",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_3-9_T2_4332_mDC__62524_62819__B13_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__189500_189802__B13_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4090_mDC__47291_47747__B19_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -11860,24 +8860,6 @@
         "depth": "2973.95",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_A_3902_mDC__188936_189293__B29_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4332_mDC__95193_95609__B8_Rigaudella_aemula_F_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__189991_190305__B18_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2166_mDC__85157_85387__B47_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -11903,47 +8885,17 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_A_3902_mDC__209323_209671__B104_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__238002_238342__B82_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2166_mDC__36806_37044__B62_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2166",
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_5-7_A_3902_mDC__232225_232502__B89_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_3-9_T2_3981_mDC__176033_176264__B18_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
         "depth": "3981",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_A_3902_mDC__231899_232175__B86_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__241177_241342__B74_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__16_2-19_1933.25_mC__74561_74818__B28_Sirmiodinium_grossii.jpg": {
         "well_id": "16_2_19_",
@@ -11969,12 +8921,6 @@
         "genus": "dissiliodinium",
         "species": "willei"
     },
-    "crop__16_2-15_1922.85_mC__196962_197182__B6_Sirmiodinium_grossii - Copy - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__25_9-2_S_2172_mDC__179421_179769__B4_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
         "depth": "217",
@@ -11986,12 +8932,6 @@
         "depth": "3780",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__15_5-7_A_3902_mDC__210808_211148__B106_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_9-2_S_2172_mDC__216187_216435__B19_Tenua_compta.jpg": {
         "well_id": "25_9_2_S",
@@ -12005,35 +8945,17 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__15_3-9_T2_4338_mDC__216438_216785__B32_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__25_9-2_S_2178_mDC__59419_59839__B15_Surculosphaeridium_vestitum_P.jpg": {
         "well_id": "25_9_2_S",
         "depth": "2178",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-19_1930.43_mC__183653_183911__B11_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__32_4-1_1458_mDC_20221110220433591__45630_45907__B13_Sirmiodinium_grossii.jpg": {
         "well_id": "32_4_1_",
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__15_3-9_T2_4332_mDC__39869_40305__B7_Rigaudella_aemula - Copy (4).jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_3-9_T2_3981_mDC__243308_243560__B6_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
@@ -12046,24 +8968,6 @@
         "depth": "1458",
         "genus": "sirmiodinium",
         "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__220824_221117__B13_Sirmiodinium_grossii_P.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__200484_200827__B52_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__245328_245628__B71_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__30_11-14_2982.9_mC__176054_176339__B7_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_14_",
@@ -12083,12 +8987,6 @@
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__15_5-7_3672_mC__217721_217986__B12_Tenua_compta.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3672",
-        "genus": "tenua",
-        "species": "compta"
-    },
     "crop__15_5-7_AT2_3880_mDC__246135_246353__B4_Rigaudella_aemula_F.jpg": {
         "well_id": "15_5_7_AT2",
         "depth": "3880",
@@ -12100,12 +8998,6 @@
         "depth": "1930.43",
         "genus": "tenua",
         "species": "compta"
-    },
-    "crop__15_5-7_AT2_3880_mDC__235807_236089__B1_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_AT2",
-        "depth": "3880",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__25_5-1_2992.8_mC_20221110171531673__66720_66921__B32_Dissiliodinium_willei_F.jpg": {
         "well_id": "25_5_1_",
@@ -12131,43 +9023,13 @@
         "genus": "tenua",
         "species": "compta"
     },
-    "crop__16_2-15_1922.85_mC__188130_188408__B31_Sirmiodinium_grossii - Copy (2).jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__198170_198533__B50_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__61932_62276__B79_Rigaudella_aemula.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__197203_197557__B39_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-15_1922.85_mC__210858_211186__B12_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
     "crop__15_5-7_3774_mDC__206160_206471__B84_Rigaudella_aemula.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3774_mDC__180625_180958__B27_Rigaudella_aemula - Copy (2).jpg": {
         "well_id": "15_5_7_",
         "depth": "3774",
         "genus": "rigaudella",
@@ -12178,12 +9040,6 @@
         "depth": "3774",
         "genus": "rigaudella",
         "species": "aemula"
-    },
-    "crop__16_2-15_1922.85_mC__189589_189811__B32_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
     },
     "crop__15_5-7_AT2_3880_mDC__237500_237850__B4_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_5_7_AT2",
@@ -12203,57 +9059,15 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_3-9_T2_4338_mDC__187879_188210__B5_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__59735_60065__B2_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
         "genus": "surculosphaeridium",
         "species": "vestitum"
     },
-    "crop__16_2-15_1922.85_mC__210858_211186__B12_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__213492_213872__B113_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__7120_2-3_S_2012.5_mC__64805_65135__B28_Sirmiodinium_grossii.jpg": {
         "well_id": "7120_2_3_S",
         "depth": "2012.5",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__197018_197296__B5_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_A_3902_mDC__189266_189504__B16_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__196249_196547__B24_Sirmiodinium_grossii.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__16_2-15_1922.85_mC__181758_182032__B28_Sirmiodinium_grossii_P - Copy.jpg": {
-        "well_id": "16_2_15_",
-        "depth": "1922.85",
         "genus": "sirmiodinium",
         "species": "grossii"
     },
@@ -12269,35 +9083,11 @@
         "genus": "sirmiodinium",
         "species": "grossii"
     },
-    "crop__15_5-7_3774_mDC__189041_189421__B68_Rigaudella_aemula_P.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_5-7_3792_mDC__34952_35333__B8_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-12_A_4025_mDC_20221115164236577__30516_30735__B1_Dissiliodinium_willei_F.jpg": {
         "well_id": "30_11_12_A",
         "depth": "4025",
         "genus": "dissiliodinium",
         "species": "willei"
-    },
-    "crop__15_5-7_3792_mDC__79974_80274__B6_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3792",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_5-7_A_3902_mDC__186891_187268__B12_Surculosphaeridium_vestitum - Copy.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
     },
     "crop__15_6-11_A_4150_mDC__80095_80565__B15_Rigaudella_aemula.jpg": {
         "well_id": "15_6_11_A",
@@ -12341,36 +9131,6 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_5-7_A_3902_mDC__222133_222386__B56_Surculosphaeridium_vestitum_F.jpg": {
-        "well_id": "15_5_7_A",
-        "depth": "3902",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__176524_176790__B1_Sirmiodinium_grossii - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "sirmiodinium",
-        "species": "grossii"
-    },
-    "crop__15_5-7_3774_mDC__176130_176548__B10_Rigaudella_aemula - Copy (2).jpg": {
-        "well_id": "15_5_7_",
-        "depth": "3774",
-        "genus": "rigaudella",
-        "species": "aemula"
-    },
-    "crop__15_3-9_T2_4338_mDC__184127_184516__B6_Surculosphaeridium_vestitum.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
-    "crop__15_3-9_T2_4338_mDC__191516_191909__B2_Surculosphaeridium_vestitum_.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4338",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__30_11-11_A_3702_mDC__188915_189472__B10_Rigaudella_aemula_P.jpg": {
         "well_id": "30_11_11_A",
         "depth": "3702",
@@ -12407,29 +9167,11 @@
         "genus": "rigaudella",
         "species": "aemula"
     },
-    "crop__15_3-9_T2_4332_mDC__33468_33727__B6_Surculosphaeridium_vestitum_P.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "surculosphaeridium",
-        "species": "vestitum"
-    },
     "crop__15_2-1_4280_mSWC__34745_35088__B66_Surculosphaeridium_vestitum.jpg": {
         "well_id": "15_2_1_",
         "depth": "4280",
         "genus": "surculosphaeridium",
         "species": "vestitum"
-    },
-    "crop__16_2-19_1930.43_mC__183119_183354__B14_Tenua_compta_P - Copy.jpg": {
-        "well_id": "16_2_19_",
-        "depth": "1930.43",
-        "genus": "tenua",
-        "species": "compta"
-    },
-    "crop__15_3-9_T2_4332_mDC__91728_92083__B12_Rigaudella_aemula_P - Copy.jpg": {
-        "well_id": "15_3_9_T2",
-        "depth": "4332",
-        "genus": "rigaudella",
-        "species": "aemula"
     },
     "crop__15_3-9_T2_3981_mDC__174069_174292__B16_Tenua_compta.jpg": {
         "well_id": "15_3_9_T2",
