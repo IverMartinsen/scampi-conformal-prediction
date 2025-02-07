@@ -1,7 +1,10 @@
+# TO-DO_
+# - Add argparse
+
 import os
 import sys
 
-sys.path.append(os.path.join(os.getcwd(), "postprocessing"))
+sys.path.append(os.getcwd())
 
 import glob
 import h5py
@@ -11,15 +14,16 @@ import joblib
 import numpy as np
 import pandas as pd
 from PIL import Image
-from utils import load_hdf5, read_fn, lab_to_name, LinearClassifier
+from utils import load_hdf5, read_fn, lab_to_name
+from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
 alpha = 0.95
-path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/5 classes - log - model/entropy.json'
-path_to_ood_detector = './postprocessing/ood_detector/ood_detector.pkl'
+path_to_ref_ent = 'training/trained_models/20250206160906/entropy.json'
+path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/5 classes - log - model/classifier.pkl'
+path_to_classifier = 'training/trained_models/20250206160906/classifier.pth'
 lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder/lab_to_name.json'))
 classes = range(len(lab_to_name))
 # args end
