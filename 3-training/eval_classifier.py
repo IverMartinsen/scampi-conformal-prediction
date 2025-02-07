@@ -1,3 +1,6 @@
+# TODO:
+# Split eval and entropy calculation intro two separate scripts?
+
 import os
 import sys
 
@@ -69,7 +72,8 @@ model = torch.nn.Sequential(pretrained_model, classifier).to(args.device)
 
 model.eval()
 
-os.makedirs(args.output_dir, exist_ok=True)
+if args.output_dir != "":
+    os.makedirs(args.output_dir, exist_ok=True)
 
 y_true = []
 y_pred = []
