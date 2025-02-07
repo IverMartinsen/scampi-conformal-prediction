@@ -1,5 +1,6 @@
 # TO-DO_
 # - Add argparse
+# - split into pure functions
 
 import os
 import sys
@@ -19,7 +20,7 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.95
+alpha = 0.50
 path_to_ref_ent = 'training/trained_models/20250206160906/entropy.json'
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
@@ -34,7 +35,7 @@ path_to_files.sort()
 
 path_to_hdf5 = os.path.join(src_data, "hdf5")
 
-folder = "./postprocessing/results/" + os.path.basename(src_data) + f"_alpha_{alpha}"
+folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_alpha_{alpha}"
 
 os.makedirs(folder, exist_ok=True)
 
@@ -75,7 +76,10 @@ for path_to_features in path_to_files:
             breakpoint()
             
         _, counts = np.unique(pred, return_counts=True)
-        num_black = counts[1]
+        try:
+            num_black = counts[1]
+        except IndexError:
+            num_black = 0
         try:
             num_blurry = counts[2]
         except IndexError:
