@@ -21,13 +21,14 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.05
-path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412/merged_entropies.json'
+alpha = 0.025
+path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250207141443/entropy.json'
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412/classifier.pth'
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20/lab_to_name.json'))
+path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250207141443/classifier.pth'
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-merged-25/lab_to_name.json'))
 classes = range(len(lab_to_name))
+classes = 4, 7, 17, 18, 21, 23
 # args end
 
 path_to_files = os.path.join(src_data, "features")
