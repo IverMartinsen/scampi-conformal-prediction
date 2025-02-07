@@ -17,7 +17,7 @@ jobfile.yml
 *.pth
 train_on_springfield.yml
 extract_features_on_springfield.yml
-postprocessing/trained_models
+trained_models
 data/labelled forams
 cluster_all_slides_on_springfield.yml
 data/NO 15-9-19 A/*.pdf
