@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser()
 parser.add_argument("--src", type=str, default=None)
 parser.add_argument("--alpha", type=float, default=None)
-parser.add_argument("--x_lim", type=tuple, default=None)
+parser.add_argument("--x_lim", nargs="+", type=int, default=None)
 parser.add_argument("--fontsize", type=int, default=18)
 args = parser.parse_args()
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
         y = ((df[c]) * (1 - fdr[c]) / (1 - alpha)).rolling(window=1).mean()
         
         plt.figure(figsize=(20, 10))
-        plt.bar(x, y, label="Genus count", color=next(iterable), width=3)
+        plt.bar(x, y, label="Genus count", width=3)
         plt.xticks(np.arange(span[0], span[1], 20), rotation=45, fontsize=fontsize)
         plt.xlabel("Depth", fontsize=fontsize)
         plt.ylabel("Count", fontsize=fontsize)
