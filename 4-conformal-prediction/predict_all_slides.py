@@ -1,6 +1,7 @@
 # TO-DO_
 # - Add argparse
 # - split into pure functions
+# - fix "RuntimeWarning: divide by zero encountered in log entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
 
 import os
 import sys
@@ -20,12 +21,12 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.50
-path_to_ref_ent = 'training/trained_models/20250206160906/entropy.json'
+alpha = 0.05
+path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412/merged_entropies.json'
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-path_to_classifier = 'training/trained_models/20250206160906/classifier.pth'
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder/lab_to_name.json'))
+path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412/classifier.pth'
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20/lab_to_name.json'))
 classes = range(len(lab_to_name))
 # args end
 
@@ -34,20 +35,22 @@ path_to_files = glob.glob(path_to_files + "/*.hdf5")
 path_to_files.sort()
 
 path_to_hdf5 = os.path.join(src_data, "hdf5")
-
-folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_alpha_{alpha}"
+import time
+timestring = time.strftime("%Y%m%d%H%M%S")
+folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_alpha_{alpha}_{timestring}"
 
 os.makedirs(folder, exist_ok=True)
 
 ood_detector = joblib.load(path_to_ood_detector)
 
-classifier = LinearClassifier(384, 5)
+classifier = LinearClassifier(384, len(lab_to_name))
 classifier.load_state_dict(torch.load(path_to_classifier, map_location="mps"))
 
 with open(path_to_ref_ent) as f:
     ref_ent = json.load(f)
 
 detections = []
+total_counts = []
 
 for path_to_features in path_to_files:
     # =============================================================================
@@ -65,6 +68,9 @@ for path_to_features in path_to_files:
         idxs = np.unique(np.concatenate([nans, infs]))
         f_un = np.delete(f_un, idxs)
         x_un = np.delete(x_un, idxs, axis=0)
+    
+    count = x_un.shape[0]
+    total_counts.append((os.path.basename(path_to_images), count))
     
     # =============================================================================
     # OOD DETECTION STEP
@@ -120,3 +126,6 @@ for path_to_features in path_to_files:
 
 df = pd.DataFrame(detections, columns=["source", "filename", "label", "genus"])
 df.to_csv(os.path.join(folder, "stats.csv"), index=False)
+# save total counts
+df = pd.DataFrame(total_counts, columns=["source", "count"])
+df.to_csv(os.path.join(folder, "counts.csv"), index=False)
