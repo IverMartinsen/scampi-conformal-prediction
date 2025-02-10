@@ -11,6 +11,7 @@ sys.path.append(os.getcwd())
 import glob
 import h5py
 import json
+import time
 import torch
 import joblib
 import numpy as np
@@ -21,43 +22,58 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.025
-path_to_ref_ent = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250207141443/entropy.json'
+alpha = 0.05
+src_models = [
+    "./training/trained_models/20250207155937",
+    "./training/trained_models/20250207160656",
+]
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-path_to_classifier = '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250207141443/classifier.pth'
 lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-merged-25/lab_to_name.json'))
 classes = range(len(lab_to_name))
 classes = 4, 7, 17, 18, 21, 23
 # args end
 
-path_to_files = os.path.join(src_data, "features")
-path_to_files = glob.glob(path_to_files + "/*.hdf5")
-path_to_files.sort()
-
-path_to_hdf5 = os.path.join(src_data, "hdf5")
-import time
+# Make folder for results
 timestring = time.strftime("%Y%m%d%H%M%S")
 folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_alpha_{alpha}_{timestring}"
 
 os.makedirs(folder, exist_ok=True)
 
+
+feature_paths = os.path.join(src_data, "features")
+feature_paths = glob.glob(feature_paths + "/*.hdf5")
+feature_paths.sort()
+
+image_folder = os.path.join(src_data, "hdf5")
+
 ood_detector = joblib.load(path_to_ood_detector)
 
-classifier = LinearClassifier(384, len(lab_to_name))
-classifier.load_state_dict(torch.load(path_to_classifier, map_location="mps"))
+classifiers = []
+entropies = []
 
-with open(path_to_ref_ent) as f:
-    ref_ent = json.load(f)
+for path in src_models:
+    classifier = LinearClassifier(384, len(lab_to_name))
+    classifier.load_state_dict(torch.load(os.path.join(path, "classifier.pth"), map_location="cpu"))
+    classifiers.append(classifier)
+
+    with open(os.path.join(path, "entropy.json")) as f:
+        entropies.append(json.load(f))
+
+ref_ent = {}
+for k in lab_to_name.values():
+    ref_ent[k] = []
+    for e in entropies:
+        ref_ent[k] += e[k]
 
 detections = []
 total_counts = []
 
-for path_to_features in path_to_files:
+for path_to_features in feature_paths:
     # =============================================================================
     # FEATURE LOADING STEP
     # =============================================================================
-    path_to_images = os.path.join(path_to_hdf5, os.path.basename(path_to_features).replace("_features", ""))
+    path_to_images = os.path.join(image_folder, os.path.basename(path_to_features).replace("_features", ""))
     f_un, x_un, _ = load_hdf5(path_to_features)
     print(f"Loaded {x_un.shape[0]} features.")
 
@@ -99,7 +115,10 @@ for path_to_features in path_to_files:
     # =============================================================================
     # ENTROPY FILTERING STEP
     # =============================================================================
-    logits = classifier(torch.tensor(x_un).float()).detach().numpy()
+    logits = []
+    for classifier in classifiers:
+        logits.append(classifier(torch.tensor(x_un).float()).detach().numpy())
+    logits = np.mean(logits, axis=0)
     y_prob = torch.nn.functional.softmax(torch.tensor(logits), dim=-1).numpy()
     
     y_pred = np.argmax(y_prob, axis=1)
