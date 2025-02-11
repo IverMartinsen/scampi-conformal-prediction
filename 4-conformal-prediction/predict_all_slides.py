@@ -22,29 +22,30 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.025
+alpha = 0.05
 src_models = [
-    './training/trained_models/20250210152137_seed1',
-    './training/trained_models/20250210155635_seed2',
-    './training/trained_models/20250210163107_seed3',
-    './training/trained_models/20250210170115_seed4',
-    './training/trained_models/20250210173135_seed5',
-    './training/trained_models/20250210180149_seed6',
-    './training/trained_models/20250210183208_seed7',
-    './training/trained_models/20250210190244_seed8',
-    './training/trained_models/20250210193252_seed9',
-    './training/trained_models/20250210200258_seed10',
+    '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412',
+    #'./training/trained_models/20250210152137_seed1',
+    #'./training/trained_models/20250210155635_seed2',
+    #'./training/trained_models/20250210163107_seed3',
+    #'./training/trained_models/20250210170115_seed4',
+    #'./training/trained_models/20250210173135_seed5',
+    #'./training/trained_models/20250210180149_seed6',
+    #'./training/trained_models/20250210183208_seed7',
+    #'./training/trained_models/20250210190244_seed8',
+    #'./training/trained_models/20250210193252_seed9',
+    #'./training/trained_models/20250210200258_seed10',
 ]
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20/lab_to_name.json'))
 classes = range(len(lab_to_name))
 #classes = 4, 7, 17, 18, 21, 23
 # args end
 
 # Make folder for results
 timestring = time.strftime("%Y%m%d%H%M%S")
-folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_alpha_{alpha}_{timestring}"
+folder = "./4-conformal-prediction/results/" + "test"
 
 os.makedirs(folder, exist_ok=True)
 
@@ -67,6 +68,26 @@ for path in src_models:
 
     with open(os.path.join(path, "entropy.json")) as f:
         entropies.append(json.load(f))
+
+import torchvision
+from torchvision import transforms
+
+transform = transforms.Compose([
+    transforms.Resize((224, 224), interpolation=3),
+    transforms.ToTensor(),
+    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+])
+
+
+dataset = torchvision.datasets.ImageFolder('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate', transform=transform)
+
+features = []
+labels = []
+for i in range(len(dataset)):
+    img, label = dataset[i]
+    features.append(img.numpy())
+    labels.append(label)
+
 
 ref_ent = {}
 for k in lab_to_name.values():
@@ -136,12 +157,13 @@ for path_to_features in feature_paths:
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
     # =============================================================================
     for k in classes:
-
+        if lab_to_name[str(k)] != "bisaccate":
+            continue
         e = ref_ent[lab_to_name[str(k)]]
         q = np.quantile(e, 1 - alpha)
     
         fnames = f_un[(y_pred == k) & (entropy < q)]
-
+        
         for file in fnames:
             with h5py.File(path_to_images, 'r') as f:
                 img = f[file][()]
