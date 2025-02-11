@@ -4,36 +4,22 @@ import matplotlib.pyplot as plt
 from utils import load_hdf5
 
 
-def compute_reference_entropy(classifier, class_label):
-    # load labelled features
-    path_to_labelled_features = "labelled_crops_features.hdf5"
-
-    _, x, y = load_hdf5(path_to_labelled_features)
-
-    p = classifier.predict_proba(x)[y == class_label]
-    e = -np.sum(p * np.log(p), axis=1)
-
-    return e
-
-
-path_to_features = '/Users/ima029/Desktop/NO 6407-6-5/features/6407_6-5 2030 mDC_features.hdf5'
-
-__, x_un, _ = load_hdf5(path_to_features)
-
-ood_detector = joblib.load("ood_detection_model.pkl")
-
-pred = ood_detector.predict(x_un)
-
-x_un = x_un[pred == 0]
-
-classifier = joblib.load("genus_classifier.pkl")
-
-y_prob = classifier.predict_proba(x_un)
-y_pred = np.argmax(y_prob, axis=1)
-entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+entropy = json.load('/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 15-9-19 A_alpha_0.5_20250211114957/entropy.json')
 
 
 import json
