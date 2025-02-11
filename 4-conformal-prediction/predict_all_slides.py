@@ -22,7 +22,7 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.025
+alpha = 0.50
 src_models = [
     './training/trained_models/20250210152137_seed1',
     './training/trained_models/20250210155635_seed2',
@@ -76,6 +76,7 @@ for k in lab_to_name.values():
 
 detections = []
 total_counts = []
+entropies = []
 
 for path_to_features in feature_paths:
     # =============================================================================
@@ -131,6 +132,7 @@ for path_to_features in feature_paths:
     
     y_pred = np.argmax(y_prob, axis=1)
     entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
+    entropies.append(entropy)
 
     # =============================================================================
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
@@ -157,3 +159,11 @@ df.to_csv(os.path.join(folder, "stats.csv"), index=False)
 # save total counts
 df = pd.DataFrame(total_counts, columns=["source", "count"])
 df.to_csv(os.path.join(folder, "counts.csv"), index=False)
+# save entropies
+entropies = np.concatenate(entropies)
+d = {}
+for i in range(len(lab_to_name)):
+    idx = np.where(y_pred == i)[0]
+    d[lab_to_name[str(i)]] = entropies[idx].tolist()
+with open(os.path.join(folder, "entropy.json"), "w") as f:
+    json.dump(d, f)
