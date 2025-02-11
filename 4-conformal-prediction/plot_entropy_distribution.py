@@ -17,15 +17,13 @@ def compute_reference_entropy(classifier, class_label):
 
 
 path_to_features = '/Users/ima029/Desktop/NO 6407-6-5/features/6407_6-5 2030 mDC_features.hdf5'
-path_to_images = path_to_features.replace("_features", "")
 
-f_un, x_un, _ = load_hdf5(path_to_features)
+__, x_un, _ = load_hdf5(path_to_features)
 
 ood_detector = joblib.load("ood_detection_model.pkl")
 
 pred = ood_detector.predict(x_un)
 
-f_un = f_un[pred == 0]
 x_un = x_un[pred == 0]
 
 classifier = joblib.load("genus_classifier.pkl")
@@ -34,12 +32,45 @@ y_prob = classifier.predict_proba(x_un)
 y_pred = np.argmax(y_prob, axis=1)
 entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
 
-path_to_labelled_features = "labelled_crops_features.hdf5"
 
-_, x_lab, y_lab = load_hdf5(path_to_labelled_features)
 
-y_prob_lab = classifier.predict_proba(x_lab)
-entropy_lab = -np.sum(y_prob_lab * np.log(y_prob_lab), axis=1)
+
+
+import json
+import os
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
+
+src_models = [
+    './training/trained_models/20250210152137_seed1',
+    './training/trained_models/20250210155635_seed2',
+    './training/trained_models/20250210163107_seed3',
+    './training/trained_models/20250210170115_seed4',
+    './training/trained_models/20250210173135_seed5',
+    './training/trained_models/20250210180149_seed6',
+    './training/trained_models/20250210183208_seed7',
+    './training/trained_models/20250210190244_seed8',
+    './training/trained_models/20250210193252_seed9',
+    './training/trained_models/20250210200258_seed10',
+]
+
+entropies = []
+
+for path in src_models:
+    with open(os.path.join(path, "entropy.json")) as f:
+        entropies.append(json.load(f))
+
+entropy_lab = {}
+for k in lab_to_name.values():
+    entropy_lab[k] = []
+    for e in entropies:
+        entropy_lab[k] += e[k]
+
+
+
+
+
+
+
 
 colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
 xlim = (np.log(entropy).min(), np.log(entropy).max())
