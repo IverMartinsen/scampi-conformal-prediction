@@ -76,7 +76,8 @@ for k in lab_to_name.values():
 
 detections = []
 total_counts = []
-entropies = []
+entropies_un = []
+preds = []
 
 for path_to_features in feature_paths:
     # =============================================================================
@@ -132,7 +133,8 @@ for path_to_features in feature_paths:
     
     y_pred = np.argmax(y_prob, axis=1)
     entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
-    entropies.append(entropy)
+    entropies_un.append(entropy)
+    preds.append(y_pred)
 
     # =============================================================================
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
@@ -160,10 +162,11 @@ df.to_csv(os.path.join(folder, "stats.csv"), index=False)
 df = pd.DataFrame(total_counts, columns=["source", "count"])
 df.to_csv(os.path.join(folder, "counts.csv"), index=False)
 # save entropies
-entropies = np.concatenate(entropies)
+entropies_un = np.concatenate(entropies_un)
+preds = np.concatenate(preds)
 d = {}
 for i in range(len(lab_to_name)):
-    idx = np.where(y_pred == i)[0]
-    d[lab_to_name[str(i)]] = entropies[idx].tolist()
+    idx = np.where(preds == i)[0]
+    d[lab_to_name[str(i)]] = entropies_un[idx].tolist()
 with open(os.path.join(folder, "entropy.json"), "w") as f:
     json.dump(d, f)
