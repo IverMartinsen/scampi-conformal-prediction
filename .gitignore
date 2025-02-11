@@ -22,7 +22,7 @@ data/labelled forams
 cluster_all_slides_on_springfield.yml
 data/NO 15-9-19 A/*.pdf
 *Thumbs.db
-
+results
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
