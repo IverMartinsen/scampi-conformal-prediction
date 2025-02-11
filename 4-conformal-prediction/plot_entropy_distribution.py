@@ -1,29 +1,10 @@
-import joblib
+import os
+import json
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import load_hdf5
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-entropy = json.load('/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 15-9-19 A_alpha_0.5_20250211114957/entropy.json')
-
-
-import json
-import os
+f = open('/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 15-9-19 A_alpha_0.5_20250211122314/entropy.json')
+entropy_un = json.load(f)
 lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
 
 src_models = [
@@ -54,28 +35,25 @@ for k in lab_to_name.values():
 
 
 
-
-
-
-
 colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
-xlim = (np.log(entropy).min(), np.log(entropy).max())
+xlim = (np.log(entropy_un).min(), np.log(entropy_un).max())
+vals = np.concatenate([entropy_un[k] for k in entropy_un.keys()])
+# remove nans
+vals = vals[~np.isnan(vals)]
 
-int_to_class = {
-    0: "alisocysta",
-    4: "bisaccate",
-    11: "inaperturopollenites",
-    14: "palaeoperidinium",
-}
+
+
+xlim = (np.log(vals).min(), np.log(vals).max())
+
 
 fontsize = 20
 
-q = np.quantile(entropy, 0.05)
+q = np.quantile(vals, 0.05)
 
-t = np.zeros(20)
+t = np.zeros(len(lab_to_name))
 
-for i in [0, 4, 11, 14]:
-    e = compute_reference_entropy(classifier, i)
+for i in range(len(lab_to_name)):
+    e = entropy_lab[lab_to_name[str(i)]]
     t[i] = (e > q).mean()
 
 
@@ -83,10 +61,10 @@ for i in [0, 4, 11, 14]:
 
 alpha = t.max()
 
-q_class_wise = np.zeros(20)
+q_class_wise = np.zeros(len(lab_to_name))
 
-for i in [0, 4, 11, 14]:
-    e = compute_reference_entropy(classifier, i)
+for i in range(len(lab_to_name)):
+    e = entropy_lab[lab_to_name[str(i)]]
     n = len(e)
     q_class_wise[i] = np.quantile(e, 1 - alpha)
 
@@ -94,14 +72,14 @@ for i in [0, 4, 11, 14]:
 fig, axes = plt.subplots(5, 1, figsize=(20, 20), sharex=True)
 
 ax = axes.flatten()[0]
-ax.hist(np.log(entropy), bins=100, density=True, alpha=0.5, color=colors[0], label="Unlabelled data from slide")
+ax.hist(np.log(vals), bins=100, density=True, alpha=0.5, color=colors[0], label="Unlabelled data from slide")
 ax.axvline(np.log(q), color='r', linestyle='--', label="5% quantile", linewidth=2)
 ax.set_xlim(xlim)
 ax.set_yticks([])
 ax.legend(fontsize=fontsize)
-for j, i in enumerate([0, 4, 11, 14]):
-    ax = axes.flatten()[j + 1]
-    ax.hist(np.log(entropy_lab)[y_lab == i], bins=10, alpha=0.5, density=True, color=colors[j + 1], label=f"{int_to_class[i]}")
+for i in range(len(lab_to_name)):
+    ax = axes.flatten()[i + 1]
+    ax.hist(np.log(entropy_lab[lab_to_name[str(i)]]), bins=10, alpha=0.5, density=True, color=colors[j + 1], label=f"{lab_to_name[str(i)]}")
     ax.axvline(np.log(q_class_wise[i]), color='r', linestyle='--', linewidth=2, label="adjusted quantile")
     ax.set_xlim(xlim)
     ax.set_yticks([])
