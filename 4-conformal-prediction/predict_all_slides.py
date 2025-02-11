@@ -22,16 +22,24 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.05
+alpha = 0.025
 src_models = [
-    "./training/trained_models/20250207155937",
-    "./training/trained_models/20250207160656",
+    './training/trained_models/20250210152137_seed1',
+    './training/trained_models/20250210155635_seed2',
+    './training/trained_models/20250210163107_seed3',
+    './training/trained_models/20250210170115_seed4',
+    './training/trained_models/20250210173135_seed5',
+    './training/trained_models/20250210180149_seed6',
+    './training/trained_models/20250210183208_seed7',
+    './training/trained_models/20250210190244_seed8',
+    './training/trained_models/20250210193252_seed9',
+    './training/trained_models/20250210200258_seed10',
 ]
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-merged-25/lab_to_name.json'))
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
 classes = range(len(lab_to_name))
-classes = 4, 7, 17, 18, 21, 23
+#classes = 4, 7, 17, 18, 21, 23
 # args end
 
 # Make folder for results
