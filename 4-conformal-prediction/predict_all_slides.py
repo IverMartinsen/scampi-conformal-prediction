@@ -22,7 +22,7 @@ from training.utils import LinearClassifier
 
 # args
 src_data = 'data/NO 15-9-19 A'
-alpha = 0.025
+alpha = 0.50
 src_models = [
     './training/trained_models/20250210152137_seed1',
     './training/trained_models/20250210155635_seed2',
@@ -48,6 +48,9 @@ folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_a
 
 os.makedirs(folder, exist_ok=True)
 
+# copy lab_to_name to folder
+with open(os.path.join(folder, "lab_to_name.json"), "w") as f:
+    json.dump(lab_to_name, f)
 
 feature_paths = os.path.join(src_data, "features")
 feature_paths = glob.glob(feature_paths + "/*.hdf5")
@@ -74,8 +77,13 @@ for k in lab_to_name.values():
     for e in entropies:
         ref_ent[k] += e[k]
 
+with open(os.path.join(folder, "ref_entropy.json"), "w") as f:
+    json.dump(ref_ent, f)
+
 detections = []
 total_counts = []
+entropies_un = []
+preds = []
 
 for path_to_features in feature_paths:
     # =============================================================================
@@ -131,6 +139,8 @@ for path_to_features in feature_paths:
     
     y_pred = np.argmax(y_prob, axis=1)
     entropy = -np.sum(y_prob * np.log(y_prob), axis=1)
+    entropies_un.append(entropy)
+    preds.append(y_pred)
 
     # =============================================================================
     # CLASS-WISE QUANTILE COMPUTATION AND DETECTION STEP
@@ -157,3 +167,12 @@ df.to_csv(os.path.join(folder, "stats.csv"), index=False)
 # save total counts
 df = pd.DataFrame(total_counts, columns=["source", "count"])
 df.to_csv(os.path.join(folder, "counts.csv"), index=False)
+# save entropies
+entropies_un = np.concatenate(entropies_un)
+preds = np.concatenate(preds)
+d = {}
+for i in range(len(lab_to_name)):
+    idx = np.where(preds == i)[0]
+    d[lab_to_name[str(i)]] = entropies_un[idx].tolist()
+with open(os.path.join(folder, "entropy.json"), "w") as f:
+    json.dump(d, f)
