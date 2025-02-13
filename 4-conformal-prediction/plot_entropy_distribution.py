@@ -1,11 +1,17 @@
 import os
 import json
+import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 
-f = open('/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 15-9-19 A_alpha_0.5_20250211122314/entropy.json')
+parser = argparse.ArgumentParser()
+parser.add_argument("--alpha", type=float, default=0.05)
+parser.add_argument("--src", type=str, help="Path to the source directory containing the entropy.json files")
+args = parser.parse_args()
+
+f = open(os.path.join(args.src, "entropy.json"))
 entropy_un = json.load(f)
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
+lab_to_name = json.load(open(os.path.join(args.src, "lab_to_name.json")))
 
 src_models = [
     './training/trained_models/20250210152137_seed1',
@@ -32,60 +38,35 @@ for k in lab_to_name.values():
     for e in entropies:
         entropy_lab[k] += e[k]
 
-
-
-
-colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
-xlim = (np.log(entropy_un).min(), np.log(entropy_un).max())
-vals = np.concatenate([entropy_un[k] for k in entropy_un.keys()])
-# remove nans
-vals = vals[~np.isnan(vals)]
-
-
-
-xlim = (np.log(vals).min(), np.log(vals).max())
-
-
 fontsize = 20
 
-q = np.quantile(vals, 0.05)
-
-t = np.zeros(len(lab_to_name))
+colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
 
 for i in range(len(lab_to_name)):
+
+    plt.figure(figsize=(10, 5))
+
+    genus = lab_to_name[str(i)]
+    vals = np.array(entropy_un[genus])
+    vals = vals[~np.isnan(vals)]
+    x = np.log(vals)
+    y = np.log(entropy_lab[genus])
+    xmin = np.min((x.min(), y.min()))
+    xmax = np.max((x.max(), y.max()))
+    xlim = (xmin, xmax)
     e = entropy_lab[lab_to_name[str(i)]]
-    t[i] = (e > q).mean()
+    q = np.log(np.quantile(e, 1 - args.alpha))
+    
+    plt.hist(x, bins=100, density=True, alpha=1.0, color=colors[0], label="Unlabelled data")
+    plt.hist(y, bins=10, alpha=0.8, density=True, color=colors[i + 1], label=f"{genus}")
+    plt.axvline(q, color='r', linestyle='--', linewidth=3, label=f"{args.alpha:.0%} quantile")
+    plt.xlabel("log Entropy", fontsize=fontsize)
+    plt.xlim(xlim)
+    plt.xticks(fontsize=fontsize)
+    plt.yticks([])
+    plt.legend(fontsize=fontsize)
+    plt.tight_layout()
+    fname = f"{genus}_entropy_distribution.png"
+    plt.savefig(os.path.join(args.src, fname), dpi=300)
+    plt.close()
 
-
-
-
-alpha = t.max()
-
-q_class_wise = np.zeros(len(lab_to_name))
-
-for i in range(len(lab_to_name)):
-    e = entropy_lab[lab_to_name[str(i)]]
-    n = len(e)
-    q_class_wise[i] = np.quantile(e, 1 - alpha)
-
-
-fig, axes = plt.subplots(5, 1, figsize=(20, 20), sharex=True)
-
-ax = axes.flatten()[0]
-ax.hist(np.log(vals), bins=100, density=True, alpha=0.5, color=colors[0], label="Unlabelled data from slide")
-ax.axvline(np.log(q), color='r', linestyle='--', label="5% quantile", linewidth=2)
-ax.set_xlim(xlim)
-ax.set_yticks([])
-ax.legend(fontsize=fontsize)
-for i in range(len(lab_to_name)):
-    ax = axes.flatten()[i + 1]
-    ax.hist(np.log(entropy_lab[lab_to_name[str(i)]]), bins=10, alpha=0.5, density=True, color=colors[j + 1], label=f"{lab_to_name[str(i)]}")
-    ax.axvline(np.log(q_class_wise[i]), color='r', linestyle='--', linewidth=2, label="adjusted quantile")
-    ax.set_xlim(xlim)
-    ax.set_yticks([])
-    ax.legend(fontsize=fontsize)
-plt.xlabel("log Entropy", fontsize=fontsize)
-plt.xticks(fontsize=fontsize)
-plt.tight_layout()
-plt.savefig(f"entropy_distribution{i}.png", dpi=300)
-plt.close()
