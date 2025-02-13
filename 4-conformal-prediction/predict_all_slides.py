@@ -48,6 +48,9 @@ folder = "./4-conformal-prediction/results/" + os.path.basename(src_data) + f"_a
 
 os.makedirs(folder, exist_ok=True)
 
+# copy lab_to_name to folder
+with open(os.path.join(folder, "lab_to_name.json"), "w") as f:
+    json.dump(lab_to_name, f)
 
 feature_paths = os.path.join(src_data, "features")
 feature_paths = glob.glob(feature_paths + "/*.hdf5")
@@ -73,6 +76,9 @@ for k in lab_to_name.values():
     ref_ent[k] = []
     for e in entropies:
         ref_ent[k] += e[k]
+
+with open(os.path.join(folder, "ref_entropy.json"), "w") as f:
+    json.dump(ref_ent, f)
 
 detections = []
 total_counts = []
