@@ -9,8 +9,6 @@ parser.add_argument("--alpha", type=float, default=0.05)
 parser.add_argument("--src", type=str, help="Path to the source directory containing the entropy.json files")
 args = parser.parse_args()
 
-args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 15-9-19 A_alpha_0.5_20250213153206'
-
 f = open(os.path.join(args.src, "entropy.json"))
 entropy_un = json.load(f)
 f.close()
@@ -23,7 +21,8 @@ lab_to_name = json.load(open(os.path.join(args.src, "lab_to_name.json")))
 
 fontsize = 20
 
-colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
+#colors = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
+cmap = plt.get_cmap("tab20")
 
 for i in range(len(lab_to_name)):
 
@@ -40,8 +39,8 @@ for i in range(len(lab_to_name)):
     e = entropy_lab[lab_to_name[str(i)]]
     q = np.log(np.quantile(e, 1 - args.alpha))
     
-    plt.hist(x, bins=100, density=True, alpha=1.0, color=colors[0], label="Unlabelled data")
-    plt.hist(y, bins=10, alpha=0.8, density=True, color=colors[i + 1], label=f"{genus}")
+    plt.hist(x, bins=100, density=True, alpha=1.0, label="Unlabelled data")
+    plt.hist(y, bins=10, alpha=0.8, density=True, label=f"{genus}")
     plt.axvline(q, color='r', linestyle='--', linewidth=3, label=f"{args.alpha:.0%} quantile")
     plt.xlabel("log Entropy", fontsize=fontsize)
     plt.xlim(xlim)
