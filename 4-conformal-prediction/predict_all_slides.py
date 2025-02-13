@@ -21,23 +21,27 @@ from utils import load_hdf5, read_fn, lab_to_name
 from training.utils import LinearClassifier
 
 # args
-src_data = 'data/NO 15-9-19 A'
-alpha = 0.50
+src_data = 'data/NO 15-9-1'
+alpha = 0.95
+#src_models = [
+#    './training/trained_models/20250210152137_seed1',
+#    './training/trained_models/20250210155635_seed2',
+#    './training/trained_models/20250210163107_seed3',
+#    './training/trained_models/20250210170115_seed4',
+#    './training/trained_models/20250210173135_seed5',
+#    './training/trained_models/20250210180149_seed6',
+#    './training/trained_models/20250210183208_seed7',
+#    './training/trained_models/20250210190244_seed8',
+#    './training/trained_models/20250210193252_seed9',
+#    './training/trained_models/20250210200258_seed10',
+#]
 src_models = [
-    './training/trained_models/20250210152137_seed1',
-    './training/trained_models/20250210155635_seed2',
-    './training/trained_models/20250210163107_seed3',
-    './training/trained_models/20250210170115_seed4',
-    './training/trained_models/20250210173135_seed5',
-    './training/trained_models/20250210180149_seed6',
-    './training/trained_models/20250210183208_seed7',
-    './training/trained_models/20250210190244_seed8',
-    './training/trained_models/20250210193252_seed9',
-    './training/trained_models/20250210200258_seed10',
+    '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412',
 ]
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
-lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
+#lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
+lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20/lab_to_name.json'))
 classes = range(len(lab_to_name))
 #classes = 4, 7, 17, 18, 21, 23
 # args end
