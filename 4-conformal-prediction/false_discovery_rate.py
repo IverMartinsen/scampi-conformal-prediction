@@ -26,8 +26,8 @@ def compute_fdr(alpha, beta, P, N):
 def compute_T(ent_unl):
     return np.array([len(ent_unl[k]) for k in ent_unl.keys()]).sum()
 
-def compute_P(T, recall, gamma):
-    return T * recall * gamma
+def compute_P(T, gamma):
+    return T * gamma
 
 def compute_N(ent_unl, class_name, P):
     T_class = len(ent_unl[class_name])
@@ -46,7 +46,6 @@ for class_name in ent_lab.keys():
     x = ent_lab[class_name]
     z = ent_unl[class_name]
     z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
-    recall = 1.00
     
     a = np.linspace(0, 0.99, 100) # alphas
 
@@ -59,7 +58,7 @@ for class_name in ent_lab.keys():
     for gamma in [0.001, 0.005, 0.01]:
         
         T = compute_T(ent_unl)
-        P = compute_P(T, recall, gamma)
+        P = compute_P(T, gamma)
         N = compute_N(ent_unl, class_name, P)
         fdr = compute_fdr(a, b, P, N)
 
@@ -88,7 +87,7 @@ z = ent_unl[class_name]
 beta = compute_beta(x, z, alpha)
 
 T = compute_T(ent_unl)
-P = compute_P(T, recall, gamma)
+P = compute_P(T, gamma)
 N = compute_N(ent_unl, class_name, P)
 fdr = compute_fdr(alpha, beta, P, N)
 
