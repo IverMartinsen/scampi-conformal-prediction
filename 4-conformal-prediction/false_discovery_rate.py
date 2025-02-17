@@ -1,34 +1,42 @@
+import os
+import json
+import argparse
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import json
 
-with open('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/merged_entropies.json', 'r') as f:
+parser = argparse.ArgumentParser()
+parser.add_argument("--src", type=str)
+args = parser.parse_args()
+
+args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/15-9-1 alpha 0.5'
+
+with open(os.path.join(args.src, 'ref_entropy.json'), 'r') as f:
     ent_lab = json.load(f)
 
-with open('/Users/ima029/Desktop/NO 6407-6-5/postprocessing/trained_models/20250103120412/entropies_15_9_1.json', 'r') as f:
+with open(os.path.join(args.src, 'entropy.json'), 'r') as f:
     ent_unl = json.load(f)
 
-classes_of_interest = ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palaeoperidinium']
+with open(os.path.join(args.src, 'lab_to_name.json'), 'r') as f:
+    lab_to_name = json.load(f)
 
 
-for class_name in classes_of_interest:
+for class_name in ent_lab.keys():
 
     x = ent_lab[class_name]
-    #z = ent_unl[class_name]
-    z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+    z = ent_unl[class_name]
+    #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
     
-    fig = plt.figure(figsize=(20, 10))
-    plt.hist(np.log(x), bins=20, alpha=0.5, density=True, color="tab:blue", label=class_name)
-    plt.hist(np.log(z), bins=100, alpha=0.5, density=True, color="tab:orange", label="NO 15/9-1")
-    plt.legend(fontsize=20)
-    plt.xlabel("log Entropy", fontsize=20)
-    plt.ylabel("Density", fontsize=20)
-    plt.xticks(fontsize=20)
-    plt.yticks(fontsize=20)
-    plt.savefig(f"{class_name}_entropy_distribution.png", dpi=300)
-    plt.close()
-
+    #fig = plt.figure(figsize=(20, 10))
+    #plt.hist(np.log(x), bins=20, alpha=0.5, density=True, color="tab:blue", label=class_name)
+    #plt.hist(np.log(z), bins=100, alpha=0.5, density=True, color="tab:orange", label="NO 15/9-1")
+    #plt.legend(fontsize=20)
+    #plt.xlabel("log Entropy", fontsize=20)
+    #plt.ylabel("Density", fontsize=20)
+    #plt.xticks(fontsize=20)
+    #plt.yticks(fontsize=20)
+    #plt.savefig(f"{class_name}_entropy_distribution.png", dpi=300)
+    #plt.close()
 
     recall = 1.00
 
@@ -54,7 +62,7 @@ for class_name in classes_of_interest:
         
         fdr = 1 / (1 + (1 - a) * r / b)
 
-        plt.plot(a, fdr, label=f"gamma={gamma} (r={np.round(r, 2)})", marker="o")
+        plt.plot(a, fdr, label=r"$\gamma =$" + f"{gamma} " + r"($\frac{P}{N}=$" + f"{np.round(r, 2)})", marker="o")
     plt.legend(fontsize=20)
     plt.xlabel("alpha", fontsize=20)
     plt.ylabel("False Discovery rate", fontsize=20)
