@@ -31,8 +31,8 @@ def compute_P(T, gamma):
 
 def compute_N(ent_unl, class_name, P):
     T_class = len(ent_unl[class_name])
-    assert T_class > P, print(T_class, P)
-    return T_class - P
+    #assert T_class > P, print(T_class, P)
+    return np.max((T_class - P, 0))
 
 def compute_beta(x, z, alpha):
     """
@@ -54,7 +54,7 @@ for class_name in ent_lab.keys():
     for j, alpha in enumerate(a):
         b[j] = compute_beta(x, z, alpha)
 
-    plt.figure(figsize=(20, 10))
+    plt.figure(figsize=(16, 8))
     for gamma in [0.001, 0.005, 0.01]:
         
         T = compute_T(ent_unl)
@@ -64,12 +64,12 @@ for class_name in ent_lab.keys():
 
         plt.plot(a, fdr, label=r"$\gamma =$" + f"{gamma} " + r"($\frac{P}{N}=$" + f"{np.round(P / N, 2)})", marker="o")
     plt.legend(fontsize=20)
-    plt.xlabel("alpha", fontsize=20)
-    plt.ylabel("False Discovery rate", fontsize=20)
+    plt.xlabel(r"$\alpha$", fontsize=20)
+    plt.ylabel("FDR", fontsize=20)
     plt.ylim(0, 1)
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
-    plt.savefig(f"{class_name}_fdr.png", dpi=300)
+    plt.savefig(os.path.join(args.src, f"{class_name}_fdr.png"), dpi=300)
     plt.close()
 
 
@@ -80,9 +80,7 @@ gamma = 0.005
 class_name = "inaperturopollenites"
 
 x = ent_lab[class_name]
-z = ent_unl[class_name]
-#z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
-
+z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
 
 beta = compute_beta(x, z, alpha)
 
