@@ -9,8 +9,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--src", type=str)
 args = parser.parse_args()
 
-args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/15-9-1 alpha 0.5'
-
 with open(os.path.join(args.src, 'ref_entropy.json'), 'r') as f:
     ent_lab = json.load(f)
 
