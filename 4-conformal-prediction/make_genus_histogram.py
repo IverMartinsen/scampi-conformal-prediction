@@ -85,7 +85,7 @@ def infer_depth(x):
     """
     seps = ["_", " ", "-", "."]
     x = extract_numbers(x, seps)
-    d = x[np.where(np.array(x) > 1000)[0][0]]
+    d = x[np.where((np.array(x) > 1000) & (np.array(x) < 10000))[0][-1]]
     return d
 
 
@@ -112,12 +112,12 @@ if __name__ == "__main__":
         span = (df["depth"].min(), df["depth"].max())
     else:
         span = args.x_lim
-    
+        
     df = df.loc[(df["depth"] >= span[0]) & (df["depth"] <= span[1])]
 
     cmap = plt.get_cmap("tab20")
     iterable = iter(cmap.colors)
-
+    
     for c in classes:
         
         x = df["depth"]
@@ -129,10 +129,14 @@ if __name__ == "__main__":
         x = y.index.map(lambda x: x.mid).values
         
         plt.figure(figsize=(20, 10))
-        plt.bar(x, y, label="Genus count", width=args.bar_width)
-        plt.ylim(args.y_lim)
+        plt.bar(x, y, label="Genus count", width=args.bar_width, edgecolor="white")
+        if args.y_lim is None:
+            ylim = (0, df[c].max() + 2)
+        else:
+            ylim = args.y_lim
         plt.xticks(np.arange(span[0], span[1], args.interval), rotation=45, fontsize=fontsize)
-        plt.yticks(range(args.y_lim[0], args.y_lim[1], 2), fontsize=fontsize)
+        yticks = np.linspace(0, ylim[1], 10).astype(int)
+        plt.yticks(yticks, fontsize=fontsize)
         plt.xlabel("Depth", fontsize=fontsize)
         plt.ylabel("Count", fontsize=fontsize)
         plt.title(f"{c} distribution", fontsize=fontsize)
