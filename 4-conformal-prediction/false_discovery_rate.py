@@ -73,21 +73,21 @@ for class_name in ent_lab.keys():
 
 # compute FDR for given alpha and gamma and class_name
 
-alpha = 0.95
-gamma = 0.005
-class_name = "inaperturopollenites"
-
-x = ent_lab[class_name]
-z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
-
-beta = compute_beta(x, z, alpha)
-
-T = compute_T(ent_unl)
-P = compute_P(T, gamma)
-N = compute_N(ent_unl, class_name, P)
-fdr = compute_fdr(alpha, beta, P, N)
-
-print(f"False Discovery Rate for {class_name}: {fdr} (alpha={alpha}, gamma={gamma})")
+#alpha = 0.95
+#gamma = 0.005
+#class_name = "inaperturopollenites"
+#
+#x = ent_lab[class_name]
+#z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+#
+#beta = compute_beta(x, z, alpha)
+#
+#T = compute_T(ent_unl)
+#P = compute_P(T, gamma)
+#N = compute_N(ent_unl, class_name, P)
+#fdr = compute_fdr(alpha, beta, P, N)
+#
+#print(f"False Discovery Rate for {class_name}: {fdr} (alpha={alpha}, gamma={gamma})")
 
 
 
