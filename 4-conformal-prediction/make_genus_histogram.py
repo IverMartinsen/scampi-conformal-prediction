@@ -13,7 +13,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--src", type=str, default=None)
 parser.add_argument("--alpha", type=float, default=None)
 parser.add_argument("--x_lim", nargs="+", type=int, default=None)
+parser.add_argument("--y_lim", nargs="+", type=int, default=None)
 parser.add_argument("--fontsize", type=int, default=18)
+parser.add_argument("--interval", type=int, default=20)
+parser.add_argument("--bin_width", type=int, default=5)
+parser.add_argument("--bar_width", type=int, default=10)
 args = parser.parse_args()
 
 
@@ -117,11 +121,18 @@ if __name__ == "__main__":
     for c in classes:
         
         x = df["depth"]
-        y = ((df[c]) * (1 - fdr[c]) / (1 - alpha)).rolling(window=1).mean()
+        #y = ((df[c]) * (1 - fdr[c]) / (1 - alpha)).rolling(window=1).mean()
+        y = (df[c]).rolling(window=1).mean()
+        
+        bins = np.arange(span[0], span[1], args.bin_width)
+        y = y.groupby(pd.cut(x, bins), observed=True).sum()
+        x = y.index.map(lambda x: x.mid).values
         
         plt.figure(figsize=(20, 10))
-        plt.bar(x, y, label="Genus count", width=3)
-        plt.xticks(np.arange(span[0], span[1], 20), rotation=45, fontsize=fontsize)
+        plt.bar(x, y, label="Genus count", width=args.bar_width)
+        plt.ylim(args.y_lim)
+        plt.xticks(np.arange(span[0], span[1], args.interval), rotation=45, fontsize=fontsize)
+        plt.yticks(range(args.y_lim[0], args.y_lim[1], 2), fontsize=fontsize)
         plt.xlabel("Depth", fontsize=fontsize)
         plt.ylabel("Count", fontsize=fontsize)
         plt.title(f"{c} distribution", fontsize=fontsize)
