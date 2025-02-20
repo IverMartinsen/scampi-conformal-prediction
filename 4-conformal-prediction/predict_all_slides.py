@@ -21,9 +21,9 @@ from utils import load_hdf5, read_fn, lab_to_name
 from training.utils import LinearClassifier
 
 # args
-src_data = 'data/NO 15-9-1'
-alpha = 0.95
-#src_models = [
+src_data = 'data/NO 15-9-19 A'
+alpha = 0.025
+#src_models = [ # 10 seeds and 6 classes
 #    './training/trained_models/20250210152137_seed1',
 #    './training/trained_models/20250210155635_seed2',
 #    './training/trained_models/20250210163107_seed3',
@@ -35,15 +35,28 @@ alpha = 0.95
 #    './training/trained_models/20250210193252_seed9',
 #    './training/trained_models/20250210200258_seed10',
 #]
-src_models = [
-    '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412',
+src_models = [ # 10 seeds and 20 classes
+    "./training/trained_models/20241223150033",
+    "./training/trained_models/20241223154957",
+    "./training/trained_models/20241223155034",
+    "./training/trained_models/20241223160703",
+    "./training/trained_models/20241223160725",
+    "./training/trained_models/20241223165621",
+    "./training/trained_models/20241223165637",
+    "./training/trained_models/20241223183148",
+    "./training/trained_models/20241223183241",
+    "./training/trained_models/20241223204815",
 ]
+#src_models = [
+#    '/Users/ima029/Desktop/NO 6407-6-5/training/trained_models/20250103120412',
+#]
 path_to_ood_detector = './training/ood_detector/ood_detector.pkl'
 use_ood_detector = True
 #lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/BaileyLabels/imagefolder-bisaccate/lab_to_name.json'))
 lab_to_name = json.load(open('/Users/ima029/Desktop/NO 6407-6-5/data/labelled imagefolders/imagefolder_20/lab_to_name.json'))
 classes = range(len(lab_to_name))
 #classes = 4, 7, 17, 18, 21, 23
+classes = [4]
 # args end
 
 # Make folder for results

@@ -30,6 +30,7 @@ for i in range(len(lab_to_name)):
 
     genus = lab_to_name[str(i)]
     vals = np.array(entropy_un[genus])
+    #vals = np.concatenate([entropy_un[k] for k in entropy_un.keys()])
     vals = vals[~np.isnan(vals)]
     x = np.log(vals)
     y = np.log(entropy_lab[genus])

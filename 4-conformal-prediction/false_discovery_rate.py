@@ -43,7 +43,7 @@ for class_name in ent_lab.keys():
 
     x = ent_lab[class_name]
     z = ent_unl[class_name]
-    z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+    #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
     
     a = np.linspace(0, 0.99, 100) # alphas
 
