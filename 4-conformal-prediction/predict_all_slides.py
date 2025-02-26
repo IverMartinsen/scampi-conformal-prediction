@@ -21,8 +21,8 @@ from utils import load_hdf5, read_fn, lab_to_name
 from training.utils import LinearClassifier
 
 # args
-src_data = 'data/NO 15-9-19 A'
-alpha = 0.025
+src_data = 'data/NO 6407-6-5'
+alpha = 0.95
 #src_models = [ # 10 seeds and 6 classes
 #    './training/trained_models/20250210152137_seed1',
 #    './training/trained_models/20250210155635_seed2',

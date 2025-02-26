@@ -4,6 +4,7 @@ import argparse
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from scipy.stats import norm
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--src", type=str)
@@ -19,7 +20,7 @@ with open(os.path.join(args.src, 'lab_to_name.json'), 'r') as f:
     lab_to_name = json.load(f)
 
 def compute_fdr(alpha, beta, P, N):
-    return 1 / (1 + (1 - alpha) * P / N / beta)
+    return 1 / (1 + ((1 - alpha) / beta) * (P / N))
 
 def compute_T(ent_unl):
     return np.array([len(ent_unl[k]) for k in ent_unl.keys()]).sum()
@@ -36,37 +37,49 @@ def compute_beta(x, z, alpha):
     """
     Given alpha, how many elements in z are smaller than the alpha-quantile of x
     """
-    q = np.quantile(x, 1 - alpha)
-    return np.sum(z < q) / len(z)
+    #q = np.quantile(x, 1 - alpha)
+    q = norm.ppf(1 - alpha, loc=np.mean(x), scale=np.std(x))
+    #p = np.sum(z < q) / len(z)
+    p = norm.cdf(q, loc=np.mean(z), scale=np.std(z))
+    return p
 
 for class_name in ent_lab.keys():
 
     x = ent_lab[class_name]
     z = ent_unl[class_name]
-    #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
-    
+    #z = np.concatenate([ent_unl[k] for k in ent_unl.keys() if k != class_name])
+    z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+    # remove nan values
+    z = z[~np.isnan(z)]
     a = np.linspace(0, 0.99, 100) # alphas
 
     b = np.zeros_like(a) # betas
 
     for j, alpha in enumerate(a):
         b[j] = compute_beta(x, z, alpha)
-
+        
+    #if class_name == "inaperturopollenites":
+    #    breakpoint()
+    
     plt.figure(figsize=(16, 8))
-    for gamma in [0.001, 0.005, 0.01]:
+    for gamma in [0.0001, 0.001, 0.01]:
         
         T = compute_T(ent_unl)
+        #T = len(z)
         P = compute_P(T, gamma)
         N = compute_N(ent_unl, class_name, P)
         fdr = compute_fdr(a, b, P, N)
 
         plt.plot(a, fdr, label=r"$\gamma =$" + f"{gamma} " + r"($\frac{P}{N}=$" + f"{np.round(P / N, 2)})", marker="o")
+    for a in [0.05, 0.50, 0.95]:
+        plt.axvline(a, linestyle="--", color="black")
     plt.legend(fontsize=20)
     plt.xlabel(r"$\alpha$", fontsize=20)
     plt.ylabel("FDR", fontsize=20)
     plt.ylim(0, 1)
-    plt.xticks(fontsize=20)
+    plt.xticks([0.00, 0.05, 0.25, 0.50, 0.75, 0.95, 1.00], fontsize=20, rotation=45)
     plt.yticks(fontsize=20)
+    plt.tight_layout()
     plt.savefig(os.path.join(args.src, f"{class_name}_fdr.png"), dpi=300)
     plt.close()
 
@@ -74,8 +87,8 @@ for class_name in ent_lab.keys():
 # compute FDR for given alpha and gamma and class_name
 
 #alpha = 0.95
-#gamma = 0.005
-#class_name = "inaperturopollenites"
+#gamma = 0.0001
+#class_name = "palaeoperidinium"
 #
 #x = ent_lab[class_name]
 #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
