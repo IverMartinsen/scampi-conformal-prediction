@@ -20,7 +20,7 @@ parser.add_argument("--bin_width", type=int, default=5)
 parser.add_argument("--bar_width", type=int, default=10)
 args = parser.parse_args()
 
-
+args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 6407-6-5_alpha_0.5'
 
 def load_stats(path_to_stats):
     """
@@ -144,6 +144,37 @@ if __name__ == "__main__":
         plt.savefig(os.path.join(src, f"{c}_distribution.png"))
         plt.close()
 
+
+    # make horizontal bar plot of the counts of each genus on the same axis
+
+    args.bin_width = 15
+    args.bar_width = 20
+    args.y_lim = 0, 900
+    args.interval = 120
+
+    fig, ax = plt.subplots(1, 4, figsize=(20, 10), sharey=True)
+    for i, c in enumerate(classes):
+        x = df["depth"]
+        bins = np.arange(span[0], span[1], args.bin_width)
+        y = (df[c]).rolling(window=1).mean()
+        y = y.groupby(pd.cut(x, bins), observed=True).sum()
+        x = y.index.map(lambda x: x.mid).values
+            
+        ax[i].barh(x, y, height=args.bar_width, edgecolor="white")
+        ax[i].set_title(c, fontsize=fontsize)
+        ax[i].set_xlabel("Count", fontsize=fontsize)
+        ax[i].set_yticks(np.arange(span[0], span[1], args.interval))
+        if i == 0:        
+            ax[i].set_ylabel("Depth", fontsize=fontsize)
+        #else:
+        #    ax[i].set_yticks([])
+        ax[i].set_xlim(args.y_lim)
+        # change fontsize of ticks
+        ax[i].tick_params(axis="both", which="major", labelsize=fontsize)
+    plt.tight_layout()
+    plt.gca().invert_yaxis()
+    plt.savefig(os.path.join(src, "genus_counts.png"))
+    plt.close()
 
 ## joint plot
 #tmp = df.copy()
