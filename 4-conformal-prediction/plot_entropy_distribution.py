@@ -41,7 +41,7 @@ for i in range(len(lab_to_name)):
     xlim = (xmin, xmax)
     e = entropy_lab[lab_to_name[str(i)]]
     q = np.log(np.quantile(e, 1 - args.alpha))
-    if args.fit_to_normal:
+    if args.fit_to_normal == True:
         xax = np.linspace(xmin, xmax, 100)
         yax = norm.pdf(xax, loc=np.mean(x), scale=np.std(x))
         plt.fill_between(xax, yax, alpha=1.0, color=cmap(0), label="Unlabelled data")
