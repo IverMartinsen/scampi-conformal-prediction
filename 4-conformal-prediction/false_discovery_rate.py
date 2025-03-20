@@ -83,6 +83,46 @@ for class_name in ent_lab.keys():
     plt.savefig(os.path.join(args.src, f"{class_name}_fdr.png"), dpi=300)
     plt.close()
 
+# joint plots
+for gamma in [0.0001, 0.001]:
+
+    plt.figure(figsize=(16, 8))
+
+    #for class_name in ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palaeoperidinium']:
+    for class_name in ['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium']:
+        x = ent_lab[class_name]
+        z = ent_unl[class_name]
+
+        z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+        # remove nan values
+        z = z[~np.isnan(z)]
+        a = np.linspace(0, 0.99, 100) # alphas
+
+        b = np.zeros_like(a) # betas
+
+        for j, alpha in enumerate(a):
+            b[j] = compute_beta(x, z, alpha)        
+            
+        T = compute_T(ent_unl)
+        P = compute_P(T, gamma)
+        N = compute_N(ent_unl, class_name, P)
+        fdr = compute_fdr(a, b, P, N)
+
+        plt.plot(a, fdr, label=f"{class_name}", marker="o")
+
+    for a in [0.05, 0.50, 0.95]:
+        plt.axvline(a, linestyle="--", color="black")
+    plt.legend(fontsize=20)
+    plt.xlabel(r"$\alpha$", fontsize=20)
+    plt.ylabel("FDR", fontsize=20)
+    plt.ylim(0, 1)
+    plt.xticks([0.00, 0.05, 0.25, 0.50, 0.75, 0.95, 1.00], fontsize=20, rotation=45)
+    plt.yticks(fontsize=20)
+    plt.tight_layout()
+    plt.savefig(os.path.join(args.src, f"gamma_{gamma}_fdr.jpg"), dpi=300)
+    plt.close()
+
+
 
 # compute FDR for given alpha and gamma and class_name
 
