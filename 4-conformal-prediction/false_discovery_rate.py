@@ -46,9 +46,9 @@ def compute_beta(x, z, alpha):
 for class_name in ent_lab.keys():
 
     x = ent_lab[class_name]
-    z = ent_unl[class_name]
+    z = np.array(ent_unl[class_name])
     #z = np.concatenate([ent_unl[k] for k in ent_unl.keys() if k != class_name])
-    z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+    #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
     # remove nan values
     z = z[~np.isnan(z)]
     a = np.linspace(0, 0.99, 100) # alphas
@@ -84,16 +84,17 @@ for class_name in ent_lab.keys():
     plt.close()
 
 # joint plots
-for gamma in [0.0001, 0.001]:
+for gamma in [1e-7, 1e-6, 1e-5, 1e-4, 0.001, 0.01]:
 
     plt.figure(figsize=(16, 8))
 
+    for class_name in ['bisaccate']:
     #for class_name in ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palaeoperidinium']:
-    for class_name in ['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium']:
+    #for class_name in ['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium']:
         x = ent_lab[class_name]
         z = ent_unl[class_name]
-
-        z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+        z = np.array(z)
+        #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
         # remove nan values
         z = z[~np.isnan(z)]
         a = np.linspace(0, 0.99, 100) # alphas

@@ -20,7 +20,7 @@ parser.add_argument("--bin_width", type=int, default=5)
 parser.add_argument("--bar_width", type=int, default=10)
 args = parser.parse_args()
 
-args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 6407-6-5_alpha_0.5'
+#args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 6407-6-5_alpha_0.5'
 
 def load_stats(path_to_stats):
     """
@@ -125,40 +125,47 @@ if __name__ == "__main__":
         y = (df[c]).rolling(window=1).mean()
         
         bins = np.arange(span[0], span[1], args.bin_width)
-        y = y.groupby(pd.cut(x, bins), observed=True).sum()
-        x = y.index.map(lambda x: x.mid).values
+        #y = y.groupby(pd.cut(x, bins), observed=True).sum()
+        #x = y.index.map(lambda x: x.mid).values
         
-        plt.figure(figsize=(20, 10))
-        plt.bar(x, y, label="Genus count", width=args.bar_width, edgecolor="white")
+        plt.figure(figsize=(5, 10))
+        plt.barh(x, y, label="Genus count", height=args.bar_width, edgecolor="white")
         if args.y_lim is None:
-            ylim = (0, df[c].max() + 2)
+            xlim = (0, df[c].max() + 2)
         else:
-            ylim = args.y_lim
-        plt.xticks(np.arange(span[0], span[1], args.interval), rotation=45, fontsize=fontsize)
-        yticks = np.linspace(0, ylim[1], 10).astype(int)
-        plt.yticks(yticks, fontsize=fontsize)
-        plt.xlabel("Depth", fontsize=fontsize)
-        plt.ylabel("Count", fontsize=fontsize)
+            xlim = args.y_lim
+        plt.yticks(np.arange(span[0], span[1], args.interval), rotation=45, fontsize=fontsize)
+        #xticks = np.linspace(0, ylim[1], 10).astype(int)
+        #plt.xticks(xticks, fontsize=fontsize)
+        plt.xlim(xlim)
+        plt.xticks(fontsize=fontsize)
+        plt.ylabel("Depth", fontsize=fontsize)
+        plt.xlabel("Count", fontsize=fontsize)
         plt.title(f"{c} distribution", fontsize=fontsize)
         plt.tight_layout()
-        plt.savefig(os.path.join(src, f"{c}_distribution.png"))
+        plt.gca().invert_yaxis()
+        plt.savefig(os.path.join(src, f"{c}_distribution.jpg"), dpi=300)
         plt.close()
 
 
     # make horizontal bar plot of the counts of each genus on the same axis
 
-    args.bin_width = 15
-    args.bar_width = 20
-    args.y_lim = 0, 900
-    args.interval = 120
+    #args.bin_width = 15
+    #args.bar_width = 20
+    #args.y_lim = 0, 500
+    #args.interval = 120
 
-    fig, ax = plt.subplots(1, 4, figsize=(20, 10), sharey=True)
+    fig, ax = plt.subplots(1, 5, figsize=(20, 10), sharey=True)
+    classes = ["dissiliodinium"] + list(classes)
     for i, c in enumerate(classes):
         x = df["depth"]
         bins = np.arange(span[0], span[1], args.bin_width)
-        y = (df[c]).rolling(window=1).mean()
-        y = y.groupby(pd.cut(x, bins), observed=True).sum()
-        x = y.index.map(lambda x: x.mid).values
+        try:
+            y = (df[c]).rolling(window=1).mean()
+        except KeyError:
+            y = np.zeros_like(x)
+        #y = y.groupby(pd.cut(x, bins), observed=True).sum()
+        #x = y.index.map(lambda x: x.mid).values
             
         ax[i].barh(x, y, height=args.bar_width, edgecolor="white")
         ax[i].set_title(c, fontsize=fontsize)

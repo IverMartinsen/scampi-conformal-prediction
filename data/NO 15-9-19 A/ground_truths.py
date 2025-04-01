@@ -67,6 +67,10 @@ ground_truths = {
             3908: 18,
             3919: 19,
         },
+    'tenua':
+        {
+            3780: 0,
+        }
 }
 
 for genus in ground_truths.keys():
@@ -75,17 +79,44 @@ for genus in ground_truths.keys():
     y = list(ground_truths[genus].values())
     fontsize = 18
 
-    plt.figure(figsize=(20, 10))
-    plt.bar(x, y, width=10, edgecolor='white')
-    plt.xlim(3760, 3940)
-    plt.xticks(np.arange(3760, 3940, 20), rotation=45, fontsize=fontsize)
-    plt.ylim(0, 60)
-    plt.yticks(np.arange(0, 60, 10), fontsize=fontsize)
+    plt.figure(figsize=(5, 10))
+    plt.barh(x, y, height=10, edgecolor='white')
+    plt.ylim(3760, 3940)
+    plt.yticks(np.arange(3760, 3940, 20), rotation=45, fontsize=fontsize)
+    plt.xlim(0, 60)
+    plt.xticks(np.arange(0, 60, 10), fontsize=fontsize)
     if genus == 'bisaccate':
-        plt.ylim(0, 100)
-        plt.yticks(np.arange(0, 100, 20), fontsize=fontsize)
-    plt.xlabel("Depth", fontsize=18)
-    plt.ylabel("Count", fontsize=18)
+        plt.xlim(0, 100)
+        plt.xticks(np.arange(0, 100, 20), fontsize=fontsize)
+    plt.ylabel("Depth", fontsize=18)
+    plt.xlabel("Count", fontsize=18)
+    plt.title(f"{genus} distribution", fontsize=fontsize)
     plt.tight_layout()
+    plt.gca().invert_yaxis()
     plt.savefig(f"{genus}_ground_truth_distribution.png", dpi=300)
     plt.close()
+
+# joint plots
+
+fig, ax = plt.subplots(1, 5, figsize=(20, 10), sharey=True)
+
+for i, genus in enumerate(['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium', 'tenua']):
+    x = list(ground_truths[genus].keys())
+    y = list(ground_truths[genus].values())
+        
+    ax[i].barh(x, y, height=10, edgecolor="white")
+    ax[i].set_title(genus, fontsize=fontsize)
+    ax[i].set_xlabel("Count", fontsize=fontsize)
+    ax[i].set_ylim(3750, 3930)
+    ax[i].set_yticks(np.arange(3760, 3920, 20))
+    if i == 0:        
+        ax[i].set_ylabel("Depth", fontsize=fontsize)
+    #else:
+    #    ax[i].set_yticks([])
+    ax[i].set_xlim((0, 60))
+    # change fontsize of ticks
+    ax[i].tick_params(axis="both", which="major", labelsize=fontsize)
+plt.tight_layout()
+plt.gca().invert_yaxis()
+plt.savefig("genus_counts.png")
+plt.close()
