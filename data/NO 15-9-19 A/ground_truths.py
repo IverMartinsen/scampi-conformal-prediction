@@ -104,7 +104,7 @@ for i, genus in enumerate(['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surc
     x = list(ground_truths[genus].keys())
     y = list(ground_truths[genus].values())
         
-    ax[i].barh(x, y, height=10, edgecolor="white")
+    ax[i].barh(x, y, height=10, edgecolor="white", color=plt.cm.tab10(8))
     ax[i].set_title(genus, fontsize=fontsize)
     ax[i].set_xlabel("Count", fontsize=fontsize)
     ax[i].set_ylim(3750, 3930)
