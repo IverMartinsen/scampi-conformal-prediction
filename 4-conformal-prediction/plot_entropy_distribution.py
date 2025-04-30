@@ -55,11 +55,11 @@ for i in range(len(lab_to_name)):
     plt.xlabel("log Entropy", fontsize=fontsize)
     plt.xlim(xlim)
     plt.xticks(fontsize=fontsize)
-    plt.ylim(bottom=0)
+    plt.ylim(bottom=0, top=5)
     plt.yticks([])
-    plt.legend(fontsize=fontsize)
+    #plt.legend(fontsize=fontsize)
     plt.tight_layout()
-    fname = f"{genus}_entropy_distribution.png"
+    fname = f"{genus}_entropy_distribution.jpg"
     plt.savefig(os.path.join(args.src, fname), dpi=300)
     plt.close()
 
