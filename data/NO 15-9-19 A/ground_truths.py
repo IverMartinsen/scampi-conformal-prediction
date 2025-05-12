@@ -73,24 +73,29 @@ ground_truths = {
         }
 }
 
+fontsize = 30
+
 for genus in ground_truths.keys():
 
     x = list(ground_truths[genus].keys())
     y = list(ground_truths[genus].values())
-    fontsize = 18
-
+    
+    hist = np.histogram(x, bins=np.arange(3760, 3940, 6), weights=y)
+    x = hist[1][:-1]
+    y = hist[0]
+        
     plt.figure(figsize=(5, 10))
-    plt.barh(x, y, height=10, edgecolor='white')
+    plt.barh(x, y, height=6, edgecolor='white')
     plt.ylim(3760, 3940)
     plt.yticks(np.arange(3760, 3940, 20), rotation=45, fontsize=fontsize)
     plt.xlim(0, 60)
     plt.xticks(np.arange(0, 60, 10), fontsize=fontsize)
     if genus == 'bisaccate':
-        plt.xlim(0, 100)
-        plt.xticks(np.arange(0, 100, 20), fontsize=fontsize)
-    plt.ylabel("Depth", fontsize=18)
-    plt.xlabel("Count", fontsize=18)
-    plt.title(f"{genus} distribution", fontsize=fontsize)
+        plt.xlim(0, 140)
+        plt.xticks(np.arange(0, 140, 40), fontsize=fontsize)
+    plt.ylabel("", fontsize=18)
+    plt.xlabel("", fontsize=18)
+    plt.title(f"{genus.capitalize()}", fontsize=fontsize)
     plt.tight_layout()
     plt.gca().invert_yaxis()
     plt.savefig(f"{genus}_ground_truth_distribution.png", dpi=300)
@@ -98,19 +103,20 @@ for genus in ground_truths.keys():
 
 # joint plots
 
+
 fig, ax = plt.subplots(1, 5, figsize=(20, 10), sharey=True)
 
 for i, genus in enumerate(['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium', 'tenua']):
     x = list(ground_truths[genus].keys())
     y = list(ground_truths[genus].values())
         
-    ax[i].barh(x, y, height=10, edgecolor="white", color=plt.cm.tab10(8))
-    ax[i].set_title(genus, fontsize=fontsize)
-    ax[i].set_xlabel("Count", fontsize=fontsize)
+    ax[i].barh(x, y, height=6, edgecolor="white", color=plt.cm.tab10(8))
+    ax[i].set_title(genus.capitalize(), fontsize=fontsize)
+    #ax[i].set_xlabel("Count", fontsize=fontsize)
     ax[i].set_ylim(3750, 3930)
-    ax[i].set_yticks(np.arange(3760, 3920, 20))
+    ax[i].set_yticks(np.arange(3750, 3930, 20))
     if i == 0:        
-        ax[i].set_ylabel("Depth", fontsize=fontsize)
+        ax[i].set_ylabel("", fontsize=fontsize)
     #else:
     #    ax[i].set_yticks([])
     ax[i].set_xlim((0, 60))

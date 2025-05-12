@@ -86,15 +86,15 @@ for class_name in ent_lab.keys():
 # joint plots
 for gamma in [1e-7, 1e-6, 1e-5, 1e-4, 0.001, 0.01]:
 
-    plt.figure(figsize=(16, 8))
+    plt.figure(figsize=(14, 7))
 
-    for class_name in ['bisaccate']:
+    #for class_name in ['bisaccate']:
     #for class_name in ['alisocysta', 'bisaccate', 'inaperturopollenites', 'palaeoperidinium']:
-    #for class_name in ['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium']:
+    for class_name in ['dissiliodinium', 'rigaudella', 'sirmiodinium', 'surculosphaeridium']:
         x = ent_lab[class_name]
         z = ent_unl[class_name]
         z = np.array(z)
-        #z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
+        z = np.concatenate([ent_unl[k] for k in ent_unl.keys()])
         # remove nan values
         z = z[~np.isnan(z)]
         a = np.linspace(0, 0.99, 100) # alphas
@@ -109,16 +109,16 @@ for gamma in [1e-7, 1e-6, 1e-5, 1e-4, 0.001, 0.01]:
         N = compute_N(ent_unl, class_name, P)
         fdr = compute_fdr(a, b, P, N)
 
-        plt.plot(a, fdr, label=f"{class_name}", marker="o")
+        plt.plot(a, fdr, label=f"{class_name.capitalize()}", marker="o", linewidth=4)
 
     for a in [0.05, 0.50, 0.95]:
-        plt.axvline(a, linestyle="--", color="black")
-    plt.legend(fontsize=20)
-    plt.xlabel(r"$\alpha$", fontsize=20)
-    plt.ylabel("FDR", fontsize=20)
+        plt.axvline(a, linestyle="--", color="black", linewidth=4)
+    plt.legend(fontsize=30)
+    plt.xlabel(r"$\alpha$", fontsize=30)
+    plt.ylabel("FDR", fontsize=30)
     plt.ylim(0, 1)
-    plt.xticks([0.00, 0.05, 0.25, 0.50, 0.75, 0.95, 1.00], fontsize=20, rotation=45)
-    plt.yticks(fontsize=20)
+    plt.xticks([0.05, 0.50, 0.95], fontsize=30, rotation=45)
+    plt.yticks(fontsize=30)
     plt.tight_layout()
     plt.savefig(os.path.join(args.src, f"gamma_{gamma}_fdr.jpg"), dpi=300)
     plt.close()

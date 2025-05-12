@@ -14,10 +14,10 @@ parser.add_argument("--src", type=str, default=None)
 parser.add_argument("--alpha", type=float, default=None)
 parser.add_argument("--x_lim", nargs="+", type=int, default=None)
 parser.add_argument("--y_lim", nargs="+", type=int, default=None)
-parser.add_argument("--fontsize", type=int, default=18)
+parser.add_argument("--fontsize", type=int, default=30)
 parser.add_argument("--interval", type=int, default=20)
 parser.add_argument("--bin_width", type=int, default=5)
-parser.add_argument("--bar_width", type=int, default=10)
+parser.add_argument("--bar_width", type=int, default=6)
 args = parser.parse_args()
 
 #args.src = '/Users/ima029/Desktop/NO 6407-6-5/4-conformal-prediction/results/NO 6407-6-5_alpha_0.5'
@@ -124,7 +124,11 @@ if __name__ == "__main__":
         #y = ((df[c]) * (1 - fdr[c]) / (1 - alpha)).rolling(window=1).mean()
         y = (df[c]).rolling(window=1).mean()
         
-        bins = np.arange(span[0], span[1], args.bin_width)
+        hist = np.histogram(x, bins=np.arange(3760, 3940, 6), weights=y)
+        x = hist[1][:-1]
+        y = hist[0]
+
+        #bins = np.arange(span[0], span[1], args.bin_width)
         #y = y.groupby(pd.cut(x, bins), observed=True).sum()
         #x = y.index.map(lambda x: x.mid).values
         
@@ -134,14 +138,15 @@ if __name__ == "__main__":
             xlim = (0, df[c].max() + 2)
         else:
             xlim = args.y_lim
+        plt.ylim(span[0], span[1])
         plt.yticks(np.arange(span[0], span[1], args.interval), rotation=45, fontsize=fontsize)
         #xticks = np.linspace(0, ylim[1], 10).astype(int)
         #plt.xticks(xticks, fontsize=fontsize)
         plt.xlim(xlim)
-        plt.xticks(fontsize=fontsize)
-        plt.ylabel("Depth", fontsize=fontsize)
-        plt.xlabel("Count", fontsize=fontsize)
-        plt.title(f"{c} distribution", fontsize=fontsize)
+        plt.xticks(np.arange(xlim[0], xlim[1], 4), fontsize=fontsize)
+        plt.ylabel("", fontsize=fontsize)
+        plt.xlabel("", fontsize=fontsize)
+        plt.title(f"{c.capitalize()}", fontsize=fontsize)
         plt.tight_layout()
         plt.gca().invert_yaxis()
         plt.savefig(os.path.join(src, f"{c}_distribution.jpg"), dpi=300)
@@ -154,9 +159,9 @@ if __name__ == "__main__":
     #args.bar_width = 20
     #args.y_lim = 0, 500
     #args.interval = 120
-
-    fig, ax = plt.subplots(1, 5, figsize=(20, 10), sharey=True)
-    classes = ["dissiliodinium"] + list(classes)
+    
+    #classes = ["dissiliodinium"] + list(classes)
+    fig, ax = plt.subplots(1, len(classes), figsize=(20, 10), sharey=True)
     for i, c in enumerate(classes):
         x = df["depth"]
         bins = np.arange(span[0], span[1], args.bin_width)
@@ -164,18 +169,19 @@ if __name__ == "__main__":
             y = (df[c]).rolling(window=1).mean()
         except KeyError:
             y = np.zeros_like(x)
-        #y = y.groupby(pd.cut(x, bins), observed=True).sum()
-        #x = y.index.map(lambda x: x.mid).values
+        y = y.groupby(pd.cut(x, bins), observed=True).sum()
+        x = y.index.map(lambda x: x.mid).values
             
         ax[i].barh(x, y, height=args.bar_width, edgecolor="white")
-        ax[i].set_title(c, fontsize=fontsize)
-        ax[i].set_xlabel("Count", fontsize=fontsize)
+        ax[i].set_title(c.capitalize(), fontsize=fontsize)
+        #ax[i].set_xlabel("Count", fontsize=fontsize)
+        ax[i].set_ylim(span[0], span[1])
+        ax[i].set_xlim(args.y_lim)
         ax[i].set_yticks(np.arange(span[0], span[1], args.interval))
         if i == 0:        
-            ax[i].set_ylabel("Depth", fontsize=fontsize)
+            ax[i].set_ylabel("", fontsize=fontsize)
         #else:
         #    ax[i].set_yticks([])
-        ax[i].set_xlim(args.y_lim)
         # change fontsize of ticks
         ax[i].tick_params(axis="both", which="major", labelsize=fontsize)
     plt.tight_layout()
